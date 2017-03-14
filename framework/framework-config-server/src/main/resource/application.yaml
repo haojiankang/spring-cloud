@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: framework-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///D:\cloud-config-repo
+          searchPaths: frameworkConfig
+eureka:
+ client:
+   serviceUrl:
+     defaultZone: 
+       - http://localhost:8761/eureka/

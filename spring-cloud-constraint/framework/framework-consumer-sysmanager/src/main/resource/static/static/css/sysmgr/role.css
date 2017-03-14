@@ -1,0 +1,3 @@
+.noscrollbox .table-custom-normal td:last-child, .noscrollbox .table-custom-normal th:last-child{
+    width:120px;
+}

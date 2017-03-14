@@ -1,0 +1,160 @@
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Microsoft YaHei', Arial, 'Courier New', Helvetica, sans-serif;
+    outline: none;
+    zoom: 1;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.horizontalTab{
+	padding: 8px;
+    border-radius: 4px;
+	background:url('../images/bg_lishi_03_03.png');
+}
+
+.horizontalTab div{
+    font-size: 0px;
+}
+.horizontalTab span{
+    vertical-align: middle;
+}
+.horizontalTab span button{
+    vertical-align: middle;
+}
+.horizontalTab >ul{
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0px;;
+    /*height:30px;*/
+}
+
+.horizontalTab .c-input-group{
+	margin-bottom: 0px;
+}
+
+
+
+.tab-list  li{
+    list-style: none;
+    float: left;
+    font-size: 14px;;
+    height:30px;
+    background: #eee;
+    margin: 0px 4px;
+    padding:0px 8px;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 9.5%;
+    width: 112px;
+}
+
+
+.tab-list  li em{
+    font-style: normal;
+    max-width: 75px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    color: #333;
+    font-size:14px;
+    height: 30px;
+    line-height: 30px;
+
+}
+.tab-list span{
+    vertical-align: middle;
+}
+.tab-list  li .remove{
+    background: none;
+    font-size: 0px;
+    cursor: pointer;
+    vertical-align: top;
+    display: inline-block;
+    height: 30px;
+    width: 15px;
+    line-height:30px;
+    margin-left: 4px;
+
+}
+.tab-list  li .remove span{
+    font-size: 10px;
+    color: #666;
+    padding: 2px;
+    border-radius: 4px;
+}
+.tab-list  li .remove span:hover{
+    color: #db4437;
+    /* background: #db4437;*/
+
+}
+
+.tab-list  .tab-active{
+    background:#54b5e9;
+}
+.tab-list .tab-active:hover{
+    background:#54b5e9 !important;
+}
+.tab-list .tab-active em{
+    color: #fff;
+}
+.tab-list .tab-active span{
+    color: #fff;
+}
+.tab-list .tab-active .remove span{
+    color: #fff;
+}
+.tab-list .tab-active span:hover{
+    /*color: #fff !important;
+    background: #fff;*/
+}
+
+.tab-list li:hover{
+    background: #b4d1e1;
+
+}
+.tab-list li:hover em{
+    /*color: #fff;*/
+}
+.tab-list li:hover span{
+    /*color: #fff;*/
+}
+
+.float-tab-container{
+    width: 128px;
+    min-width: 128px;
+    background: #eee;
+    position: absolute;
+    top: 50px;
+    right: 8px;
+    padding: 4px;
+    display: none;
+    z-index:9999;
+}
+
+
+.float-tab-container{
+    background:#eee ;
+}
+
+.float-tab-container li{
+    border-bottom: 1px #ddd solid;
+
+}
+.float-tab-container  li:last-child{
+    border: none;
+}
+
+
+.horizontalTab .more{
+    background:#54b5e9 ;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+

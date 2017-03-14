@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好健康-资源管理</title>
+    <Link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+    <script src="../../static/js/modular.js" data-config="../../static/js/config.js" data-main="sysmgr.resource"></script>
+    <style>
+    	.right_content_1,.right_content_2{
+    		padding:15px
+    	}
+    </style>
+
+</head>
+<body>
+
+<!--内容页面布局 开始-->
+    <div class="frame-content resource">
+        <div class="left">
+            <p class="head">
+                	显示下级机构用户信息
+            </p>
+            <div id="tree" class=" ztree"></div>
+        </div>
+        <div class="cellspacing"></div>
+        <div class="right border-bg-default">
+            <div class="wrap">
+                <div class="body">
+                    <div class="wrap perfectScrollbar">
+						<p class="head">
+							<span id="info_title"></span>资源信息
+						</p>
+						
+						<!-- 内容一 -->
+						 <div class="right_content_1" id="infoList">
+				                <div class="rightbar-btn-header-box">
+				                    <div class="btn-ctrl">
+				                        <button  class="btn-base btn-blue btn-response" id="btn-add"><i class="fa fa-user-plus" aria-hidden="true"></i>新增</button>
+				                        <button  class="btn-base btn-green btn-response" id="btn-edit" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>修改</button>
+				                        <button id="delnode" class="btn-base btn-orange-red btn-response"><i class="fa fa-trash-o" aria-hidden="true"></i>删除</button>
+				                        
+				                        
+				                    </div>
+				                </div>
+				
+				
+				                <form class="form1" id="infoform">
+				
+				                    <div class="cell-box">
+				                        <div class="input-box">
+				                            <label>资源名称：</label>
+				                            <div>
+				                                <input id="id" name="id" type="hidden">
+												<input id="resourceName" readonly="readonly" name=resourceName class="form-control"type="text"  placeholder=" ">
+												<input type="hidden" name="parentNO" class="form-control">								
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				                    <div class="cell-box">
+				                        <div class="input-box">
+				                            <label>资源类型：</label>
+				                            <div>
+				                            	<input readonly="readonly" name="resourceTypeName" class="form-control" type="text"  placeholder=" ">
+												<input id="resourceType" readonly="readonly" type="hidden" name="resourceType" class="form-control">
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				
+				
+				                    <div class="cell-box">
+				                        <div class="input-box">
+				                            <label>资源编号：</label>
+				                            <div>
+				                            	<input id="no" readonly="readonly" name="no" class="form-control" type="text"  placeholder=" ">
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				                    <div class="cell-box">
+				                        <div class="input-box">
+				                            <label>资源权限：</label>
+				                            <div>
+				                            	<input id="juris_code" readonly="readonly"  name="juris_code" class="form-control" type="text"  placeholder=" ">
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				                    <div class="cell-box fullwrap">
+				                        <div class="input-box">
+				                            <label>资源属性：</label>
+				                            <div>
+				                                <textarea id="properties" readonly="readonly" name="properties" class="form-control" rows="2" type="text"  placeholder="" ></textarea>
+				                            </div>
+				                        </div>
+				                    </div>
+				
+				                    <!--div class="cell-box">
+				                        <div class="input-box">
+				                            <div class="btn-group">
+				                                <button class="btn-base confirm">确认</button>
+				                                <button  class="btn-base cancel">取消</button>
+				                            </div>
+				                        </div>
+				                    </div-->
+				
+				
+				                </form>
+				            </div>
+						<!-- 内容二一-->
+						<p class="head border-top">系统管理的下级资源信息</p>
+						<div id="dataList" class="noscrollbox right_content_2"></div>
+                
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--内容页面布局 开始-->
+    
+            
+<!-- div class="floatbox floatbox-double" id="datamodal" target-draggable="false">
+        <div class="left-block-blue crumb"></div>
+        <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div class="title">
+            用户信息
+        </div>
+        <hr class="splitline">
+        <form  class="form-horizontal" role="form" id="dataform">
+            <div class="form-inline">
+                <dl class="col-half">
+                    <dd><label>名称:</label>
+						 <input id="id" name="id" type="hidden">
+						<input id="resourceName" name="resourceName" class="input-base">
+						<input type="hidden" name="parentNO" class="input-base">
+					</dd>
+					
+					<dd>
+                        <label>类型:</label>
+
+                            <div class="btn-group">
+                               <select id="resourceType" class="form-control" name="resourceType" >
+										<option value=1>应用</option>
+										<option value=2>导航条</option>
+										<option value=3>菜单</option>
+										<option value=4>按钮</option>
+								</select>
+                            </div>
+                        </dd>                        
+                        
+                    <dd><label>编号:</label><input id="no" name="no" class="input-base"></dd>
+                    <dd><label>权限:</label><input id="juris_code"  name="juris_code" class="input-base"></dd>
+                    <dd><label>属性:</label><input id="properties"  name="properties" class="input-base"></dd>
+
+                </dl>
+            </div>
+            <hr class="splitline">
+            <div class="footbar">
+                <button type="button" class="btn-base confirm" id="btn-save">确认</button>
+                <button type="button" class="btn-base cancel">取消</button>
+            </div>
+        </form>
+    </div-->
+
+			<div class="modal fade" id="datamodal" >
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title">资源信息</h4>
+			      </div>
+			      <div class="modal-body">
+			      	 	<form class="form-horizontal" role="form" id="dataform">
+					        <div class="form-group">
+								<label for="resourceName" class="col-xs-3 control-label">资源名称：</label>
+								<div class="col-xs-3">
+						            <input id="id" name="id" type="hidden">
+									<input id="resourceName" name="resourceName" class="form-control">
+									<input type="hidden" name="parentNO" class="form-control">
+								</div>
+								<label for="resourceType" class="col-xs-3 control-label">资源类型：</label>
+								<div class="col-xs-3">
+									<select id="resourceType" class="form-control" name="resourceType" >
+										<option value=1>应用</option>
+										<option value=2>导航条</option>
+										<option value=3>菜单</option>
+										<option value=4>按钮</option>
+										<option value=5>权限资源</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="no" class="col-xs-3 control-label">资源编号：</label>
+								<div class="col-xs-3">
+									<input id="no" name="no" class="form-control">
+								</div>
+								<label for="juris_code" class="col-xs-3 control-label">资源权限：</label>
+								<div class="col-xs-3">
+									<input id="juris_code"  name="juris_code" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="properties" class="col-xs-3 control-label">资源属性：</label>
+								<div class="col-xs-9">
+									<input id="properties"  name="properties" class="form-control">
+								</div>
+							</div>							
+						</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-success" id="btn-save">
+			        	<span class="glyphicon glyphicon-save" aria-hidden="true"></span>保存
+			        </button>
+			        <button type="button" class="btn btn-info" data-dismiss="modal">
+			        	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+			        </button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+
+
+	<script id="template-tbody" type="text/x-handlebars-template" des="资源信息模版" >
+		{{#each this}}
+         <div class="block-square">
+             <p>
+                 <span class="title">{{name}}({{no}})</span>
+                     <span class="btn-ctrl-group">
+                         <button class="biz-btn-edit" data-id="{{id}}" title="编辑"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                         <button class="biz-btn-del" data-id="{{id}}" title="删除"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                     </span>
+             </p>
+             <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+         </div>
+		{{/each}}
+	</script>
+
+</body>
+</html>

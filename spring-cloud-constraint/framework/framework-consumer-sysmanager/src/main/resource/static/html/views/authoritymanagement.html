@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>好健康-体检统计</title>
+    <Link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+    <link rel="stylesheet" href="../../static/framework/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/framework/FontIcon/iconfont.css">
+    <link rel="stylesheet" href="../../static/css/framework-public.css">
+    <link rel="stylesheet" href="../../static/framework/web-font-awesome/css/font-awesome.css">
+</head>
+<body>
+<div class="containerBox">
+    <!--内容块-->
+    <div class="rightbar">
+
+        <div class="content">
+            <div class="rightbar-btn-header-box">
+                <div class="btn-ctrl">
+                    <button class="btn-base btn-blue"><i class="fa fa-user-plus" aria-hidden="true"></i>新增</button>
+                    <button class="btn-base btn-green"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>修改</button>
+                    <button class="btn-base btn-orange-red"><i class="fa fa-trash-o" aria-hidden="true"></i>删除</button>
+                </div>
+                <div class="search-box">
+                    <div>
+                        <input type="text" class="search-input" />
+                        <button class="btn-base">统计</button>
+                    </div>
+                </div>
+            </div>
+            <!--按钮块 end-->
+            <!--table-->
+            <div class="tablebox">
+                <div class="noscrollbox">
+                    <table class="table table-custom-normal">
+                        <tr><th colspan="6">权限信息列表</th></tr>
+                        <tr class="field">
+                            <th>
+                                <button class="square-btn-all" type="button" ><i class="fa fa-square-o" aria-hidden="true"></i></button>
+                            </th>
+                            <th>
+                                权限名称
+                            </th>
+                            <th>权限编码</th>
+                            <th>认证类型</th>
+                            <th>认证规则</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="square-btn">
+                                    <i class="fa fa-square-o" aria-hidden="true"></i>
+                                    <input type="checkbox" />
+                                </label>
+                            </td>
+                            <td>admin</td>
+                            <td>管理员1</td>
+                            <td>男</td>
+                            <td>进行中</td>
+                            <td class="btn-ctrl-group">
+                                <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="square-btn">
+                                    <i class="fa fa-square-o" aria-hidden="true"></i>
+                                    <input type="checkbox" onchange="checkboxChange(this)" />
+                                </label>
+                            </td>
+                            <td>admin</td>
+                            <td>管理员2</td>
+                            <td>男</td>
+                            <td>进行中</td>
+                            <td class="btn-ctrl-group">
+                                <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+            <!--table end-->
+            <!--按钮块-->
+        </div>
+
+        <!--底部分页-->
+        <div class="container bottombar">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--分页 end-->
+    </div>
+    <!--内容块 end-->
+
+</div>
+
+
+</body>
+<!--必要插件-->
+<script src="../../static/framework/Jquery/Jquery.min.js"></script>
+<script src="../../static/framework/Bootstrap/js/bootstrap.js"></script>
+<script src="../../static/framework/zTree/handlebars.js"></script>
+<script src="../../static/framework/zTree/underscore.js"></script>
+<script src="../../static/js/common/common.js"></script>
+<!--本页面 js-->
+<script src="../../static/js/views/rolemanagement.js"></script>
+
+
+</body>
+</html>

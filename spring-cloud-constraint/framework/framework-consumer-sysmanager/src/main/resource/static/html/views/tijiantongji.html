@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>好健康-体检统计</title>
+  <Link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+  <link rel="stylesheet" href="../../static/framework/Bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../static/framework/FontIcon/iconfont.css">
+
+  <style>
+
+      @font-face {font-family: 'iconfont';
+          src: url('iconfont.eot'); /* IE9*/
+          src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('iconfont.woff') format('woff'), /* chrome、firefox */
+          url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+          url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+      }
+
+      .iconfont{
+          font-family:"iconfont" !important;
+          font-style:normal;
+          -webkit-font-smoothing: antialiased;
+          -webkit-text-stroke-width: 0.2px;
+          -moz-osx-font-smoothing: grayscale;}
+
+
+	*{padding:0px;margin:0px;border:0px;font-family: 'Microsoft YaHei',Arial,'Courier New', Helvetica, sans-serif;}
+
+	body{background:#f5f5f5}
+
+
+
+	.listbar .dropdown{
+		margin-right:8px;
+	}
+	.right-table-controller-btn{
+		display:inline;
+	}
+
+    .right-table-controller-btn  button{
+        margin-left:6px;
+    }
+    .right-table-controller-btn .title{
+        font-size:14px;
+        color:#6b6b6b;
+        vertical-align: super;
+    }
+    .right-table-controller-btn button{
+        width:39px;
+        height:39px;
+        background: #cccccc;
+        color:#fff;
+        border:none;
+        outline: none;
+        border-radius: 2px;
+    }
+      .right-table-controller-btn button .iconfont{
+          font-size:24px
+      }
+
+
+    .right-table-controller-btn button:hover{
+        color:#0185d0;
+    }
+    .right-table-controller-btn .selected{
+        color:#fff !important;
+        background: #0185d0;
+    }
+
+	.bottombar nav{text-align:center}
+    .bottombar nav ul li{
+
+    }
+    .bottombar{
+        /*background:#f5f5f5;
+        position: fixed;
+        bottom:0px;
+        left:0px;*/
+        width:100%;
+    }
+    .bottombar nav ul li a{
+        padding:0px;
+        margin:0px 5px;
+        line-height:40px;
+        width:40px;
+        height:40px;
+        border-radius:2px;
+        background: #e7ebee;
+        border:none;
+
+    }
+
+    .bottombar nav ul li a:hover{
+        background: #cccccc;
+    }
+
+
+    .pagination>.active>a{
+        background:#0183cf !important;
+    }
+    .pagination>.active>a:hover{
+        background:#0183cf;
+    }
+	.header-title p{
+		color:#808080;
+		font-size:16px;
+		margin:20px 0px
+	}
+	/**地址选择器 样式**/
+	.address-selector .dropdown button{
+		width:120px;
+		height:40px;
+		padding:4px 4px 4px 10px;
+		text-align:left;
+		line-height:30px;
+		background:#fff;
+		border:1px #dbdbdb solid;
+		border-radius:2px;
+
+	}
+	.address-selector .dropdown button span{
+		float:right;
+		display:inline-block;
+		background:#2197d8;
+		color:#fff;
+		line-height:30px;
+		width:30px;
+		height:30px;
+		border:none;
+        text-align: center;
+        border-radius: 2px;;
+	}
+      /**时间选择器 样式**/
+
+      .date-selector .dropdown button{
+          width:120px;
+          height:40px;
+          padding:4px 4px 4px 10px;
+          text-align:left;
+          line-height:30px;
+          background:#fff;
+          border:1px #dbdbdb solid;
+          border-radius:2px;
+
+      }
+      .date-selector .dropdown button span{
+          float:right;
+          display:inline-block;
+          color:#fff;
+          line-height:30px;
+          width:30px;
+          height:30px;
+          border:none;
+          text-align: center;
+          border-radius: 2px;;
+          line-height: 26px;;
+      }
+      .date-selector .dropdown button span i{
+          font-size:24px;
+          color: #ff80a8;
+      }
+
+
+
+    .table-custom-normal{
+        border:2px #dbdbdb solid;
+        background:#fff;
+    }
+    .table-custom-normal td{
+        border:none !important;
+        height:50px;
+        font-size:14px;
+        vertical-align: middle !important;
+        color:#808080;
+    }
+
+    .table-custom-normal td+td, .table-custom-normal th+th{
+        text-align: center;;
+    }
+      .table-custom-normal tr:nth-child(2n){
+          background:#fafbfc;
+      }
+
+
+    .table-custom-normal th{
+        color:#333333;
+        font-size:14px;
+        height:50px;
+        vertical-align: middle  !important;
+    }
+     .table>tr>th{
+
+
+     }
+    .table-custom-normal tr th:first-child,.table-custom-normal tr td:first-child{
+        text-align: left !important;
+        padding-left:40px;
+        width: 315px;
+    }
+
+    .table-custom-normal tr:hover{
+        background:#eef6fa;
+        color:#0071b3 !important;
+    }
+
+      .searchBtn{
+        background:#389e44;
+          font-size:16px;
+          color:#fff;
+          height:40px;
+          width:120px;
+          border-radius: 2px;
+      }
+      .searchBtn span{
+          padding-right: 10px;
+      }
+
+  </style>
+ </head>
+ <body>
+	<div class="container-fluid header-title">
+		<p>一体机体检系统</p>
+	</div>
+ <!--headerbar start->
+	<!--div class="container-fluid">
+		<div class="row">
+
+
+			<div class="col-xs-9">
+
+				<form class="form-inline" >
+					<div class="form-group listbar address-selector">
+
+						<div class="dropdown pull-left">
+							<button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							地区
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							县区
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							乡镇卫生院
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							村卫生院
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu " aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							开始日期
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							结束日期
+							<span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li> 
+						  </ul>
+						</div>
+
+						<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span>查找</button>
+
+					</div>
+
+				</form>
+			
+			
+			</div>
+
+
+			<div class="col-xs-3">
+
+			<div class="right-table-controller-btn pull-right">
+			  <div class="form-group">
+
+				<span class="form-control-static">浏览视图</span>
+
+				<button type="button" class="btn btn-default">
+					<span  class="glyphicon glyphicon-stats"></span >
+				</button>
+
+				<button type="button" class="btn btn-default">
+					<span  class="glyphicon glyphicon-list"></span >
+				</button>
+
+			  </div>
+			  
+			</div>
+
+			</div>
+			
+
+		
+		</div>	
+	</div-->
+	
+<!--headerbar end-->
+
+    <div class="container-fluid">
+		<div class="row">
+
+
+			<div class="col-xs-9">
+
+				<form class="form-inline" >
+
+                    <!--div class="form-group listbar address-selector">
+
+                        <div class="dropdown pull-left">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                开始日期
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div-->
+
+					<div class="form-group listbar date-selector">
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							开始日期
+                                <span><i class="iconfont">&#xe607;</i></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<div class="dropdown pull-left">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							结束日期
+                                <span><i class="iconfont">&#xe607;</i></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+
+						<button type="button" class="searchBtn"><span class="glyphicon glyphicon-search"></span><b>查找</b></button>
+
+					</div>
+
+
+				</form>
+
+
+			</div>
+
+
+			<div class="col-xs-3">
+
+			<div class="right-table-controller-btn pull-right">
+			  <div class="form-group">
+
+				<span class="form-control-static title">浏览视图</span>
+
+				<button type="button" class="histogramData selected">
+                    <i class="iconfont">&#xe641;</i>
+				</button>
+
+				<button type="tableData button">
+                    <i class="iconfont"> &#xe660;</i>
+				</button>
+
+			  </div>
+
+			</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+
+    <!--table start-->
+    <div class="container-fluid">
+        <table class="table table-custom-normal">
+            <tr>
+                    <th>机构名称</th>
+                    <th>血压</th>
+                    <th>血糖</th>
+                    <th>体温</th>
+                    <th>心电</th>
+                    <th>尿常规</th>
+                    <th>心率</th>
+                    <th>血氧</th>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+                <tr>
+                    <td>测试数据卫生室测试数据卫生室</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</th>
+                    <td>00</td>
+                </tr>
+
+        </table>
+    </div>
+    <!-- 为 ECharts 图表 -->
+    <div id="main" style="width: 100%;height:700px;"></div>
+
+<div class="container bottombar">
+	<nav>
+	  <ul class="pagination">
+		<li>
+		  <a href="#" aria-label="Previous">
+			<span aria-hidden="true">&laquo;</span>
+		  </a>
+		</li>
+		<li><a href="#">1</a></li>
+		<li class="active"><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li>
+		  <a href="#" aria-label="Next">
+			<span aria-hidden="true">&raquo;</span>
+		  </a>
+		</li>
+	  </ul>
+	</nav>
+</div>
+<!--table end-->
+
+<!-- jQuery 2.2.3 -->
+<script src="../../static/framework/Jquery/jquery-1.12.4.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../static/framework/Bootstrap/js/bootstrap.js"></script>
+ <!--Echarts-->
+ <script src="../../static/framework/ECharts/echarts.js"></script>
+ <script>
+     // 初始化echarts实例
+     var myChart = echarts.init(document.getElementById('main'));
+
+
+     option = {
+         tooltip : {
+             trigger: 'axis',
+             axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                 type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+             }
+         },
+         legend: {
+             data: ['机构名称','血压','血糖','体温','心电','尿常规','心率','血氧']
+         },
+         grid: {
+             left: '3%',
+             right: '4%',
+             bottom: '3%',
+             containLabel: true
+         },
+         xAxis:  {
+             type: 'value'
+         },
+         yAxis: {
+             type: 'category',
+             data: ['测试卫生室1','测试卫生室2','测试卫生室3','测试卫生室4','测试卫生室5','测试卫生室6','测试卫生室7']
+         },
+         series: [
+             {
+                 name: '机构名称',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [320, 302, 301, 334, 390, 330, 320]
+             },
+             {
+                 name: '血压',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [120, 132, 101, 134, 90, 230, 210]
+             },
+             {
+                 name: '血糖',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [220, 182, 191, 234, 290, 330, 310]
+             },
+             {
+                 name: '体温',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [150, 212, 201, 154, 190, 330, 410]
+             },
+             {
+                 name: '心电',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [820, 832, 901, 934, 1290, 1330, 1320]
+             },
+             {
+                 name: '尿常规',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [820, 832, 901, 934, 1290, 1330, 1320]
+             },
+             {
+                 name: '心率',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [820, 832, 901, 934, 1290, 1330, 1320]
+             },
+             {
+                 name: '血氧',
+                 type: 'bar',
+                 stack: '总量',
+                 label: {
+                     normal: {
+                         show: true,
+                         position: 'insideRight'
+                     }
+                 },
+                 data: [820, 832, 901, 934, 1290, 1330, 1320]
+             }
+         ]
+     };
+
+     myChart.setOption(option);
+ </script>
+
+
+ </body>
+</html>

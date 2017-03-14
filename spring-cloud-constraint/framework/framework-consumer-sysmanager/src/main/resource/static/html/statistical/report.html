@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>统计查询</title>
+    <script src="../../static/js/modular.js" data-config="../../static/js/config.js" data-main="statistical.report"></script>
+</head>
+<body>
+
+  <!--内容页面布局 开始-->
+    <div class="frame-content">
+        
+            <div class="wrap">
+                <div class="top">  
+                
+                <div class="c-container-fluid">                           
+                
+	                <div class="row">
+				        <div class="col-sm-5 col-sm-offset-2">
+				            <div class="c-input-group">
+				            	
+			
+				                <span class="addon padding-left-8">
+				                	<button type="button" class="btn-base btn-response btn-blue" id="btn-search">查询</button>
+				                </span>			                
+				            </div>
+				            
+				        </div>
+				
+				    </div>
+				
+				</div> 
+    
+			</div>
+			
+                <div class="body">
+                    <div class="wrap  border-bg-default">
+                    
+                    <!--标题栏 开始-->
+                            <div class="table-custom-normal-header">
+                                <span>用户信息列表</span>
+                            </div>
+                    
+                    
+                    <div class="table-absolute">
+                    	<table id="dataList" class="table table-custom-normal">
+	                        <thead>
+	                            <tr class="field">
+	                                <th>
+		                               <button class="square-btn-all" type="button"  title="全选/全不选"><i class="fa fa-square-o" aria-hidden="true"></i></button>
+		                            </th>
+	                                <th>帐号</th>
+									<th>姓名</th>
+									<th>性别</th>
+									<th>电话</th>
+									<th>邮箱</th>
+									<th>状态</th>
+									<th>操作</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                        
+	                        </tbody>
+                        </table>
+                    
+                    </div>
+                    
+                    </div>
+                </div>
+                <div class="foot">
+					<!--底部分页-->
+         <div id="pageContainer" class="container bottombar">
+            
+        </div>
+        <!--分页 end-->
+                </div>
+            </div>
+    </div>
+    <!--内容页面布局 开始-->
+ 
+
+
+
+
+
+            
+     <!--        
+     <div class="floatbox floatbox-double" id="datamodal" target-draggable="false" >
+        <div class="left-block-blue crumb"></div>
+        <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <div class="title">
+            用户信息
+        </div>
+        <hr class="splitline">
+        <form id="dataform" method="post" onsubmit="return false;" class="form-horizontal">
+            <div class="modal-body">
+		                <div class="form-group">
+							<label for="organization" class="col-xs-2 control-label">机构：</label>
+							<div class="col-xs-4">
+								<input id="organization" readonly="readonly" name="organization.name" class="form-control">
+								<input type="hidden" name="organization.code" class="form-control">
+								<input type="hidden" name="organization.id" class="form-control">
+								<input type="hidden" name="id" class="form-control">
+							</div>
+							<label for="rolelist" class="col-xs-2 control-label">角色：</label>
+						 	<div class="col-xs-4" id="rolelist">
+						 	<select class="form-control" id="roles" name="roles[index].id"></select>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="form-group-input">
+								<label for="userName" class="col-xs-2 control-label">账号：</label>
+								<div class="col-xs-4">
+									<input id="userName" autocomplete="off" name="userName" class="form-control"/>
+
+								 </div>
+							</div>
+							<div class="form-group-input">
+							    <label for="fullname" class="col-xs-2 control-label">姓名：</label>
+								   <div class="col-xs-4">
+								    	<input id="fullname" name="fullname" class="form-control">
+							       </div>
+					       </div>
+						</div>
+						<div class="form-group">
+							<div class="form-group-input" >
+								<label for="tel" class="col-xs-2 control-label">电话：</label>
+								<div class="col-xs-4">
+									<input id="tel" value="" name="tel" class="form-control">
+								</div>
+							</div>
+							<div class="form-group-input" >
+								<label for="mail" class="col-xs-2 control-label">邮箱：</label>
+								<div class="col-xs-4">
+									<input id="mail" value="" name="mail" class="form-control">
+								</div>
+							</div>
+					       
+					    </div>
+					    
+					    
+					    
+						<div class="form-group">
+							<div class="form-group-input">
+							 	<label for="sex" class="col-xs-2 control-label">性别：</label>
+								<div class="col-xs-4">
+						 			<select class="form-control" id="sex" name="sex"></select>
+								</div>
+							</div>
+							<label for="flag" class="col-xs-2 control-label">状态：</label>
+						   <div class="col-xs-4" >
+						 			<select class="form-control" id="flag" name="flag"></select>
+						   </div>
+						</div>
+			      </div>
+			      
+
+            <hr class="splitline">
+            <div class="footbar">
+                <button type="button" class="btn-base confirm" id="btn-save" >确认</button>
+                <button type="button" class="btn-base cancel">取消</button>
+            </div>
+        </form>
+    </div>
+				-->
+
+			<div class="modal fade" id="datamodal" >
+			       <form id="dataform" method="post" onsubmit="return false;" class="form-horizontal" >
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title">用户信息</h4>
+			      </div>
+			      <div class="modal-body">
+		                <div class="form-group">
+							<label for="organization" class="col-xs-2 control-label">机构：</label>
+							<div class="col-xs-4">
+								<input id="organization" readonly="readonly" name="organization.name" class="form-control">
+								<input type="hidden" name="organization.code" class="form-control">
+								<input type="hidden" name="organization.id" class="form-control">
+								<input type="hidden" name="id" class="form-control">
+							</div>
+							<label for="rolelist" class="col-xs-2 control-label">角色：</label>
+						 	<div class="col-xs-4" id="rolelist">
+						 	<select class="form-control" id="roles" name="roles[index].id"></select>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-group-input">
+								<label for="userName" class="col-xs-2 control-label">账号：</label>
+								<div class="col-xs-4">
+									<input id="userName" autocomplete="off" name="userName" class="form-control"/>
+<!-- 									<input id="password"  autocomplete="off" type="hidden" name="password" class="form-control"/> -->
+								</div>
+							</div>
+							<div class="form-group-input">
+							    <label for="fullname" class="col-xs-2 control-label">姓名：</label>
+								   <div class="col-xs-4">
+								    	<input id="fullname" name="fullname" class="form-control">
+							       </div>
+					       </div>
+						</div>
+						<div class="form-group">
+							<div class="form-group-input" >
+								<label for="tel" class="col-xs-2 control-label">电话：</label>
+								<div class="col-xs-4">
+									<input id="tel" value="" name="tel" class="form-control">
+								</div>
+							</div>
+							<div class="form-group-input" >
+								<label for="mail" class="col-xs-2 control-label">邮箱：</label>
+								<div class="col-xs-4">
+									<input id="mail" value="" name="mail" class="form-control">
+								</div>
+							</div>
+					       
+					    </div>
+						<div class="form-group">
+							<div class="form-group-input">
+							 	<label for="sex" class="col-xs-2 control-label">性别：</label>
+								<div class="col-xs-4">
+						 			<select class="form-control" id="sex" name="sex"></select>
+								</div>
+							</div>
+							<label for="flag" class="col-xs-2 control-label">状态：</label>
+						   <div class="col-xs-4" >
+						 			<select class="form-control" id="flag" name="flag"></select>
+						   </div>
+						</div>
+			      </div>
+			      
+				<div class="modal-footer">
+		                <div class="form-group" >
+		                    <button type="button" id="btn-save"  class="btn btn-success" >
+					        	<span class="glyphicon glyphicon-save" aria-hidden="true"></span>保存
+					        </button>
+					        <button type="button" class="btn btn-info" data-dismiss="modal">
+					        	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+					        </button>
+		                </div>
+			     </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+		            </form>
+			</div><!-- /.modal -->
+   
+						   
+	<script id="template-tbody" type="text/x-handlebars-template" des="用户信息列表行模版" objformat="{result:[{id:,userName:,fullname:,sex:,age:,birthday:,tel:}]}">
+		{{#each this.result}}
+		<tr  style="height:40px;" class="case-checkbox" data-id="{{id}}">
+ 			<td><label class="square-btn"   title="选择"><i class="fa fa-square-o" aria-hidden="true" data-id="{{id}}"></i></label></td>
+			<td>{{userName}}</td>
+			<td>{{fullname}}</td>
+			<td>{{_dataKey 'sex' sex}}</td>
+			<td>{{tel}}</td>
+			<td>{{mail}}</td>
+			<td>{{_dataKey 'flag' flag}}</td>
+			<td class="btn-ctrl-group">
+               <button id="btn-edit" data-id="{{id}}" title="编辑"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+               <button id="btn-del" data-id="{{id}}"  title="删除" data-resource="001001001"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+			   <button id="btn-reset" data-id="{{id}}"  title="重置密码" data-resource="001001002"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+				&nbsp;
+            </td>
+		</tr>
+		{{/each}}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+.rightbar .content{
+    bottom: 0px;
+}
+td{
+    max-width: 700px;
+    word-break: break-all;
+}

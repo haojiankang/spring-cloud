@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>权限管理</title>
+    <Link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+	<script src="../../static/js/modular.js" data-config="../../static/js/config.js" data-main="sysmgr.jurisdiction"></script>
+</head>
+<body>
+
+
+
+
+
+<!--内容页面布局 开始-->
+    <div class="frame-content">
+        <div class="right">
+            <div class="wrap">
+                <div class="top">
+                
+                <div class="c-container-fluid">
+	                <div class="row" id="example05">
+	
+				        <div class="col-sm-4 c-btn-group">
+				            <button class="btn-base btn-blue btn-response" id="btn-add"><i class="fa fa-user-plus" aria-hidden="true"></i>新增</button>
+				            <button class="btn-base btn-green btn-response" id="btn-edit-check"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>修改</button>
+				            <button class="btn-base btn-orange-red btn-response" id="btn-del-check"><i class="fa fa-trash-o" aria-hidden="true"></i>删除</button>
+				
+				        </div>
+				
+				        <div class="col-sm-6 col-sm-offset-2">
+				            <div class="c-input-group">
+				                <input type="text" class="input-base input-response full-input" id="searchtext" placeholder="请输入查询条件"/>
+				                <span class="addon padding-left-8">
+				                     <button type="button" class="btn-base btn-blue btn-response" id="btn-search">查询</button>
+				                </span>
+				            </div>
+				        </div>
+				
+				    </div>
+				   </div>
+    
+               
+			
+			
+                </div>
+                <div class="body">
+                    <div class="wrap  border-bg-default">
+                    
+	                    <!--标题栏 开始-->
+	                            <div class="table-custom-normal-header">
+	                                <span>权限信息列表</span>
+	                            </div>
+	                    
+	                    
+	                    <div class="table-absolute">	                    
+		                    
+							<table id="dataList"  class="table table-custom-normal">
+									
+		                    <thead>
+			                        <tr class="field">
+		                            <th>
+		                               <button class="square-btn-all" type="button" title="全选/全不选"><i class="fa fa-square-o" aria-hidden="true"></i></button>
+		                            </th>
+		                            <th>权限名称</th>
+		                            <th>权限编码</th>
+		                            <th>认证类型</th>
+		                            <th>认证规则</th>
+		                            <th>操作</th>
+		                        </tr>
+		                    </thead>
+		                    <tbody>
+		                    
+		                    </tbody>
+		                    </table>
+		                    
+	                    </div>
+                    </div>
+                </div>
+                <div class="foot">
+					 <!--底部分页-->
+			        <div id="pageContainer" class="container bottombar">
+			            
+			        </div>
+			        <!--分页 end-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--内容页面布局 开始-->
+    
+    <!--窗体公共样式 开始->
+<div class="floatbox roleinfo-box"  id="datamodal" target-draggable="flase">
+    <div class="left-block-blue crumb"></div>
+    <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="title">
+        权限管理
+    </div>
+    <hr class="splitline" />
+    <form class="form-horizontal" role="form" id="dataform">
+        <div class="form-inline">
+            <dl>
+                <dd><label>权限名称:</label>
+                    <input id="jurisdictionName" name="jurisdictionName" class="input-base">
+                    <input type="hidden" name="id" class="form-control">
+                </dd>
+                <dd><label>权限编码:</label>
+                    <input id="jurisdictionCode"  autocomplete="off" name="jurisdictionCode" class="input-base" />
+                </dd>
+                <dd><label>认证类型:</label><input class="input-base" /></dd>
+                <dd>
+                    <label>认证类型:</label>
+                    
+                    <div class="btn-group">
+                        <button type="button" class="btn selectedValue"  id="authenticationType" name="authenticationType"></button>
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">URL</a></li>
+                        </ul>
+                    </div>
+                </dd>
+                <dd><label>认证规则:</label><input class="input-base" name="authenticationRule" /></dd>
+            </dl>
+        </div>
+        <hr class="splitline" />
+        <div class="footbar">
+            <button type="button" class="btn-base confirm" id="btn-save">保存</button>
+            <button type="button" class="btn-base cancel">关闭</button>
+        </div>
+    </form>
+</div>
+<!-窗体公共样式 结束-->
+
+
+			<div class="modal fade" id="datamodal" >
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title">权限信息</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form class="form-horizontal" role="form" id="dataform">
+			            <input id="add" name="add" value="" type="hidden">
+						<div class="form-group">
+							<label for="jurisdictionName" class="col-xs-3 control-label">权限名称：</label>
+							<div class="col-xs-5">
+								<input id="jurisdictionName" name="jurisdictionName" class="form-control">
+								<input type="hidden" name="id" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="jurisdictionCode" class="col-xs-3 control-label">权限编码：</label>
+							<div class="col-xs-5">
+								<input id="jurisdictionCode"  autocomplete="off" name="jurisdictionCode" class="form-control" />
+							</div>
+						</div>
+						<div class="form-group">
+						    <label for="authenticationType" class="col-xs-3 control-label">认证类型：</label>
+							   <div class="col-xs-5">
+							    	<select id="authenticationType" name="authenticationType" class="form-control">
+							    		<option></option>
+							    		<option>URL</option>
+							    	</select>
+						       </div>
+					    </div>
+						<div class="form-group">
+							<label for="authenticationRule" class="col-xs-3 control-label">认证规则：</label>
+							<div class="col-xs-5">
+								<input id="authenticationRule" 	 name="authenticationRule" class="form-control">
+							</div>
+						</div>
+					</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-success" id="btn-save" >
+			        	<span class="glyphicon glyphicon-save" aria-hidden="true"></span>保存
+			        </button>
+			        <button type="button" class="btn btn-info" data-dismiss="modal">
+			        	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+			        </button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+    
+    <script id="template-tbody" type="text/x-handlebars-template" des="权限信息列表行模版" >
+		{{#each this.result}}
+		 <tr class="case-checkbox" data-id="{{id}}">
+             <td><label class="square-btn" title="选择"><i class="fa fa-square-o" aria-hidden="true" data-id="{{id}}"></i></label></td>
+             <td>{{jurisdictionName}}</td>
+             <td>{{jurisdictionCode}}</td>
+             <td>{{authenticationType}}</td>
+             <td>{{authenticationRule}}</td>
+             <td class="btn-ctrl-group">
+                 <button id="btn-edit" data-id="{{id}}" title="编辑"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                 <button id="btn-del" data-id="{{id}}" title="删除"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+					&nbsp;
+             </td>
+         </tr>	
+		{{/each}}
+	</script>
+    
+</body>
+</html>

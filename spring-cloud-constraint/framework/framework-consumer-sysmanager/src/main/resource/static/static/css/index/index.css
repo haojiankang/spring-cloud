@@ -1,0 +1,252 @@
+ *{padding:0px;margin:0px;border:0px;font-family: 'Microsoft YaHei',Arial,'Courier New', Helvetica, sans-serif;zoom: 1}
+
+/**涓�涓嬫牱寮忔湁閲嶅啓adminlte鏍峰紡**/
+body{min-width:480px;}
+a{text-underline: none;text-decoration: none !important;}
+.sidebar .title{
+		color:#fff;
+		font-size:16px;
+		padding:15px;
+	}
+body{
+	overflow: hidden;
+}
+	.main-header{
+		z-index:99999
+	}
+
+	.main-header .logo{
+		height:50px !important;
+	}
+
+	.main-header .logo img{
+		width:35px;height:31px;
+	}
+	.main-header .logo .logo-lg img{
+		width:90px;height:24px;
+		vertical-align: baseline;
+	}
+
+	.main-header .logo .logo-lg{
+		height:50px;
+		line-height:57px;
+	}
+	.main-header .logo .logo-lg .title{
+		font-size:20px;
+
+	}
+
+
+	.main-header .navbar{
+		height:50px;
+		background:#fff;
+	}
+	.navbar .sidebar-toggle{font-size:25px;color:#333}
+
+	.main-sidebar, .left-side{
+		padding-top:50px !important;
+	}
+	.main-header .navbar .sidebar-toggle{
+		color:#333
+	}
+
+
+
+	.bottomShadow{
+	  -webkit-box-shadow:0px 3px 10px rgba(173, 176, 176, 0.33);  
+	  -moz-box-shadow:0px 3px 10px rgba(173, 176, 176, 0.33);  
+	  box-shadow:0px 3px 10px rgba(173, 176, 176, 0.33);  
+	}
+
+	.navbar >.title{
+		font-size:18px;
+		color:#333;
+		display:inline-block;
+		height:50px;
+		line-height:50px;
+
+	}
+	.logo-mini{height:50px;line-height:50px;}
+	.main-header .sidebar-toggle{padding:8px;}
+	.sidebar-menu li.header{
+		font-size:18px;
+		padding:18px 15px 18px 15px;
+	}
+	.treeview-menu > li{
+		height:45px;
+	}
+
+	.sidebar-menu>li{
+		border-bottom:1px solid;
+	}
+
+	.sidebar-menu .treeview-menu>li>a {
+		padding: 0px 0px 0px 33px;
+		display: block;
+		font-size: 12px;
+		height: 44px;
+		line-height: 44px;
+}
+
+.sidebar-menu .treeview-menu{
+	padding-left:0px
+}
+
+.content {
+    position: relative;
+}
+
+
+.content #mainFrame{
+	width:100%;
+    background: #f5f5f5;
+    position: relative;
+}
+
+
+.navbar-nav > .user-menu > .dropdown-menu > .user-body{
+	padding:6px;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > .user-body{
+	border:none;	
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > .user-body a{
+	color:#667688 !important;
+}
+
+.dropdown-menu{
+	min-width:130px;
+}
+
+.navbar-nav > .user-menu .user-image{
+	/**褰撲釜浜哄ご鍍忓彸杈规病鏈夋枃瀛楁椂鍊欎娇鐢�**/
+	margin-right:0px;
+}
+
+.navbar-nav > .user-menu > .dropdown-menu > .user-body:hover{
+	background-color: #eff4f5;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-body a:hover{
+	color:#0184cf !important;
+	background-color:none !important;
+	font-weight:bold;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #eff4f5;
+	font-weight:bold;
+	color:#0184cf !important;
+}
+ .treeview-menu a{
+     font-size: 0px;
+ }
+ .treeview-menu a *{
+     vertical-align: middle;
+ }
+ .treeview-menu a span{
+     font-size:12px
+ }
+.treeview-menu a i{
+    text-align: center;
+	font-size:10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.rightBar{
+		width:62px;
+		position:absolute;
+		right:0px;
+		top:0px;
+		bottom:0px;
+		padding-top:82px;
+		padding-left: 8px;
+		padding-right: 8px;
+
+	}
+ .content-wrapper, .right-side{
+     background: #f5f5f5 !important;
+ }
+ #leftTreeContainer i{
+     /*width: 30px;*/
+     /*font-size: 24px;*/
+ }
+ .treeview >a>i:first-child{
+     font-size: 18px;
+     width: 56px;
+     margin-left: -6px;
+     text-align: center;
+ }
+ .treeview-menu >li>a>i{
+     width:10px;
+     font-size: 12px;
+     -webkit-transform:scale(0.8)
+
+ }
+ .treeview-menu >li>a>.fa-circle-o{
+     font-size: 6px;
+     -webkit-transform:scale(0.5)
+ }
+ .treeview >a span{
+     margin-left: 5px;
+ }
+
+ .sidebar-menu>li>a {
+     padding: 12px 0px 12px 0px;
+     display: block;
+ }
+
+
+ @media screen and (max-width: 768px) {
+    .content {
+		/*padding-top:50px;*/
+	}
+	.rightBar{
+		padding-top:149px;
+	}
+}
+
+@media all{
+	.navbar-custom-menu .navbar-nav > li > a{
+
+		padding-top:12.5px;
+		padding-bottom:0px;
+		height:50px;
+	}
+}
+
+
+ .moveTag{
+    position: absolute;
+     /* background: rgb(18, 52, 86); */
+     list-style: none;
+     width: 30px;
+     height: 30px;
+     float: right;
+     margin-bottom: 4px;
+     background:rgba(0, 89, 179,0.5);
+     background:#2298d9\0;
+     text-align: center;
+     border-radius: 4px;
+     z-index: 999;
+ }
+ .moveTag i{
+     color: #fff;
+     font-size: 28px;
+ }
+ /*adminlte 淇敼鍐呭*/
+ .navbar-static-top >.sidebar-toggle,.navbar-static-top >.title{
+	float:left;
+}
+.horizontalTab{
+	display:none
+}
+
+.main-sidebar{
+	z-index:10000 !important;
+}
+.sidebar-mini.sidebar-collapse .sidebar-menu>li>.treeview-menu{
+	margin-top:-1px
+}

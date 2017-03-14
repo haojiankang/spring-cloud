@@ -1,0 +1,203 @@
+body{
+	background:none;
+}
+.form-horizontal{
+	padding:10px
+}
+.resource .block-square{
+    width:300px;
+    height:150px;
+    background:#f2f2f2;
+    border-radius: 2px;;
+    margin:16px 0px 0px 16px;
+    padding:30px 10px 10px 20px;
+    position: relative;
+    float: left;
+
+}
+.resource .block-square .title{
+    font-size:16px;
+    color:#666666;
+    width:215px;
+}
+.resource .block-square p{
+    display: table;
+}
+.resource .block-square span{
+    display:table-cell;
+    word-break:break-all; 
+    word-wrap:break-word;
+}
+.resource .block-square .btn-ctrl-group{
+    width: 60px;
+    text-align: right;;
+}
+.resource .block-square .btn-ctrl-group button{
+    width:19px;
+    height:19px;
+    background: none;
+    color: #666666;
+}
+.resource .block-square .btn-ctrl-group i{
+    font-size: 19px;
+    float: left;
+    padding-top: 6px;
+}
+.block-square .btn-ctrl-group i+i{
+    padding-top: 5px;
+}
+
+.resource .block-square .btn-ctrl{
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    width: 25px;
+    height:25px;
+    padding: 0px;
+    margin: 0px;
+    background: none;
+    font-size: 25px;;
+    line-height: 1em;
+}
+.resource .block-square .btn-ctrl i{
+    font-size: 25px;
+    color: #bfbfbf;
+
+}
+
+.resource .rightbar .content{
+    background: #fff;
+}
+.resource .btn-selected i{
+    color:#0f79b7 !important
+}
+
+.resource .form1{
+    display: table;
+    width: 100%;
+    padding-top:20px;
+}
+.resource .form1 .cell-box{display:table-cell;padding-right:60px;width: 50%;float: left}
+.resource .form1 label{
+    color: #5f91b4;
+}
+.resource .form1 .cell-box input,.form1 .cell-box textarea{
+    border: 1px #d6e0ec solid;
+    min-height: 35px;
+    background: #fff;;
+    color: #666666;
+    margin-bottom: 10px;
+    background: #eeeeee;
+    -webkit-box-shadow: none;
+    box-shadow:none;
+}
+.resource .form1 .cell-box textarea{
+    width: 100%;
+    color: #666666;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    resize: none;
+    display: block;
+
+}
+.resource .input-box{display: table;width:100%;}
+.resource .input-box label{width: 75px;vertical-align: top;}
+.resource .rightbar .content .topcontent{
+    padding:30px 0px 0px 60px;
+}
+
+.resource .content .header-title{
+    background: #f7f8f9;
+    height:60px;
+    border-bottom: 1px #eeeeee solid;
+    padding-left: 60px;
+    font-size: 16px;
+    color: #5f91b4;
+    line-height: 60px;;
+    margin-bottom: 0px;
+}
+.resource .btn-group{
+    height: 40px;
+    padding-left:75px ;
+    min-width: 275px;
+}
+.resource .btn-group button{
+    width: 95px;
+    margin: 0px;
+}
+.resource .cancel{
+    border:1px #d0d0d0 solid;
+    color: #666666;;
+    background: #f5f5f5;
+    margin-left: 3px !important
+}
+.resource .confirm{
+    background: #1d94d9;;
+}
+.resource .tablebox{
+    top:412px;
+    padding: 16px 0px;
+    border: none;
+}
+
+.resource .tablebox .header{
+    height: 60px;
+    background-color: #f7f8f9;
+    color:#5f91b4;
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 60px;
+}
+
+.resource .rightbar .content{
+    bottom: 16px;
+    overflow: hidden;
+}
+.resource .leftBar{
+    bottom: 0px;
+}
+
+.resource .fullwrap{
+    width: 100% !important;
+}
+
+.resource .right_content_1,.resource right_content_2{
+	padding:15px
+}
+/****/
+@media screen and (max-width: 1024px) {
+    body{
+        padding: 16px 0px;
+    }
+    .resource .bottombar{
+
+    }
+    .resource .rightbar .content{
+        position: relative;
+    }
+    .resource .tablebox {
+        position: relative;
+        top:0px !important;
+        padding: 0px !important;
+        margin: 0;
+    }
+
+    .resource .btn-group button{
+        width: 65px;
+        margin: 0px;
+    }
+    .resource .block-square{
+        width: 287px;
+    }
+    .resource .tablebox .noscrollbox{
+
+    }
+}
+
+.resource .rightbar{
+    border:1px #dbdbdb solid;
+    background: #fff;
+}
+
+

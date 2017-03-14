@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>机构管理</title>
+    <link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+    <script src="../../static/js/modular.js" data-config="../../static/js/config.js" data-main="sysmgr.organization"></script>
+<style>
+    .fixed-container-full .table-container{
+        top:40px;
+    }
+</style>
+</head>
+<body>
+
+
+  <!--内容页面布局 开始-->
+    <div class="frame-content">
+        <div class="left">
+            <p class="head">
+              	选择机构进行维护
+            </p>
+            <div>
+            	<div id="organization" class="ztree"></div>
+            </div>
+        </div>
+        <div class="cellspacing"></div>
+        <div class="right">
+            <div class="wrap">
+                <div class="top">
+					<div class="container-fluid tools-bar">
+		                <div class="search-full row">
+		                    <div class="col-sm-6 button-group">
+		                        <button class="btn-base btn-blue btn-response" id="btn-add"><i class="fa fa-user-plus" aria-hidden="true"></i>新增</button>
+		                        <button class="btn-base btn-green btn-response" id="btn-edit-check"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>修改</button>
+		                        <button class="btn-base btn-orange-red btn-response" id="btn-del-check"><i class="fa fa-trash-o" aria-hidden="true"></i>删除</button>
+		                    </div>
+			                   
+		                    
+		                </div>
+		
+		</div>
+                </div>
+                <div class="body">
+                    <div class="wrap  border-bg-default">
+						 <!--带导航条的表格 固定布局 样式开始-->
+                        <div class="">
+
+                            <!--标题栏 开始-->
+                            <div class="header">
+                                <span><span id="list_title"></span>下级机构信息列表</span>
+
+                                <span class="switch-box">
+                                    <button class="switch-view list-view">
+                                        <i class="fa fa-th-large" title="列表视图"></i>
+                                    </button>
+                                    /
+                                     <button class="switch-view table-view selected-view-active">
+                                         <i class="fa fa-th-list active" title="方块视图"></i>
+                                     </button>
+                                </span>
+
+                            </div>                         
+
+                            <!--这里写入方块布局内容-->
+                            <div class="block-square-list" id="dataList">
+
+                            </div>
+                        </div>
+                        <!--带导航条的表格 固定布局 样式开始-->
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    <!--内容页面布局 开始-->
+    
+    
+
+			<div class="modal fade" id="datamodal" >
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title">机构信息</h4>
+			      </div>
+			      <div class="modal-body">
+			        <form class="form-horizontal" role="form" id="dataform">
+						<div class="form-group">
+						    <div class="form-group-input">
+								<label for="pname" class="col-xs-3 control-label">上级机构：</label>
+								<div class="col-xs-3">
+									<input id="id" name="id" type="hidden">
+									<input id="pname" readonly="readonly" name="pname" class="form-control">
+									<input type="hidden" name="pcode" class="form-control">
+								</div>
+							</div>
+							<div class="form-group-input">
+								<label for="code" class="col-xs-3 control-label">机构编码：</label>
+								   <div class="col-xs-3">
+										<input id="code" readonly="readonly" name="code" class="form-control">
+								   </div>
+						    </div>
+						</div>
+						<div class="form-group">
+						    <div class="form-group-input">
+								<label for="name" class="col-xs-3 control-label">机构名称：</label>
+								<div class="col-xs-3">
+									<input id="name"  autocomplete="off" name="name" class="form-control" />
+								</div>
+						    </div>
+							<div class="form-group-input">
+								<label for="code" class="col-xs-3 control-label">机构地址：</label>
+								   <div class="col-xs-3">
+										<input id="address"  name="address" class="form-control">
+								   </div>
+						    </div>
+							
+							
+					    </div>
+						<div class="form-group">
+						    <div class="form-group-input">
+								<label for="code" class="col-xs-3 control-label">联系人：</label>
+								   <div class="col-xs-3">
+										<input id="contactPerson"  name="contactPerson" class="form-control">
+								   </div>
+						    </div>
+							<div class="form-group-input">
+								<label for="code" class="col-xs-3 control-label">电话：</label>
+								   <div class="col-xs-3">
+										<input id="phone"  name="phone" class="form-control">
+								   </div>
+							</div>
+					    </div>
+						<div class="form-group">
+						    <div class="form-group-input">
+								<label for="code" class="col-xs-3 control-label">排序等级：</label>
+								   <div class="col-xs-3">
+										<input id="orderNum"  name="orderNum" class="form-control">
+								   </div>
+						    </div>
+							<div class="form-group-input">
+								<label for="code" class="col-xs-3 control-label">是否可用：</label>
+								   <div class="col-xs-3">
+										<label class="radio-inline">
+											<input type="radio" id="isUse1" name="isUse" value="0" checked>可用
+										</label>
+										<label class="radio-inline">
+											<input type="radio" id="isUse2" name="isUse" value="1">禁用
+										</label>
+								   </div>
+							</div>
+					    </div>
+						<div class="form-group hide" >
+						      <div class="form-group-input">
+								  <label for="code" class="col-xs-3 control-label">机构级别：</label>
+								   <div class="col-xs-3">
+										<input id="slevel"  name="slevel" class="form-control hide" />
+								   </div>
+							  </div>
+					    </div>
+					</form>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-success" id="btn-save" >
+			        	<span class="glyphicon glyphicon-save" aria-hidden="true"></span>保存
+			        </button>
+			        <button type="button" class="btn btn-info" data-dismiss="modal">
+			        	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+			        </button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->	
+
+
+
+
+
+
+
+<button class="open-close hide" id="open-close"><i class="fa fa-exchange" aria-hidden="true"></i></button>
+
+	<script id="template-tbody" type="text/x-handlebars-template" des="机构信息模版" >
+		<div id="data-view-block">
+
+        {{#each this}}
+			<div  class="block-square case-checkbox" data-id="{{id}}"   >
+                    <span class="title">{{name}}({{code}})</span>
+                    <span class="btn-ctrl-group">
+                        <button data-select="btn-edit" data-id="{{id}}" title="编辑"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                        <button {{#if children.length}} class="hidden"  data-disable="true" {{/if}} data-select="btn-del" data-id="{{id}}" data-code="{{code}}" title="删除"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                    </span>
+                <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+            </div>
+		{{/each}}
+
+        </div>
+        <table id="data-view-table" class="table-custom-normal">
+        {{#each this}}
+            <tr class="case-checkbox" data-id="{{id}}">
+                <td><label class="square-btn"   title="选择"><i class="fa fa-square-o" aria-hidden="true" data-id="{{id}}" data-code="{{code}}"></i></label></td>
+                <td>{{name}}({{code}})</td>
+                <td class="btn-ctrl-group">
+                    <button data-select="btn-edit" data-id="{{id}}"  title="编辑"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                    <button {{#if children.length}} class="hidden" data-disable="true" {{/if}} data-select="btn-del" data-id="{{id}}" data-code="{{code}}" title="删除"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </td>
+            </tr>
+        {{/each}}
+            </table>
+	</script>
+	
+</body>
+</html>

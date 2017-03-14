@@ -16,6 +16,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.ghit.framework.consumer.utils.CS;
 import com.ghit.framework.consumer.utils.security.filter.SecurityManagerFilter;
 import com.ghit.framework.consumer.utils.security.filter.SessionManagerFilter;
 
@@ -43,6 +44,7 @@ public class ConsumerConf {
         List<String> urlPatterns = new ArrayList<String>();
         urlPatterns.add("/*");
         registrationBean.setUrlPatterns(urlPatterns);
+        CS.setSecurityConfig(conf);
         return registrationBean;
     }
 

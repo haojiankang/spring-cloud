@@ -1,0 +1,146 @@
+/**鍙宠竟娴姩鎸夐挳鏍峰紡**/
+
+.rightFloatMenu{
+		width:176px;
+		position:absolute;
+        padding:10px 0px;
+        z-index:1000000;
+	}
+	.rightFloatMenu li{
+		position:relative;
+		list-style:none;
+		width:160px;
+		height:30px;
+		float:right;
+		margin-bottom:4px;
+		background:rgba(1, 131, 207,0.5);
+		background:#0183cf\9;
+		padding-left:16px;
+		border-radius:4px;
+		cursor: pointer;
+	}
+	.rightFloatMenu li:hover{
+		width:176px;
+		background:rgba(1, 131, 207,0.8);
+		background:#258cc8\9;
+		border-radius:15px 4px 4px 15px;
+		
+	}
+
+	.rightFloatMenu .active{
+		background:#0059b3 !important;
+	}
+
+
+	.rightFloatMenu li a{		
+		width:100%;
+		height:30px;
+		line-height:30px;		
+		color:#fff;
+		display:table-cell;
+	}
+.rightFloatMenu li a i{
+    font-size: 12px;
+    -webkit-transform: scale(0.5);
+}
+	.rightFloatMenu li a:hover{
+		text-decoration: none;
+	}
+	.rightFloatMenu li:last-child a{
+		margin-bottom:0px;
+	}
+	.rightFloatMenu li a .title{
+		padding-left:8px;
+		padding-right:8px;
+	}
+	.rightFloatMenu li .remove{
+		vertical-align: middle;
+		display:table-cell;
+		padding-left:8px;
+		padding-right:8px;
+		color:#fff;
+		font-size: 10px;
+	}
+
+	.floatBtn{
+		/*position:absolute;
+		right:57px;
+		bottom:-46px;
+		*/
+		width:46px;
+		height:46px;
+        font-size: 0px;
+        margin-left: 16px;
+		border-radius:4px;
+		text-align:center;
+		font-size:27px;
+		cursor: pointer;
+		outline: none;
+		background:#eff1f4;
+		color:#4473c2;
+        vertical-align: middle;
+	}
+    .floatBtn i{
+        font-size: 28px;
+    }
+	.floatBtn:hover{
+		color:#eff1f4;
+		background:#4473c2;		
+	}
+	.hide{
+		display:none;
+	}
+
+	#floatMenuBox{
+        width: 176px;
+        text-align: center;
+		position:absolute;
+		top:200px;
+		right:15px;
+		z-index:100001;
+	}
+	.rightFloatMenu{
+		display: none;
+	}
+	#floatMenuBox:hover .rightFloatMenu,.rightFloatMenu:hover .rightFloatMenu{
+        display:block;
+	}
+
+
+/*固定的历史记录样式**/
+.historyFixedMenu{
+	min-width:150px !important;
+}
+.historyFixedMenu .active {
+	background-color: #337ab7 !important;
+	border-radius:0px !important;
+}
+.historyFixedMenu li{
+	position:relative;
+}
+.historyFixedMenu .remove{
+	position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #8194a9;
+    cursor: pointer;
+}
+.historyFixedMenu .remove:hover{
+	color:#4589c3
+}
+
+.historyFixedMenu .active a{
+	padding-right:40px;
+	background-color: #337ab7 !important;
+}
+@media (max-width: 991px){
+	.historyFixedMenu .active a{
+		padding-right:40px;
+		background-color: #337ab7 !important;
+	}
+}
+       
+.historyFixedMenu .active a span,.historyFixedMenu .active i,.historyFixedMenu .active .remove{
+		color:#fff !important;
+	}
+	

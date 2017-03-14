@@ -1,0 +1,250 @@
+*{
+    padding:0px;
+    margin:0px;
+    border:0px;
+    font-family: 'Microsoft YaHei',Arial,'Courier New', Helvetica, sans-serif;
+    outline: none;    
+}
+.widthAnimate{
+	-webkit-transition: -webkit-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    -moz-transition: -moz-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    -o-transition: -o-transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+body{
+    min-width: 1024px;
+    min-height: 600px;
+}
+
+.topbar,.footbar{
+	height:95px;
+	width:100%;
+	background:#fff;
+  }
+  .content{
+	position:absolute;
+	left:0px;
+	top:95px;
+	bottom:95px;
+	min-height:400px;
+	right:0px;
+	width:100%;
+    min-width: 1024px;
+	background:#0082ce;
+	text-align:center;
+
+  }
+  .logoBox{
+	width:147px;
+	height:47px;
+	padding:24px;
+  }
+  .logoBox img{
+      width:147px;
+  }
+  .leftImage{
+			width:436px;
+			height:330px;
+			float:left;
+
+		}
+  .leftImage img{
+      width:100%;
+      position:relative;
+  }
+  .standardBox{
+      width:1024px;
+      position:relative;
+      margin:auto;
+      display:none;
+      padding:0px 20px;
+      overflow: hidden;
+
+
+
+  }
+  .rightLoginBox{
+	width:400px;
+	height:335px;
+	background:#cfe5f1;
+	float:right;
+	padding:50px 30px;
+
+	-webkit-box-shadow: inset 0 1px 5px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow: inset 0 1px 5px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+
+  }
+
+  .rightLoginBox .title{
+	font-size:16px;
+	color:#0184cf;
+	text-align:left;
+  }
+  .rowBox{
+	width:100%;
+	height:38px;
+	display:table;
+  }
+  .rowBox div{
+	display:table-cell;
+  }
+
+  .rowBox .iconBox{
+	width:18px;
+	height:18px;
+	background:#fff;
+
+	border-top:1px #ccd4db solid;
+	border-left:1px #ccd4db solid;
+	border-bottom:1px #ccd4db solid;
+
+	padding-left:10px;
+	padding-right:10px;
+  }
+
+  .rowBox .inputBox{
+	width:100%;
+  }
+  .rowBox .inputBox input{
+	width:100%;
+	padding-top:6px;
+	padding-top:9px\9;
+	padding-left:12px;
+	padding-right:12px;
+	padding-bottom:6px;
+
+	color:#666;
+  }
+  .iconBox span{
+      color:#4caade;
+  }
+
+
+  .codeRowBox{
+				width:100%;
+				height:40px;
+				display:table;
+			}
+			.codeRowBox .codeInputBox{
+				width:155px;
+				height:40px;
+				display:table-cell;
+			}
+
+			.codeRowBox .imageCode{
+				width:80px;
+				height:40px;
+				padding-left:10px;
+				display:table-cell;
+			}
+
+			.codeRowBox .imageCode img{
+				
+				width:80px;
+				height:40px;
+
+			}
+
+			.codeRowBox .refresh{
+				width:70px;
+				height:40px;
+				display:table-cell;
+			}
+	.margin-top-20{
+		margin-top:20px;
+	}
+	.loginButtonbox{
+		width:100%;
+		height:40px;
+	}
+	.loginButtonbox button{
+		width:100%;
+		height:40px;
+		background:#0083cf;
+		border-radius:5px;
+		color:#fff;
+		font-size:16px;
+	}
+
+	.iconBox lable{
+		color:#0083cf;
+	}
+
+	.rightRadius{
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		border-top-right-radius:5px;
+		border-bottom-right-radius:5px;
+	}
+	.leftRadius{
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		border-top-right-radius:0;
+		border-bottom-right-radius:0;
+	}
+
+/**
+		background:#fff;
+	border:1px #ccd4db solid;
+	border-radius:5px;
+	**/
+
+	.inputBox input{
+		border-top:1px #ccd4db solid;
+		border-right:1px #ccd4db solid;
+		border-bottom:1px #ccd4db solid;
+		height:40px;
+		background:#fff;
+	}
+	input:focus{
+			border:1px #66afe9 solid;
+			outline: 0;
+			-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+		}
+		.footbar p{
+			font-size:14px;
+			line-height:95px;
+			color:#727272;
+			text-align:center;			
+		}
+		.footbar{
+			position: fixed;
+			bottom:0px;
+			left:0px;
+		}
+		.refresh button{
+			background:none;
+			color:#0082ce;
+			font-size:16px;
+		}
+		.loginButtonbox button:hover{
+			background:#48a2d7;
+		}
+.findPass button{
+    color:#0185d0;
+    background:none;
+}
+
+
+@media screen and (min-width: 1400px) {
+    .leftImage{
+        width:655px;
+        height:496px;
+
+
+
+    }
+    .leftImage img{
+        top:-77px;
+    }
+    .standardBox{
+        width: 1280px;
+        overflow: inherit;
+
+
+
+    }
+}
+
+

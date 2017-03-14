@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>呆萌</title>
+    <Link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+    <link rel="stylesheet" href="../../static/framework/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/framework/FontIcon/iconfont.css">
+    <link rel="stylesheet" href="../../static/framework/web-font-awesome/css/font-awesome.css">
+    
+    <link rel="stylesheet" href="../../static/css/framework-public.css">
+    <link rel="stylesheet" href="../../static/framework/discreteness-resources/css/discreteness.css">
+</head>
+<style>
+    body >div{
+        width:400px;
+    }
+</style>
+<body>
+
+<!--
+右侧框架开始
+说明：主要控制好frame-content宽高内容自适应
+-->
+<div class="main">
+    <div class="frame-content">
+        <div class="left">
+            left
+        </div>
+        <div class="right">
+            <div class="wrap">
+                <div class="top">
+                    top
+                </div>
+                <div class="bottom">
+                    bottom
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--右侧框架结束-->
+
+<!--窗体公共样式 开始-->
+<div class="floatbox roleinfo-box"  id="modal" target-draggable="flase">
+    <div class="left-block-blue crumb"></div>
+    <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="title">
+        系统管理员的资源信息
+    </div>
+    <hr class="splitline" />
+    <form>
+        <div class="form-inline">
+            <dl>
+                <dd><label>配置分组:</label><input class="input-base" /></dd>
+                <dd><label>配置分组:</label><input class="input-base" /></dd>
+                <dd><label>配置分组:</label><input class="input-base" /></dd>
+                <dd><label>配置分组:</label><input class="input-base" /></dd>
+
+                <dd>
+                    <label>认证类型:</label>
+                    <!-- Split button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn selectedValue">Action</button>
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </dd>
+
+
+
+                <dd>
+                    <label>状　　态:</label>
+                    启用<input class="radio-base" name="xx" type="radio" />
+                    未启用<input class="radio-base" name="xx" type="radio" />
+                </dd>
+
+            </dl>
+        </div>
+        <hr class="splitline" />
+        <div class="footbar">
+            <button class="btn-base confirm">确认</button>
+            <button  class="btn-base cancel">取消</button>
+        </div>
+    </form>
+</div>
+<!--窗体公共样式 结束-->
+<!--窗体公共样式 开始-->
+<div class="floatbox roleinfo-box"  id="normal" target-draggable="true">
+    <div class="left-block-blue crumb"></div>
+    <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="title">
+        系统管理员的资源信息
+    </div>
+    <hr class="splitline" />
+    <div class="form-inline">
+        <dl>
+            <dd><label>配置分组:</label><input class="input-base" /></dd>
+            <dd><label>配置分组:</label><input class="input-base" /></dd>
+            <dd><label>配置分组:</label><input class="input-base" /></dd>
+            <dd><label>配置分组:</label><input class="input-base" /></dd>
+        </dl>
+    </div>
+    <hr class="splitline" />
+    <div class="footbar">
+        <button class="btn-base confirm">确认</button>
+        <button  class="btn-base cancel">取消</button>
+    </div>
+</div>
+<!--窗体公共样式 结束-->
+
+<!--文字内容框-->
+<!--窗体公共样式 开始-->
+<div class="floatbox roleinfo-box"  id="normal" target-draggable="true">
+    <div class="left-block-blue crumb"></div>
+    <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="title">
+        系统管理员的资源信息
+    </div>
+    <hr class="splitline" />
+    <div class="form-inline">
+       <p>
+           请先选择要编辑的记录!
+       </p>
+    </div>
+    <hr class="splitline" />
+    <div class="footbar">
+        <button class="btn-base confirm">确认</button>
+        <button  class="btn-base cancel">取消</button>
+    </div>
+</div>
+<!--窗体公共样式 结束-->
+<p>弹出框 使用方式：id="xx" 是否可拖动：target-draggable="true"，true为普通弹出框可拖动，附带淡入淡出动画， false为模态，不可拖动，附带上下出场效果</p>
+<button type="button" class="btn btn-primary btn-lg"  data-target="#modal">弹出一个模态框</button>
+<button type="button" class="btn btn-primary btn-lg"  data-target="#normal">弹出一个普通可拖动框</button>
+<br/>
+<p>双排列表样式开始</p>
+<button type="button" class="btn btn-primary btn-lg"  data-target="#userinfo">弹出一个双排可拖动框</button>
+<div class="floatbox floatbox-double"  id="userinfo" target-draggable="true">
+    <div class="left-block-blue crumb"></div>
+    <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="title">
+        用户信息
+    </div>
+    <hr class="splitline" />
+    <form>
+        <div class="form-inline">
+            <dl class="col-half">
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd><label>分组:</label><input class="input-base" /></dd>
+                <dd>
+                    <label>状态:</label>
+                    男<input class="radio-base" name="sex" type="radio" />
+                    女<input class="radio-base" name="sex" type="radio" />
+                </dd>
+                <dd>
+                    <label>状态:</label>
+                    启用<input class="radio-base" name="xx" type="radio" />
+                    未启用<input class="radio-base" name="xx" type="radio" />
+                </dd>
+
+            </dl>
+        </div>
+        <hr class="splitline"/>
+        <div class="footbar">
+            <button class="btn-base confirm">确认</button>
+            <button  class="btn-base cancel">取消</button>
+        </div>
+    </form>
+</div>
+<p>树样式开始</p>
+<button type="button" class="btn btn-primary btn-lg"  data-target="#resource">弹出一个树框</button>
+<div class="floatbox resources-list-box" id="resource" target-draggable="true">
+    <div class="left-block-blue crumb"></div>
+    <button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
+    <div class="title">
+        系统管理员的资源信息
+    </div>
+    <div class="sourcetree">
+        <ul>
+            <li> <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>访问系统</p>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>系统管理 <i class="fa fa-check" aria-hidden="true"></i><i class="fa fa-check hover-check" aria-hidden="true"></i></p>
+                        <ul>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>权限管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>资源管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>机构管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>用户管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-end.png" /><i class="fa fa-square-o"></i>系统管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li> <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>访问系统</p>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>系统管理 <i class="fa fa-check" aria-hidden="true"></i><i class="fa fa-check hover-check" aria-hidden="true"></i></p>
+                        <ul>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>权限管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>资源管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>机构管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>用户管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-end.png" /><i class="fa fa-square-o"></i>系统管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li> <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>访问系统</p>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>系统管理 <i class="fa fa-check" aria-hidden="true"></i><i class="fa fa-check hover-check" aria-hidden="true"></i></p>
+                        <ul>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>权限管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>资源管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>机构管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>用户管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-end.png" /><i class="fa fa-square-o"></i>系统管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li> <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>访问系统</p>
+                <ul>
+                    <li>
+                        <p><i class="fa fa-minus-square-o" aria-hidden="true"></i>系统管理 <i class="fa fa-check" aria-hidden="true"></i><i class="fa fa-check hover-check" aria-hidden="true"></i></p>
+                        <ul>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>权限管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>资源管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>机构管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-center.png" /><i class="fa fa-square-o"></i>用户管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                            <li> <p><img src="../../static/framework/discreteness-resources/images/sourcetree-li-icon-end.png" /><i class="fa fa-square-o"></i>系统管理<i class="fa fa-check hover-check" aria-hidden="true"></i></p></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li> <p><i class="fa fa-plus-square-o" aria-hidden="true"></i>访问系统</p></li>
+            <li> <p><i class="fa fa-plus-square-o" aria-hidden="true"></i>访问系统</p></li>
+
+        </ul>
+    </div>
+    <div class="footbar">
+        <button class="btn-base confirm">确认</button>
+        <button  class="btn-base cancel">取消</button>
+    </div>
+</div>
+<!--带导航条的表格 流布局 样式开始-->
+<div style="width:400px;height:400px;overflow:hidden;position: relative;">
+<div class="fixed-container-full">
+
+    <div class="table-container" >
+        <table class="table-base">
+            <tr>
+                <td>12asdf3</td>
+                <td>12asdf3</td>
+                <td>12asdf3</td>
+            </tr>
+        </table>
+    </div>
+
+    <nav style="background: #654321">
+        123456
+    </nav>
+</div>
+</div>
+
+<!--上传控件开始-->
+<!--上传控件开始-->
+<!--上传控件开始-->
+
+<!--object id="ExternalInterfaceExample"  name="ExternalInterfaceExample"
+        type="application/x-shockwave-flash" data="../../static/framework/uploadController/swf/testUpload.swf" width="550" height="400">
+    <param name="movie" value="../../static/framework/uploadController/swf/testUpload.swf"/>
+    <param name="quality" value="high"/>
+    <param name="allowscriptaccess" value="always"/>
+    <a href="http://www.adobe.com/go/getflash">
+        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+    </a>
+</object-->
+
+
+
+
+
+
+
+<script src="../../static/framework/Jquery/jquery.min.js"></script>
+<script src="../../static/framework/Bootstrap/js/bootstrap.min.js"></script>
+<script src="../../static/framework/draggabilly/draggabilly.js"></script>
+<script src="../../static/framework/discreteness-resources/js/discreteness.js"></script>
+
+<script>
+
+
+</script>
+</body>
+</html>

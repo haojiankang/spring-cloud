@@ -1,0 +1,272 @@
+.module-bg{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.5);
+    z-index: 19;
+}
+.floatbox{
+    position: absolute;
+    width:400px;
+    background: #fff;;
+    padding:0px 27px;
+    z-index: 18;
+    display: none;
+}
+.floatbox-double{
+    width: 550px !important;
+}
+.active{
+    z-index: 20 !important;
+}
+.floatbox .splitline{
+    background: #d0d0d0;
+    height:1px;
+    margin:0px;
+    border: none;
+}
+.floatbox .title{
+    position: relative;
+    width: 100%;
+    text-align: left;
+    line-height: 57px;
+    height: 57px;;
+    font-size: 18px;
+    color: #333333;
+}
+.floatbox .footbar{
+    text-align: center;
+    padding:20px;
+}
+.floatbox .footbar button{
+    width: 120px;
+}
+.floatbox .cancel{
+    border:1px #d0d0d0 solid;
+    color: #666666;;
+    background: #f5f5f5;;
+}
+.floatbox .confirm{
+    background: #1d94d9;;
+}
+.floatbox .left-block-blue{
+    width:7px;
+    height: 23px;
+    position: absolute;
+    left: 0px;
+    top:17px;
+    background:#0185d0 ;
+}
+.floatbox  .close{
+    font-size:24px;
+    color:#999999;
+    position: absolute;
+    right:10px;
+    top:5px;
+}
+
+/*以上是弹出框的公共样式*/
+
+/*资源信息框样式*/
+.resources-list-box{
+    position: absolute;
+    width:400px;
+    height:520px;
+    background: #fff;;
+    padding:0px 27px;
+}
+.resources-list-box .title{
+    position: relative;
+    width: 100%;
+    text-align: left;
+    line-height: 57px;
+    height: 57px;;
+    font-size: 18px;
+    color: #333333;
+}
+.sourcetree{
+    width: 100%;
+    height:384px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    overflow:hidden;
+}
+.sourcetree >ul{
+    padding-left:9px;
+    width: 375px;
+    padding-right: 30px;
+    height:100%;
+    overflow: auto;
+}
+.sourcetree ul li{
+    color: #666666;
+    font-size:14px;
+    list-style: none;
+}
+
+.sourcetree ul li p{
+    margin-bottom: 0px;;
+    font-size: 15px;;
+}
+.sourcetree ul li i{
+    color: #c0c0c0;
+    margin-right: 10px;;
+}
+.sourcetree ul li p:hover{
+    color: #0185d0;
+}
+.sourcetree >ul>li>ul>li{padding-left:30px;}
+.sourcetree >ul>li>ul>li>ul{padding-left:6px;}
+.sourcetree >ul>li>p{
+    height:35px;
+    line-height: 35px;
+}
+.sourcetree .hover-check{
+    color:#0185d0;
+    visibility: hidden;
+    float: right;
+    margin-top: 3px;
+}
+.sourcetree p:hover .hover-check{
+    visibility:visible !important;
+}
+.sourcetree{
+    border-top: 1px #d0d0d0 solid;
+    border-bottom: 1px #d0d0d0 solid;
+}
+/*角色信息弹出框*/
+.roleinfo-box .form-group>label,.roleinfo-box .form-group>div{
+    padding:0px;
+    margin: 0px;
+}
+.roleinfo-box .input-box{
+    width: 100%;
+    display: table;
+    margin-bottom: 10px;
+}
+.roleinfo-box .input-box >label,.roleinfo-box .input-box >div{
+    display: table-cell;
+    height:30px;
+    line-height: 30px;
+}
+.roleinfo-box .input-box >label{
+    color:#666666;
+    font-size: 14px;
+    width: 74px;
+    font-weight: 100;
+}
+.roleinfo-box .input-box >div{
+}
+/**右侧框架样式 开始*/
+/*
+.frame-content{
+    position: relative;
+    width:400px;
+    height:300px;
+    display: table;
+}
+.frame-content .left{
+    display: table-cell;
+    width:100px;
+    background: #555;
+}
+.frame-content .right{
+    display: table-cell;
+    background: #888;
+}
+.frame-content .right .wrap{
+    width:100%;
+    height:100%;
+    display: table;
+
+}
+.frame-content .right .top{
+    width: 100%;
+    height:100px;
+    background: #bbb;
+    display: table-row;
+}
+.frame-content .right .bottom{
+    width:100%;
+    /*height:100%;
+    display: table-row;
+    background: #eee;
+}
+*/
+/**右侧框架样式 结束*/
+
+/**表单样式 开始*/
+.form-inline .input-base,.form-inline .area-base{
+    width: 80%;
+    background:#f2f2f2 ;
+    color: #666666;
+    border-radius: 2px;
+    padding-left:10px;
+    padding-right: 10px;
+    height:30px;
+}
+.form-inline .radio-base{
+    vertical-align: middle;
+    margin: 0px 10px;
+}
+.form-inline{
+    width:100%;
+    padding: 15px 0px;
+    overflow: hidden;
+}
+.form-inline dl{
+    width: 100%;
+    color: #666666;
+}
+.form-inline dl label,.form-inline dl dd{
+    height:30px;
+    line-height: 30px;
+    float: left;
+}
+.form-inline dl label{
+    width: 20%;
+    min-width: 42px;
+    font-weight: 100;
+}
+.form-inline .btn-group .selectedValue{
+    min-width: 50px;
+}
+.form-inline .btn-group button{
+    background: #f2f2f2 !important;
+    height: 30px !important;
+    padding:0px 12px;
+}
+.form-inline dl dd{
+    width: 100%;
+    font-weight: 100;
+    margin:5px 0px;
+}
+.col-half dd{
+    width: 50% !important;;
+    float: left;
+}
+.col-half label{
+}
+.col-half dd:nth-child(1n){
+    padding-right: 10px;
+}
+.col-half:nth-child(2n){
+    padding-left: 10px;
+}
+/**表单样式 结束*/
+
+/**带导航条的表格 固定布局 样式开始**/
+ .fixed-container-full{
+     position:absolute;width:100%;height:100%;
+ }
+.fixed-container-full .table-container{
+     position: absolute;top:0px;right:0px;bottom: 60px;left:0px;background: #555
+ }
+/**基本表格样式**/
+.table-base{
+    width:100%;background: #777
+}

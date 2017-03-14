@@ -1,0 +1,141 @@
+.m-hide{
+    display: none;
+}
+.block-square-active{
+    border:1px #51b1eb solid;
+}
+.block-square-active .fa-check-circle-o{
+    color:#51b1eb !important;
+}
+.block-square{
+    width:47%;
+    height:100px;
+    background:#f2f2f2;
+    border-radius: 4px;
+    margin: 0px 0px 2% 2%;
+    padding:15px;
+    position: relative;
+    float: left;
+
+}
+.block-square .title{
+    font-size:16px;
+    color:#666666;
+    /*width:80%;*/
+    max-width:140px;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.block-square p{
+    display: table;
+}
+.block-square span{
+    display:table-cell;
+    word-break:break-all; /*鏀寔IE锛宑hrome锛孎F涓嶆敮鎸�*/
+    word-wrap:break-word;/*鏀寔IE锛宑hrome锛孎F*/
+}
+
+.block-square .btn-ctrl-group{
+    width: 20%;
+    min-width: 30px;
+    text-align: right;;
+}
+.block-square .btn-ctrl-group button{
+    width:19px;
+    height:19px;
+    background: none;
+    color: #666666;
+}
+.block-square .btn-ctrl-group i{
+    font-size: 19px;
+    float: left;
+    padding-top: 3px;
+}
+.block-square .btn-ctrl-group i+i{
+    padding-top: 5px;
+}
+
+.block-square .btn-ctrl{
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    width: 25px;
+    height:25px;
+    padding: 0px;
+    margin: 0px;
+    background: none;
+    font-size: 25px;;
+    line-height: 1em;
+}
+.block-square .btn-ctrl i{
+    font-size: 25px;
+    color: #bfbfbf;
+
+}
+.btn-selected i{
+    color:#0f79b7 !important
+}
+
+.rightbar .content{
+    bottom: 0px;
+}
+.leftBar{
+    bottom: 0px;
+}
+
+.switch-view-container{
+    float: right;
+}
+.table-view,.list-view{
+    background: none;
+    color: #999;
+}
+.selected-view-active i{
+    color:#fd694f !important;
+}
+.fixed-container-full .table-container{
+    top:40px !important;
+}
+.switch-box{
+    float: right;
+}
+.open-close{
+    z-index: 999;
+    position: absolute;
+    /*left: 150px;*/
+    right:150px;
+    top: 150px;
+    width: 46px;
+    height: 46px;
+    font-size: 0px;
+    margin-left: 16px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 27px;
+    cursor: pointer;
+    outline: none;
+    background: #eff1f4;
+    color: #4473c2;
+    vertical-align: middle;
+
+}
+
+@media screen and (min-width: 1024px) {
+        .block-square{
+		    width:30.3%;
+		    height:150px;
+        }
+    }
+    
+    .block-square-list{
+    	position: absolute;
+	    top: 40px;
+	    left:0px;
+	    right:0px;
+	    bottom: 0px;
+	    overflow: auto;
+	    margin: 10px 10px 10px 0px;
+    }

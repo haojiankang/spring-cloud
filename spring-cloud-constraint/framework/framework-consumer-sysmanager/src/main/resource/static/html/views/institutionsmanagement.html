@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>好健康-体检统计</title>
+    <Link Rel="SHORTCUT ICON" href="../../static/images/logo_white.png">
+    <link rel="stylesheet" href="../../static/framework/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/framework/FontIcon/iconfont.css">
+    <link rel="stylesheet" href="../../static/css/framework-public.css">
+    <link rel="stylesheet" href="../../static/framework/web-font-awesome/css/font-awesome.css">
+
+    <style>
+        /**以上是公共样式**/
+        .block-square{
+            width:300px;
+            height:150px;
+            background:#f2f2f2;
+            border-radius: 2px;;
+            margin:16px 0px 0px 16px;
+            padding:30px 10px 10px 20px;
+            position: relative;
+            float: left;
+
+        }
+        .block-square .title{
+            font-size:16px;
+            color:#666666;
+            width:215px;
+        }
+        .block-square p{
+            display: table;
+        }
+        .block-square span{
+            display:table-cell;
+            word-break:break-all; /*支持IE，chrome，FF不支持*/
+            word-wrap:break-word;/*支持IE，chrome，FF*/
+        }
+        .block-square .btn-ctrl-group{
+            width: 60px;
+            text-align: right;;
+        }
+        .block-square .btn-ctrl-group button{
+            width:19px;
+            height:19px;
+            background: none;
+            color: #666666;
+        }
+        .block-square .btn-ctrl-group i{
+            font-size: 19px;
+            float: left;
+            padding-top: 6px;
+        }
+        .block-square .btn-ctrl-group i+i{
+            padding-top: 5px;
+        }
+
+        .block-square .btn-ctrl{
+            position: absolute;
+            right:10px;
+            bottom:10px;
+            width: 25px;
+            height:25px;
+            padding: 0px;
+            margin: 0px;
+            background: none;
+            font-size: 25px;;
+            line-height: 1em;
+        }
+        .block-square .btn-ctrl i{
+            font-size: 25px;
+            color: #bfbfbf;
+
+        }
+        .btn-selected i{
+            color:#0f79b7 !important
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="containerBox">
+
+    <!--leftbar-->
+    <div class="leftBarBox">
+        <div class="leftBar">
+            <div class="header">
+                <span>显示下级机构用户信息</span>
+            </div>
+            <div class="basetree">
+                <ul>
+                    <li>
+                        <i class="toggleIcon iconfont">&#xe62b;</i><i class="iconfont">&#xe632;</i>
+                        河南省
+                        <ul>
+                            <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                            <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                            <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                            <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                            <li>
+                                <i class="toggleIcon iconfont">&#xe62b;</i><i class="iconfont">&#xe632;</i>
+                                河南省
+                                <ul>
+                                    <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                                    <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                                    <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                                    <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                                    <li> <i class="iconfont">&#xe626;</i>XX机构</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><i class="toggleIcon iconfont">&#xe602;</i><i class="iconfont">&#xe66e;</i>河南省</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <!--leftbar end-->
+    <!--内容块-->
+    <div class="rightbar">
+
+        <div class="content">
+                <div class="rightbar-btn-header-box">
+                    <div class="btn-ctrl">
+                        <button class="btn-base btn-blue"><i class="fa fa-user-plus" aria-hidden="true"></i>新增</button>
+                        <button class="btn-base btn-green"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>修改</button>
+                        <button class="btn-base btn-orange-red"><i class="fa fa-trash-o" aria-hidden="true"></i>删除</button>
+                    </div>
+                    <div class="search-box">
+                        <div>
+                            <input type="text" class="search-input" />
+                            <button class="btn-base">统计</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!--按钮块 end-->
+                <!--table-->
+                <div class="tablebox">
+                    <div class="header">
+                        <span> X县2的下级机构信息列表</span>
+                    </div>
+                    <div class="noscrollbox">
+                        <!--一个方块 start-->
+                        <div class="block-square">
+                            <p>
+                                <span class="title">X村(R010101302)X村</span>
+                                <span class="btn-ctrl-group">
+                                    <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </span>
+                            </p>
+                            <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+                        </div>
+                        <!--一个方块 start-->
+
+                        <!--一个方块 start-->
+                        <div class="block-square">
+                            <p>
+                                <span class="title">X村(R010101302)X村</span>
+                                <span class="btn-ctrl-group">
+                                    <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </span>
+                            </p>
+                            <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+                        </div>
+                        <!--一个方块 start-->
+
+                        <!--一个方块 start-->
+                        <div class="block-square">
+                            <p>
+                                <span class="title">X村(R010101302)X村</span>
+                                <span class="btn-ctrl-group">
+                                    <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </span>
+                            </p>
+                            <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+                        </div>
+                        <!--一个方块 start-->
+
+                        <!--一个方块 start-->
+                        <div class="block-square">
+                            <p>
+                                <span class="title">X村(R010101302)X村</span>
+                                <span class="btn-ctrl-group">
+                                    <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </span>
+                            </p>
+                            <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+                        </div>
+                        <!--一个方块 start-->
+
+                        <!--一个方块 start-->
+                        <div class="block-square">
+                            <p>
+                                <span class="title">X村(R010101302)X村</span>
+                                <span class="btn-ctrl-group">
+                                    <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </span>
+                            </p>
+                            <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+                        </div>
+                        <!--一个方块 start-->
+
+                        <!--一个方块 start-->
+                        <div class="block-square">
+                            <p>
+                                <span class="title">X村(R010101302)X村</span>
+                                <span class="btn-ctrl-group">
+                                    <button><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                    <button><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </span>
+                            </p>
+                            <button class="btn-ctrl"><i class="fa fa-check-circle-o" aria-hidden="true"></i></button>
+                        </div>
+                        <!--一个方块 start-->
+
+
+
+
+                    </div>
+                </div>
+                <!--table end-->
+            <!--按钮块-->
+        </div>
+
+        <!--底部分页-->
+        <div class="container bottombar">
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--分页 end-->
+    </div>
+    <!--内容块 end-->
+
+</div>
+
+
+</body>
+<!-- jQuery 2.2.3 -->
+<script src="../../static/framework/Jquery/jquery-1.12.4.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../static/framework/Bootstrap/js/bootstrap.js"></script>
+<script>
+
+</script>
+
+
+</body>
+</html>

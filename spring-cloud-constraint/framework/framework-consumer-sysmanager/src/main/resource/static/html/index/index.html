@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <link rel="icon" href="../../static/images/logo.ico" type="image/x-icon"/>  
+  <title>远程心电协同平台(1.0)</title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <script src="../../static/js/modular.js" data-config="../../static/js/config.js" data-main="index"></script>
+	<!--[if lt IE 9]>
+    <script src="../../static/framework/ie8-compatible/html5shiv.min.js"></script>
+  	<script src="../../static/framework/ie8-compatible/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+   
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><img src="../../static/images/logo_white.png" /></span>
+      <!-- logo for regular state and mobile devices -->
+      <div class="logo-lg">
+		<img src="../../static/images/logo_word_white.png" />
+	  </div>
+    </a>
+
+
+	<!-- Header Navbar -->
+    <nav class="navbar navbar-static-top bottomShadow" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+	  <span class="title">
+		远程心电协同平台(1.0)
+	  </span>
+	  
+
+
+	  <div class="navbar-custom-menu" id="verticalTabsBtn">
+        <ul class="nav navbar-nav">
+          
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+          
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="floatBtn">
+              <img src="../../static/images/tab_icon.png" class="user-image" alt="User Image">
+            </a>            
+            <ul class="dropdown-menu historyFixedMenu" id="verticalMenu"></ul>
+          </li>
+         
+        </ul>
+      </div>
+
+
+
+
+
+
+	  <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="../../static/images/default_avatar.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <!--span class="hidden-xs">boy</span-->
+            </a>
+            <ul class="dropdown-menu">
+
+				<li class="user-body">
+					<a href="javascript:void(0);"><span class="fa fa-user"></span><span id="userName"></span></a>
+				</li>
+
+				<li class="user-body">
+					<a href="javascript:void(0);" id="btn-modifypwd"><span class="fa fa-edit"></span>修改密码</a>
+				</li>
+				
+				<li class="user-body">
+					<a href="javascript:void(0);" class="btn-modifyTabsStyle"><span class="fa  fa-exchange"></span><span>切换标签展示</span></a>
+				</li>				
+
+				<li class="user-body">
+					<a href="javascript:void(0);" id="btn-loginout"><span class="fa fa-power-off"></span>注销</a>
+				</li>
+
+            
+            </ul>
+          </li>
+         
+        </ul>
+      </div>
+
+
+
+
+	 </nav>
+	 
+	</header>
+
+
+	
+
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+
+        <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" id="leftTreeContainer">
+
+	   <li class="header title">菜单导航</li>
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+
+
+<div style="min-height: 842px;" class="content-wrapper">
+
+ <!-- /.content -->
+ <div class="horizontalTab">
+ 	<!-- 横向标签  开始-->
+    		<div class="c-input-group">
+
+				<!--标签容器 -->
+			    <ul class="fullparent tab-list" id="horizontalMenu"></ul>
+			
+				<!-- more 模块 -->
+			    <span class="addon padding-left-8">
+			
+			        <div class="dropdown" style="display: none" id="tab-more-btn">
+			        	<!-- more 按钮 -->
+			            <button class="btn btn-default dropdown-toggle more" type="button" id="dropdownMenu1" data-toggle="dropdown">
+			                <span class="icon-sangedian"></span>
+			            </button>
+			            <!-- more容器  -->
+			            <ul class="dropdown-menu dropdown-menu-right tab-list float-tab-container" role="menu" aria-labelledby="dropdownMenu1" id="tab-more-container">
+			            </ul>
+			        </div>
+			
+			    </span>
+			
+			</div>
+    	<!-- 横向标签  结束 -->
+ </div>
+	
+	
+    <!-- Main content -->
+    <section class="content">
+    	
+      <!-- Your Page Content Here -->
+	  <div id="mainFrame">
+      </div>
+
+    </section>
+    
+ </div>
+
+ <footer class="main-footer">
+	广东健康在线信息技术股份有限公司
+  </footer>
+
+
+<div class="row">
+			<div class="modal fade" id="datamodal" >
+			       <form id="dataform" method="post"  class="form-horizontal" action="">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title">修改密码</h4>
+			      </div>
+			      <div class="modal-body" >
+						<div class="form-group" >
+							<div class="form-group-input" >
+								<label for="userName" class="col-xs-3 control-label">原密码：</label>
+								<div class="col-xs-5">
+									<input id="oldpwd" autocomplete="off" type="password"  name="oldpwd" class="form-control" placeholder="请输入原始密码"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-group-input">
+								<label for="userName" class="col-xs-3 control-label">新密码：</label>
+								<div class="col-xs-5">
+									<input id="newpwd" autocomplete="off" type="password" name="newpwd" class="form-control" placeholder="请输入新密码"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-group-input">
+								<label for="userName" class="col-xs-3 control-label">确认密码：</label>
+								<div class="col-xs-5">
+									<input id="newpwd2" autocomplete="off" type="password"  name="newpwd2" class="form-control" placeholder="请输再次输入新密码"/>
+								</div>
+							</div>
+						</div>
+			      </div>
+			      
+				<div class="modal-footer">
+		                <div class="form-group" style="text-align:center">
+		                    <button type="button" id="submit"  class="btn btn-success" id="btnUserSave" >
+					        	确认
+					        </button>
+					        <button type="button" class="btn btn-info" data-dismiss="modal">
+					        	取消
+					        </button>
+		                </div>
+			     </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+		            </form>
+			</div><!-- /.modal -->
+		</div>	
+</div>
+<!-- REQUIRED JS SCRIPTS -->
+
+<!--悬浮url选择器-->
+<script id="leftTree" type="text/x-handlebars-template">
+              {{#each this}}
+              <li class="treeview">
+                  <a href="#">
+                      <i class="fa {{icon}}"></i>
+                      <span> {{name}}</span>
+                      <i class="fa fa-angle-left pull-right"></i>
+
+                  </a>
+                  <ul class="treeview-menu">
+                      {{#each sons}}
+                         <li data-options='{{json}}'  class='leftMenu'><a href="javascript:void(0);"><i class="fa  {{icon}}" ></i><span>{{name}}</span></a></li>
+                      {{/each}}
+                  </ul>
+              </li>
+              {{/each}}
+          </script>
+</body>
+</html>

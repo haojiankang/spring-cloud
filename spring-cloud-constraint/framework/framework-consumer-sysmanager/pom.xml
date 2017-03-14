@@ -5,10 +5,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>${project.domain}</groupId>
-		<artifactId>spring-cloud-constraint</artifactId>
-		<version>${constraint.version}</version>
+		<artifactId>framework</artifactId>
+		<version>1.0.0</version>
 	</parent>
-	<artifactId>spring-cloud-starter-parent</artifactId>
-	<name>spring-cloud-starter-parent</name>
-	<packaging>pom</packaging>
+	<artifactId>framework-consumer-sysmanager</artifactId>
+	<name>framework-consumer-sysmanager</name>
+	<dependencies>
+		<dependency>
+			<groupId>${project.domain}</groupId>
+			<artifactId>framework-consumer</artifactId>
+		</dependency>
+	</dependencies>
 </project>

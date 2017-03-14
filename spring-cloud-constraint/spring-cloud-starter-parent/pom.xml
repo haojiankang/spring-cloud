@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ghit</groupId>
+		<artifactId>spring-cloud-constraint</artifactId>
+		<version>${constraint.version}</version>
+	</parent>
+	<artifactId>spring-cloud-starter-parent</artifactId>
+	<name>spring-cloud-starter-parent</name>
+	<properties>
+		<druid.version>1.0.15</druid.version>
+		<jdk15on.version>1.54</jdk15on.version>
+		<beanutils.version>1.8.3</beanutils.version>
+		<commons-lang3.version>3.4</commons-lang3.version>
+		<poi.version>3.11</poi.version>
+		<mail.version>1.4.7</mail.version>
+		<ehcache.version>2.6.6</ehcache.version>
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<ojdbc6.version>11.2.0.1.0</ojdbc6.version>
+		<jsel.version>1.0</jsel.version>
+		<commons-utils.version>1.0.0</commons-utils.version>
+		<framework-provider.version>1.0.0</framework-provider.version>
+		<framework-provider-sysmanager.version>1.0.0</framework-provider-sysmanager.version>
+		<framework-consumer-sysmanager.version>1.0.0</framework-consumer-sysmanager.version>
+		<framework-consumer.version>1.0.0</framework-consumer.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.ghit</groupId>
+				<artifactId>commons-utils</artifactId>
+				<version>${commons-utils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ghit</groupId>
+				<artifactId>framework-provider</artifactId>
+				<version>${framework-provider.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ghit</groupId>
+				<artifactId>framework-provider-sysmanager</artifactId>
+				<version>${framework-provider-sysmanager.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ghit</groupId>
+				<artifactId>framework-consumer</artifactId>
+				<version>${framework-consumer.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.ghit</groupId>
+				<artifactId>framework-consumer-sysmanager</artifactId>
+				<version>${framework-consumer-sysmanager.version}</version>
+			</dependency>
+			<!-- 数据库连接池 -->
+			<dependency>
+				<groupId>com.ghit</groupId>
+				<artifactId>commons-utils</artifactId>
+				<version>${commons-utils.version}</version>
+			</dependency>
+			<!-- 数据库连接池 -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+			<!-- jsel -->
+			<dependency>
+				<groupId>com.jsel</groupId>
+				<artifactId>jsel</artifactId>
+				<version>${jsel.version}</version>
+			</dependency>
+			<!-- 加密算法相关 -->
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk15on</artifactId>
+				<version>${jdk15on.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<!-- Apache工具组件 -->
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang3.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>${beanutils.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<!-- poi处理execl 工具类 -->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<!-- 邮件工具 -->
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>${mail.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<!-- servlte API 相关 -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet-api.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- oracle 驱动包 -->
+			<dependency>
+				<groupId>com.oracle</groupId>
+				<artifactId>ojdbc6</artifactId>
+				<version>${ojdbc6.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+			<!-- ehcache 缓存 -->
+			<dependency>
+				<groupId>net.sf.ehcache</groupId>
+				<artifactId>ehcache-core</artifactId>
+				<version>${ehcache.version}</version><!--$NO-MVN-MAN-VER$ -->
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+	</dependencies>
+	<packaging>pom</packaging>
+</project>

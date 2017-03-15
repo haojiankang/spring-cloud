@@ -1,7 +1,0 @@
-session: 
-  timeout: 30
-  errorPage: /error/info
-  exclude: "*.ico,/error*,/static/*,/webservice/*,/index/config,/web/*,/fgDataFile/*,/region/*,/download/*"
-  notSecurity: "*.ico,/,/error*,/html/*,/static/*,/index/config,/index/login,/,/login.jsp,/index/resetPassword,/webservice/*,/oauth2/*,/index/loginOut,/web/*,/fgDataFile/*,/region/*,/download/*"
-  loginUrl: /index/login,/,/login.jsp
-  enableParam: false

@@ -15,8 +15,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.ghit.framework.commons.utils.bean.SpringUtils;
 import com.ghit.framework.commons.utils.security.model.IUser;
+import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;

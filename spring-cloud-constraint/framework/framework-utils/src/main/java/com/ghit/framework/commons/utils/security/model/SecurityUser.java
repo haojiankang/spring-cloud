@@ -2,6 +2,8 @@ package com.ghit.framework.commons.utils.security.model;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -34,7 +36,7 @@ public class SecurityUser implements IUser, Serializable {
      */
     private static final long serialVersionUID = 1L;
     private String userName;
-    private List<? extends IRole> roles;
+    private List<SecurityRole> roles=new ArrayList<>();
     // 用于存放用户具有的所有权限的编码
     private String codes;
     // 用于存放用户具有的所有url认证类型的路径
@@ -42,15 +44,15 @@ public class SecurityUser implements IUser, Serializable {
     // 用户类型信息,0为系统管理员
     private Integer userType;
 
-    private SecurityDepartment department;
-    private Map<String,Object> data;
+    private SecurityDepartment department=new SecurityDepartment();
+    private Map<String,Object> data=new HashMap<>();
     @Override
     public String getUserName() {
         return userName;
     }
 
     @Override
-    public List<? extends IRole> getRoles() {
+    public List<SecurityRole> getRoles() {
         return roles;
     }
 
@@ -60,8 +62,8 @@ public class SecurityUser implements IUser, Serializable {
             StringBuilder sb = new StringBuilder();
             // &拼接authenticationRule
             Consumer<IJurisdiction> action = juris -> {
-                if (juris.getAuthenticationType() == AuthenticationType.URL) {
-                    sb.append(juris.getAuthenticationRule());
+                if (juris.getType() == AuthenticationType.URL) {
+                    sb.append(juris.getRule());
                     sb.append(",");
                 }
             };
@@ -113,7 +115,7 @@ public class SecurityUser implements IUser, Serializable {
         this.userName = userName;
     }
 
-    public void setRoles(List<? extends IRole> roles) {
+    public void setRoles(List<SecurityRole> roles) {
         this.roles = roles;
     }
 

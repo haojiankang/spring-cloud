@@ -9,7 +9,7 @@ package com.ghit.framework.provider.sysmanager.supports.sysmgr;
 
 import java.util.List;
 
-import com.ghit.framework.commons.utils.bean.SpringUtils;
+import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;

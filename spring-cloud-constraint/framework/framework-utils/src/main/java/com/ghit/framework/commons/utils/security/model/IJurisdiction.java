@@ -23,13 +23,13 @@ public interface IJurisdiction extends Serializable{
      * 
      * @return
      */
-    AuthenticationType getAuthenticationType();
+    AuthenticationType getType();
 
     /**
      * 获取认证规则
      * 
      * @return
      */
-    String getAuthenticationRule();
+    String getRule();
 
 }

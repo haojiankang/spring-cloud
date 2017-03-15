@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
 import com.ghit.framework.commons.utils.Page;
 import com.ghit.framework.commons.utils.bean.BeanUtils;
 import com.ghit.framework.commons.utils.bean.ObjectUtils;
-import com.ghit.framework.commons.utils.bean.SpringUtils;
+import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ConfigurationService;

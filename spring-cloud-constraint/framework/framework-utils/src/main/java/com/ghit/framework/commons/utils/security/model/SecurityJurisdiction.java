@@ -26,16 +26,13 @@ public class SecurityJurisdiction implements IJurisdiction, Serializable {
         return code;
     }
 
-    @Override
-    public AuthenticationType getAuthenticationType() {
+    public AuthenticationType getType() {
         return type;
     }
 
-    @Override
-    public String getAuthenticationRule() {
+    public String getRule() {
         return rule;
     }
-
     public void setType(AuthenticationType type) {
         this.type = type;
     }

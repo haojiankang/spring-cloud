@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.SpringUtils;
+import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;

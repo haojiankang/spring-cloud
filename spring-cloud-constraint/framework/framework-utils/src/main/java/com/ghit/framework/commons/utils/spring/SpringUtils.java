@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.bean;
+package com.ghit.framework.commons.utils.spring;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;

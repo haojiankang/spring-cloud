@@ -10,8 +10,6 @@ package com.ghit.framework.consumer.sysmanager.feignclient;
 import java.util.Map;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -38,6 +36,6 @@ public interface IndexFeignClient {
     public SSTO<String> resetPassword(User user);
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
-    public SSTO<SecurityUser> login(@ModelAttribute User user);
+    public SSTO<SecurityUser> login(User user);
 
 }

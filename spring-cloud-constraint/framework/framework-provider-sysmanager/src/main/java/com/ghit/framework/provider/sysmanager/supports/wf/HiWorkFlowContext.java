@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ghit.framework.commons.utils.bean.SpringUtils;
+import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiActivityBean;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPDBean;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPNActionBean;

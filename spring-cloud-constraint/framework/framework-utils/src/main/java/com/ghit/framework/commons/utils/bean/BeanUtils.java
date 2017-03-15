@@ -15,6 +15,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -31,7 +32,13 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.ghit.framework.commons.utils.i18n.LanguageType;
+import com.ghit.framework.commons.utils.lang.DateTimeUtil;
 import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.ghit.framework.commons.utils.security.model.SecurityDepartment;
+import com.ghit.framework.commons.utils.security.model.SecurityJurisdiction;
+import com.ghit.framework.commons.utils.security.model.SecurityRole;
+import com.ghit.framework.commons.utils.security.model.SecurityUser;
 
 /**
  * Java简单对象工具类.
@@ -164,6 +171,100 @@ public class BeanUtils {
             cls = cls.getSuperclass();
         }
         return list.toArray(new Field[list.size()]);
+    }
+
+    public static String oToFromData(Object obj) {
+        StringBuilder data = new StringBuilder("");
+        if (obj != null) {
+            fieldValueToSB(obj, "", data);
+        }
+        return data.toString().replaceAll("&*$", "");
+    }
+
+    private static void fieldValueToSB(Object src, String pre, StringBuilder target) {
+        try {
+            if(pre.length()>0){
+                pre=pre+".";
+            }
+            Field[] fields = getAllFields(src.getClass());
+            accessible(fields);
+            for (Field field : fields) {
+                Object value = field.get(src);
+                Class<?> type = field.getType();
+                String name = field.getName();
+                if (value == null)
+                    continue;
+                fieldValueExec(pre+name, target, value, type );
+                target.append("&");
+            }
+        } catch (IllegalArgumentException | IllegalAccessException e) {
+            log.warn(e.getMessage(), e);
+        }
+
+    }
+
+    private static void fieldValueExec(String name, StringBuilder target, Object value, Class<?> type) {
+        if (type != Date.class && isSimpleType(type)) {
+            target.append(name);
+            target.append("=");
+            target.append(value);
+        } else if (type == Date.class) {
+            target.append(name);
+            target.append("=");
+            target.append(DateTimeUtil.getTimeNormalString((Date) value));
+        } else if (Enum.class.isAssignableFrom(type)) {
+            target.append(name);
+            target.append("=");
+            target.append(((Enum<?>) value).name());
+        } else if (Collection.class.isAssignableFrom(type)) {
+            Collection<?> colle = (Collection<?>) value;
+            if (!colle.isEmpty()) {
+                Iterator<?> iterator = colle.iterator();
+                int i=0;
+                while(iterator.hasNext()){
+                    Object next = iterator.next();
+                    fieldValueExec(name + "[" + i + "]", target, next,next.getClass());
+                    i++;
+                    
+                }
+            }
+        } else if (Map.class.isAssignableFrom(type)) {
+            Map<?, ?> map = (Map<?, ?>) value;
+            if (!map.isEmpty()) {
+                map.forEach((k, v) -> {
+                    fieldValueExec( name + "[" + k + "]", target, v,v.getClass());
+                });
+            }
+        } else {
+            fieldValueToSB(value,  name, target);
+        }
+    }
+
+    public static void main(String[] args) {
+        SecurityUser user = new SecurityUser();
+        SecurityRole role = new SecurityRole();
+        SecurityJurisdiction juris1 = new SecurityJurisdiction();
+        SecurityJurisdiction juris2 = new SecurityJurisdiction();
+        SecurityDepartment depart = new SecurityDepartment();
+        user.setId("123456");
+        user.setLanguageType(LanguageType.Simplified_Chinese);
+        user.setUserType(0);
+        List<SecurityRole> secRoles = new ArrayList<SecurityRole>();
+        List<SecurityJurisdiction> juriss = new ArrayList<SecurityJurisdiction>();
+        user.setRoles(secRoles);
+        secRoles.add(role);
+        role.setJurisdictions(juriss);
+        juriss.add(juris1);
+        juriss.add(juris2);
+        user.setDepartment(depart);
+        juris1.setCode("001");
+        juris1.setRule("URL");
+        juris2.setCode("002");
+        juris2.setRule("URL");
+        depart.setId("123");
+        depart.setName("depart");
+        String oToFromData = oToFromData(user);
+        System.out.println(oToFromData);
     }
 
     /**

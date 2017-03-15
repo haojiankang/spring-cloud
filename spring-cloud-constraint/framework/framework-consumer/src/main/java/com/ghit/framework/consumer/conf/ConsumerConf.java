@@ -19,6 +19,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.client.RestTemplate;
 
+import com.ghit.framework.commons.utils.spring.convert.FeignRemoteCallMessageConvert;
 import com.ghit.framework.consumer.utils.CS;
 import com.ghit.framework.consumer.utils.security.filter.SecurityManagerFilter;
 import com.ghit.framework.consumer.utils.security.filter.SessionManagerFilter;
@@ -83,10 +84,14 @@ public class ConsumerConf {
         return Logger.Level.FULL;
     }
 
-
     @Bean
     public Request.Options options() {
         return new Request.Options();
+    }
+
+    @Bean
+    public FeignRemoteCallMessageConvert getFeignRemoteCallMessageConvert() {
+        return new FeignRemoteCallMessageConvert();
     }
 
 }

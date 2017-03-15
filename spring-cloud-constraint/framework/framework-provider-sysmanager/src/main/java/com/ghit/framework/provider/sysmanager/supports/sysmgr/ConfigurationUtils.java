@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
 
 import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.SpringUtils;
+import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ConfigurationService;
 import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;

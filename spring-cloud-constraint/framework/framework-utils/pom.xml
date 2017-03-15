@@ -12,11 +12,7 @@
   <dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-beans</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context-support</artifactId>
+			<artifactId>spring-web</artifactId>
 		</dependency>
 		<!-- poi处理execl 工具类 -->
 		<dependency>

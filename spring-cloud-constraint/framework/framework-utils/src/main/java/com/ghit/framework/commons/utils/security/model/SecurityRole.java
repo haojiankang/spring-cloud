@@ -2,6 +2,7 @@ package com.ghit.framework.commons.utils.security.model;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,14 +17,14 @@ public class SecurityRole implements IRole, Serializable {
      * 
      */
     private static final long serialVersionUID = 1L;
-    private List<? extends IJurisdiction> jurisdictions;
+    private List<SecurityJurisdiction> jurisdictions=new ArrayList<>();
 
     @Override
-    public List<? extends IJurisdiction> getJurisdiction() {
+    public List<SecurityJurisdiction> getJurisdiction() {
         return jurisdictions;
     }
 
-    public void setJurisdictions(List<? extends IJurisdiction> jurisdictions) {
+    public void setJurisdictions(List<SecurityJurisdiction> jurisdictions) {
         this.jurisdictions = jurisdictions;
     }
 

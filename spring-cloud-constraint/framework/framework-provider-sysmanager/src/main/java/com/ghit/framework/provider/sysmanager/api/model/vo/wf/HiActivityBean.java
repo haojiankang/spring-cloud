@@ -12,8 +12,8 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiActivity;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 
 /**
  * ClassName:HiActivity <br>

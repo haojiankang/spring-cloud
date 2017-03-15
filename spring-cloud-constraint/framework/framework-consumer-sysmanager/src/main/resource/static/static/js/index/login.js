@@ -1,54 +1,15 @@
 var depends = [
     {name: "utils"},
-    {name: "rsa"},
+    {name: "common.rsa"},
     {name: "jwerty"},
     {name: "bsIE"},
     {name: "bootstrap-validate"},
-    {name: "login", type: "css",lazy:false}
+    {name: "index.login", type: "css",lazy:false}
 ];
-modular.define({name: "login"}, depends, function () {
-    var rsa=this.rsa;
+modular.define({name: "index.login"}, depends, function () {
+    var rsa=this["common.rsa"];
     var bsIE=this.bsIE;
     function initForm() {
-//          $('#loginForm').bootstrapValidator(
-        //                 {
-        //                     message : '此值无效',
-        //                     group : ".rowBox",
-        //                     excluded : [
-        //                         ':disabled'
-        //                     ],
-        //                     submitButtons : '#submit',
-        //                     feedbackIcons :
-        //                         {
-        //                             valid : 'glyphicon glyphicon-ok',
-        //                             invalid : 'glyphicon glyphicon-remove',
-        //                             validating : 'glyphicon glyphicon-refresh'
-        //                         },
-        //                     fields :
-        //                         {
-        //                             userName :
-        //                                 {
-        //                                     validators :
-        //                                         {
-        //                                             notEmpty :
-        //                                                 {
-        //                                                     message : '用户名不能为空'
-        //                                                 }
-        //                                         }
-        //                                 },
-        //                             password :
-        //                                 {
-        //                                     validators :
-        //                                         {
-        //                                             notEmpty :
-        //                                                 {
-        //                                                     message : '密码不能为空'
-        //                                                 }
-        //                                         }
-        //                                 }
-        //                         }
-        //                 });
-
         $('#dataform').bootstrapValidator(
             {
                 message: '此值无效',
@@ -83,9 +44,7 @@ modular.define({name: "login"}, depends, function () {
                 }
             });
         $("#submit2").click(resetSub);
-
     }
-
     function initPosition() {
         var topDist = ($(".content").height() - 335) / 2;
         $(".content .standardBox").css(
@@ -94,13 +53,8 @@ modular.define({name: "login"}, depends, function () {
             }, 500)
         $(".standardBox").fadeIn(1000);
     }
-
     //登录校验方法
     function sub() {
-        //             if (!$("#loginForm").data('bootstrapValidator').isValid()) {
-        //                 $("#loginForm").data('bootstrapValidator').validate();
-        //                 return;
-        //             }
         $.hform.trim($("#loginForm"));
         $.secAjax(
             {
@@ -111,9 +65,9 @@ modular.define({name: "login"}, depends, function () {
                     password: rsa.encrypt($('#password').val())
                 },
                 dataType: 'json',
-                success: function (data) {
-                    if (data.message) {
-                        $.hjk.messageBox.show('系统提示', data.message, {
+                success: function (ssto) {
+                    if (ssto.state) {
+                        $.hjk.messageBox.show('系统提示', ssto.message, {
                             '确认': {
                                 'primary': true,
                                 'callback': function () {
@@ -151,11 +105,11 @@ modular.define({name: "login"}, depends, function () {
                 url: "index/resetPassword",
                 data: $.hform.data($("#datamodal [name]")),
                 dataType: 'json',
-                success: function (data) {
-                    if (data.state) {
+                success: function (ssto) {
+                    if (ssto.state) {
                         $.hjk.alert(
                             {
-                                body: data.message
+                                body: ssto.message
                             });
                     }
                 }

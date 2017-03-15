@@ -2,8 +2,8 @@ package com.ghit.framework.provider.sysmanager.api.service.sysmgr;
 
 import java.util.Map;
 
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 
 public interface IndexService {
     /**
@@ -66,10 +66,9 @@ public interface IndexService {
      * loadConfig:加载配置信息.
      *
      * @author ren7wei
-     * @param rsaLoad
      * @return
      * @since JDK 1.8
      */
-    Map<String, String> loadConfig(String rsaLoad);
+    Map<String, String> loadConfig();
 
 }

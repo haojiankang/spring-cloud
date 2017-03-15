@@ -11,8 +11,8 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
 
 /**

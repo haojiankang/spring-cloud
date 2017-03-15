@@ -15,6 +15,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.Activity;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPD;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPN;
@@ -29,7 +30,6 @@ import com.ghit.framework.provider.sysmanager.api.service.wf.ActivitiesFilter;
 import com.ghit.framework.provider.sysmanager.api.service.wf.ActivityFilter;
 import com.ghit.framework.provider.sysmanager.api.service.wf.WFService;
 import com.ghit.framework.provider.sysmanager.api.service.wf.WorkFlow;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.supports.wf.FlowStateError;
 import com.ghit.framework.provider.sysmanager.supports.wf.HiWorkFlowContext;
 

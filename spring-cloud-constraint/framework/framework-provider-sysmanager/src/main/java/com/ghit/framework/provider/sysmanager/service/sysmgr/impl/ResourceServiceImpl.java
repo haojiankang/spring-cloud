@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
@@ -16,7 +17,6 @@ import com.ghit.framework.provider.sysmanager.api.supports.security.ResourceInfo
 import com.ghit.framework.provider.sysmanager.api.supports.security.ResourceType;
 import com.ghit.framework.provider.sysmanager.api.supports.security.SecurityResourceInformation;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.dao.sysmgr.ResourceDao;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.ProviderContext;

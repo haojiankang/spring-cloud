@@ -7,7 +7,6 @@
 
 package com.ghit.framework.provider.sysmanager.supports.sysmgr;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
@@ -16,16 +15,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.ghit.framework.commons.utils.FileUtils;
 import com.ghit.framework.commons.utils.bean.SpringUtils;
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
+import com.ghit.framework.provider.sysmanager.supports.conf.ProviderProperties;
 
 /**
  * ClassName:SecurityPolicy <br>
@@ -104,24 +103,14 @@ public class SecurityPolicy {
         public void run() {
             loginInfo = new HashMap<>();
             beans = new HashMap<>();
-
-            String setting;
-            try {
-                setting = FileUtils.fileToString(FileUtils.getClassRoot("config/userMgr.json"), "UTF-8");
-                if (setting == null) {
-                    log.info("no search login.json config file!");
-                    return;
-                }
-                JsonNode init = (JsonNode) PS.strToJsonObj(setting);
-                JsonNode loginType = init.findValue("loginType");
-                loginType.fieldNames().forEachRemaining(t -> {
-                    loginInfo.put(t, loginType.findValue(t).asText());
-                });
-                loginInfo.forEach((k, v) -> {
-                    beans.put(k, SpringUtils.getBean(v));
-                });
-            } catch (IOException e) {
-                log.error("load login setting fail!", e);
+            ProviderProperties conf = SpringUtils.getBean("providerProperties");
+            String[] types = conf.getLogin().getTypes();
+            if (types == null) {
+                log.info("no search login.policy config !");
+                return;
+            }
+            for (String type : types) {
+                beans.put(type.split("@")[0], SpringUtils.getBean(type.split("@")[1]));
             }
         }
 
@@ -132,15 +121,16 @@ public class SecurityPolicy {
         String name = user.getUserType() + "@" + user.getUserName();
         String realPwd = user.getPassword();
         if (SecurityPolicy.checkUserStatus(name)) {
-            com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser currentUser = loginSystem.login(user);
+            IUser currentUser = loginSystem.login(user);
             if (currentUser != null) {
-//                currentUser.getData().put("loginName", user.getUserName());
-                //Sharp.currentSession().token(Sharp.md5(Sharp.currentSession().sessionId() +new Date().getTime()+ user.getUserName()));
+                // currentUser.getData().put("loginName", user.getUserName());
+                // Sharp.currentSession().token(Sharp.md5(Sharp.currentSession().sessionId()
+                // +new Date().getTime()+ user.getUserName()));
                 SecurityPolicy.changeUserStatus(name, true);
                 // 获取密码验证规则，并对密码强度进行校验
-                JsonNode json = (JsonNode) PS.strToJsonObj("{"
-                        + SharpSysmgr.getConfigValueDef(ProviderConstant.SYSMGR_CONFIG_VALIDATE_PWD, "regexp:\"\",message:\"\"")
-                        + "}");
+                JsonNode json = (JsonNode) PS
+                        .strToJsonObj("{" + SharpSysmgr.getConfigValueDef(ProviderConstant.SYSMGR_CONFIG_VALIDATE_PWD,
+                                "regexp:\"\",message:\"\"") + "}");
                 if (!realPwd.matches(json.findValue("regexp").asText())) {
                     PS.message("密码强度太低，请尽快修改密码！");
                 }
@@ -157,11 +147,11 @@ public class SecurityPolicy {
         return loginSystem.resetPassword(user);
     }
 
-    public static boolean modifyPassword(String userid,String oldpwd, String newpwd, String userType) {
+    public static boolean modifyPassword(String userid, String oldpwd, String newpwd, String userType) {
         if (userType == null)
             userType = "0";
         UserMgr loginSystem = beans.get(userType);
-        return loginSystem.modifyPassword(userid,oldpwd, newpwd);
+        return loginSystem.modifyPassword(userid, oldpwd, newpwd);
     }
 
 }

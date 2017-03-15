@@ -12,17 +12,16 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
 import com.ghit.framework.commons.utils.mail.MailInfo;
 import com.ghit.framework.commons.utils.mail.MailUtils;
 import com.ghit.framework.commons.utils.security.RSATools;
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.IndexService;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
 import com.ghit.framework.provider.sysmanager.api.service.wf.WorkFlow;
 import com.ghit.framework.provider.sysmanager.api.supports.security.ResourceInformation;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
 import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
@@ -71,6 +70,7 @@ public class IndexServiceImpl implements IndexService {
             mailInfo.setSubject("密码重置邮件（请勿回复）");
             mailInfo.setContent("您好，您已经成功重置密码，请尽快修改您的密码，新密码为：\r\n" + user.getPassword() + "");
             MailUtils.send(mailInfo);
+            PS.message("重置密码邮件已经发送，请查收。");
             return true;
         }
         return false;
@@ -106,14 +106,12 @@ public class IndexServiceImpl implements IndexService {
     }
 
     @Override
-    public Map<String, String>  loadConfig(String rsaLoad) {
+    public Map<String, String> loadConfig() {
         Map<String, String> map = BeanUtils.map("state", "ture");
-        if (StringUtil.eq(rsaLoad, "private")) {
-            map.put("modulus", RSATools.getPublicKeyModulus());
-            map.put("exponent", RSATools.getPublicKeyExponent());
-        }
+        map.put("modulus", RSATools.getPublicKeyModulus());
+        map.put("exponent", RSATools.getPublicKeyExponent());
         map.put("auth", SharpSysmgr.getConfigValueDef(ProviderConstant.SYSMGR_CONFIG_AUTH_INFO, ""));
         return map;
-    
+
     }
 }

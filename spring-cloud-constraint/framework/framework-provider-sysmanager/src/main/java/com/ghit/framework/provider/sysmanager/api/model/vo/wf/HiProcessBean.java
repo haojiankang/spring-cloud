@@ -10,8 +10,8 @@ package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiProcess;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 
 /**
  * ClassName:HiFlowState <br>

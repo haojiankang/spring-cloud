@@ -1,12 +1,16 @@
 //设置项目部署路径
-loader.staticPath="/ghit-basic-consumer/";
-loader.dynamicPath="/ghit-basic-consumer/";
+loader.staticPath="/";
+loader.dynamicPath="/";
 loader.context.baseUrl=loader.staticPath+"static/";
+loader.context.defaultPath={
+    js:"js/",
+    css:"css/"
+};
 loader.urlRewriteSession=false;
 loader.htmlurltimestamp=true;
 //定义第三方库
 var config = {
-    para: "version=v1.0_2016.08.01",
+    para: "version=v1.0_2017.02.17",
     js: {
         jquery: "framework/Jquery/jquery.min.js",
         underscore: "framework/underscore.js",
@@ -61,7 +65,6 @@ config = {
     js: {
         utils: "js/common/utils.js",
         basic: "js/common/basic.js",
-        rsa: "js/common/rsa.js",
         bsIE: "js/common/bsIE.js",
         "combox": "js/common/combox.js",
         TabController: "js/common/TabController.js",
@@ -100,7 +103,7 @@ loader.context.put(config);
 // 定义业务专用模块
 config = {
     js: {
-        login: "js/index/login.js",
+
         index: "js/index/index.js",
         "welcome":"js/index/welcome.js",
         "demo":"js/sysmgr/demo.js",
@@ -114,7 +117,6 @@ config = {
         "statistical.report":"js/statistical/report.js"
     },
     css: {
-        login: "css/index/login.css",
         index: "css/index/index.css",
         "sysmgr.user":"css/sysmgr/user.css",
         "sysmgr.resource":"css/sysmgr/resource.css",

@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.model.vo.security;
+package com.ghit.framework.commons.utils.security.model;
 /** 
  * Project Name:EHealthData 
  * File Name:SecurityDepartment.java 
@@ -7,8 +7,6 @@ package com.ghit.framework.provider.sysmanager.api.model.vo.security;
 */ 
 
 import java.io.Serializable;
-
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IDepartment;
 
 /** 
  * ClassName:SecurityDepartment <br> 

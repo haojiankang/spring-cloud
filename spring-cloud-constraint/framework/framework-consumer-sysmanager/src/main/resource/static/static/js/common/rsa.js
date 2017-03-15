@@ -1,5 +1,5 @@
 ﻿
-modular.define({name: "rsa"}, [{name:"utils"}], function () {
+modular.define({name: "common.rsa"}, [{name:"utils"}], function () {
     var utils=this.utils;
 	var RSAUtils = {};
 	var biRadixBase = 2;
@@ -704,12 +704,12 @@ modular.define({name: "rsa"}, [{name:"utils"}], function () {
 	}
 	$.secAjax({
             type: 'POST',
-            url: "index/config",
+            url: "common/session/rsa",
             data: {"rsa":"private"},
             dataType: 'json',
-            success: function (data) {
-        	self.modulus=data.modulus;
-        	self.exponent=data.exponent;
+            success: function (ssto) {
+        	self.modulus=ssto.data.modulus;
+        	self.exponent=ssto.data.exponent;
             }
         });
 	return self;

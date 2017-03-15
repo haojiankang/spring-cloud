@@ -1,10 +1,9 @@
-package com.ghit.framework.provider.sysmanager.api.model.vo.security;
+package com.ghit.framework.commons.utils.security.model;
 
 
 import java.io.Serializable;
 
-import com.ghit.framework.provider.sysmanager.api.supports.security.AuthenticationType;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IJurisdiction;
+import com.ghit.framework.commons.utils.security.AuthenticationType;
 
 /**
  * 安全权限信息基础类

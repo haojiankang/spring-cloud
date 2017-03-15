@@ -13,11 +13,10 @@ import org.springframework.stereotype.Service;
 
 import com.ghit.framework.commons.utils.bean.BeanUtils;
 import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.model.vo.security.SecurityUser;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
 import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
@@ -32,21 +31,21 @@ import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
  * @since JDK 1.8
  * @see
  */
-@Service
+@Service("systemUserMgr")
 public class SystemUserMgr implements UserMgr {
     @Resource
     private UserDao dao;
 
     @Override
     public IUser login(User user) {
-        SecurityUser currentUser = null;
+        IUser currentUser = null;
         User findUser = dao.findUsersByName(user);
         if(findUser==null)
             return null;
         user.setCreateTime(findUser.getCreateTime());
         SharpSysmgr.userPwdMd5(user);
         if (findUser != null && StringUtil.eq(findUser.getPassword(), user.getPassword())) {
-            currentUser = SecurityUser.paserUser(findUser);
+            currentUser = PS.convertUserToIUser(findUser);
         }
         return currentUser;
     }

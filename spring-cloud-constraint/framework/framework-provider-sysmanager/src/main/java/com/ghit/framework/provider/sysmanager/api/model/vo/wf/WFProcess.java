@@ -7,7 +7,7 @@
   
 package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
 
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
+import com.ghit.framework.commons.utils.security.model.IUser;
 
 /** 
  * ClassName:Process <br/> 

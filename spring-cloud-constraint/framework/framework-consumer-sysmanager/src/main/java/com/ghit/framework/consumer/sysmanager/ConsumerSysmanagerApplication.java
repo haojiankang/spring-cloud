@@ -10,8 +10,9 @@ package com.ghit.framework.consumer.sysmanager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 /** 
  * ClassName:ConsumerApplication <br/> 
@@ -23,9 +24,10 @@ import org.springframework.context.annotation.Configuration;
  * @see       
  */
 
-@Configuration
 @EnableAutoConfiguration
 @EnableDiscoveryClient
+@EnableCircuitBreaker
+@EnableFeignClients
 @SpringBootApplication(scanBasePackages={"com.ghit.framework"})
 public class ConsumerSysmanagerApplication {
     public static void main(String[] args) {

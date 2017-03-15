@@ -5,13 +5,13 @@ if (!window.console){
 
     window.console = {};
     for (var i = 0; i < names.length; ++i)
-        window.console[names[i]] = function() {}
+        window.console[names[i]] = function() {};
 };
 (function () {
     //私有工具对象
     var _ = {};
     //私有对象
-    var _private = {};
+    //var _private = {};
     //模块容器
     var container = {};
     //加载器,提供加载模块功能
@@ -28,8 +28,8 @@ if (!window.console){
 	test:function(version,op){
 	    if(!op)op='';
 	    if(this.data[version+op]===void 0){
-		var b = document.createElement('b', op)
-		b.innerHTML = '<!--[if '+op+' IE ' + version + ']><i></i><![endif]-->'
+		var b = document.createElement('b', op);
+		b.innerHTML = '<!--[if '+op+' IE ' + version + ']><i></i><![endif]-->';
 		return b.getElementsByTagName('i').length === 1;
 	    }
 	    return this.data[version+op];
@@ -104,7 +104,7 @@ if (!window.console){
     };
     //克隆对象
     _.clone = function () {
-        var options, name, copy, clone,
+        var options, name="", copy, clone,
             target = {},
             length = arguments.length;
         // 开始遍历需要被扩展到target上的参数
@@ -142,7 +142,7 @@ if (!window.console){
     };
     //复制对象
     _.copy = function () {
-        var options, name, copy, clone,
+        var options, name="", copy, clone,
             target = arguments[0],
             length = arguments.length;
         // 开始遍历需要被扩展到target上的参数
@@ -224,14 +224,14 @@ if (!window.console){
     //记录模块引用了哪些模块
     container.quote = {};
     //记录模块被哪些模块引用
-    container.referenced = {}
+    container.referenced = {};
     //设置两个模块的依赖关系
     container.bind = function (mod, refMod) {
         var self = this;
         //记录被引用关系
         var ref = self.referenced[refMod.getName()];
         if (ref == void 0) {
-            ref = {}
+            ref = {};
         }
         ref[mod.getName()] = mod;
         self.referenced[refMod.getName()] = ref;
@@ -264,7 +264,7 @@ if (!window.console){
         //查找引用到的模块
         var quo = self.quote[mod.getName()];
         //没有引用到的模块直接加载
-        var quo = _.find(quo, function (v) {
+         quo = _.find(quo, function (v) {
             return !v.load;
         });
         if (quo != void 0) {
@@ -379,7 +379,13 @@ if (!window.console){
         },
         getPath: function (type, name) {
             var self = this;
-            return self.baseUrl + self[type][name] + (self.para ? "?" + self.para : "");
+            //配置过的模块，使用配置的路径
+            if(self[type][name]){
+                return self.baseUrl + self[type][name] + (self.para ? "?" + self.para : "");
+            }else{
+                //未配置的模块，使用自动路径
+                return self.baseUrl + self.defaultPath[type]+name.replace(/\./g,"/")+"."+type + (self.para ? "?" + self.para : "");
+            }
         }
     };
     loader.configCount = 0;
@@ -412,12 +418,12 @@ if (!window.console){
             if (depends != void 0) {
                 _.each(depends, function (v) {
                     container.bind(mod, new Modular(v));
-                })
+                });
             }
             //查找引用到的模块
             var quo = container.quote[mod.getName()];
             //没有引用到的模块直接加载
-            var quo = _.find(quo, function (v) {
+             quo = _.find(quo, function (v) {
                 return !v.loadFile;
             });
             if (quo != void 0) {
@@ -425,7 +431,7 @@ if (!window.console){
                 return;
             }
         }
-        var node, tagName, nodeProp = {};
+        var node, tagName="", nodeProp = {};
         if (mod.type == "js") {
             nodeProp.async = true;
             nodeProp.charset = "utf-8";
@@ -468,12 +474,12 @@ if (!window.console){
     };
     loader.loadConfig = function (options) {
         loader.configCount++;
-        var self = this;
+        //var self = this;
         var loaded = loader.context.loaded[options.type][options.path];
         //已经加载过的文件不再加载
         if (loaded != void 0)
             return;
-        var node, tagName, nodeProp = {};
+        var node, tagName="", nodeProp = {};
         if (options.type == "js") {
             nodeProp.async = true;
             nodeProp.charset = "utf-8";
@@ -512,12 +518,12 @@ if (!window.console){
     });
     //加载程序入口，只能有一个入口
     //加载等待提示控件开始
-    var loading_box;
+    var loading_box=void 0;
     var progress_word;
     var progress_box;
-    var progress_bar;
-    var full_bg;
-    var timer;
+    var progress_bar=void 0;
+    var full_bg=void 0;
+    var timer=void 0;
     var step=0;
     var loading={
         create:function(){
@@ -581,10 +587,10 @@ if (!window.console){
             }
             //添加元素到网页
             document.getElementsByTagName("html")[0].appendChild(loading_box);
-            document.getElementsByTagName("html")[0].appendChild(full_bg)
+            document.getElementsByTagName("html")[0].appendChild(full_bg);
         },
         hide:function(){
-        	var navigatorName;
+        	//var navigatorName;
             if(loading_box){
             	if (!!window.ActiveXObject || "ActiveXObject" in window)  {
             		loading_box.removeNode(true);
@@ -636,7 +642,7 @@ if (!window.console){
             if(n<0)n=0;
             progress_bar.style.width=n+"%";
         }
-    }
+    };
   //加载等待提示控件结束
     loader.mainModular={};
     loader.startLoad=function(){
@@ -658,12 +664,12 @@ if (!window.console){
     //加载程序配置文件
     var configs = config.split(",");
     loader.startLoad();
-    var time=new Date().getTime()
+    var time=new Date().getTime();
     _.each(configs, function (v) {
         loader.loadConfig({type: "js", path: v+"?datetime="+time});
     });
 
-})()
+})();
 
 
 

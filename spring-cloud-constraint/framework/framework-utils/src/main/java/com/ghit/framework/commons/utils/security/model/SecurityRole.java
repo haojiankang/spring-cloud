@@ -1,11 +1,8 @@
-package com.ghit.framework.provider.sysmanager.api.model.vo.security;
+package com.ghit.framework.commons.utils.security.model;
 
 
 import java.io.Serializable;
 import java.util.List;
-
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IJurisdiction;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IRole;
 
 /**
  * 安全角色信息基础类

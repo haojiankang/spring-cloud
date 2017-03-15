@@ -16,7 +16,9 @@ import java.io.ObjectOutputStream;
 import java.net.URLDecoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -25,7 +27,17 @@ import org.apache.commons.logging.LogFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.ghit.framework.commons.utils.bean.BeanUtils;
+import com.ghit.framework.commons.utils.security.AuthenticationType;
 import com.ghit.framework.commons.utils.security.RSATools;
+import com.ghit.framework.commons.utils.security.model.IUser;
+import com.ghit.framework.commons.utils.security.model.SecurityDepartment;
+import com.ghit.framework.commons.utils.security.model.SecurityJurisdiction;
+import com.ghit.framework.commons.utils.security.model.SecurityRole;
+import com.ghit.framework.commons.utils.security.model.SecurityUser;
+import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Jurisdiction;
+import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Role;
+import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.ContextContainer;
 
 /**
@@ -39,13 +51,51 @@ import com.ghit.framework.provider.sysmanager.api.supports.security.context.Cont
  * @see
  */
 public class PS {
-    protected static final Log LOGGER = LogFactory.getLog(PS.class);
+    protected static final Log  LOGGER= LogFactory.getLog(PS.class);
     private static PS sharp;
 
     public static PS sharp() {
         if (sharp == null)
             sharp = new PS();
         return sharp;
+    }
+
+    public static IUser convertUserToIUser(User user) {
+        SecurityUser secUser = new SecurityUser();
+        secUser.setUserName(user.getFullname());
+        secUser.setId(user.getId());
+        secUser.setUserType(user.getUserType());
+        if (user.getRoles() != null) {
+            List<SecurityRole> secRoles = new ArrayList<SecurityRole>();
+            for (Role role : user.getRoles()) {
+                if (role.getJurisdictions() != null) {
+                    SecurityRole secRole = new SecurityRole();
+                    List<SecurityJurisdiction> secJurisList = new ArrayList<SecurityJurisdiction>();
+                    for (Jurisdiction juris : role.getJurisdictions()) {
+                        SecurityJurisdiction secJuris = new SecurityJurisdiction();
+                        secJuris.setCode(juris.getJurisdictionCode());
+                        secJuris.setRule(juris.getAuthenticationRule());
+                        if (juris.getAuthenticationType() != null)
+                            secJuris.setType(AuthenticationType.valueOf(juris.getAuthenticationType()));
+                        secJurisList.add(secJuris);
+                    }
+                    secRole.setJurisdictions(secJurisList);
+                    secRoles.add(secRole);
+                }
+            }
+            secUser.setRoles(secRoles);
+        }
+        SecurityDepartment deparment = new SecurityDepartment();
+        secUser.setDepartment(deparment);
+        deparment.setId("-1");
+        if (user.getOrganization() != null) {
+            deparment.setCode(user.getOrganization().getCode());
+            deparment.setId(user.getOrganization().getId());
+            deparment.setName(user.getOrganization().getName());
+        }
+        secUser.setData(BeanUtils.map("loginName", user.getUserName()));
+        return secUser;
+
     }
 
     /**
@@ -104,7 +154,6 @@ public class PS {
         return sharp();
     }
 
-
     /**
      * 
      * jsonToT:将JSON格式的字符串转换为指定的类型的实体
@@ -124,7 +173,7 @@ public class PS {
         try {
             return ojbmapper.readValue(jsonStr, c);
         } catch (IOException e) {
-            LOGGER.error(e);
+            LOGGER.error(e.getMessage(),e);
         }
         return null;
     }
@@ -136,7 +185,7 @@ public class PS {
         try {
             return ojbmapper.readTree(jsonStr);
         } catch (IOException e) {
-            LOGGER.error(e);
+            LOGGER.error(e.getMessage(),e);
         }
         return null;
     }
@@ -148,7 +197,7 @@ public class PS {
         try {
             return ojbmapper.writeValueAsString(obj);
         } catch (IOException e) {
-            LOGGER.error(e);
+            LOGGER.error(e.getMessage(),e);
         }
         return null;
     }
@@ -245,7 +294,7 @@ public class PS {
         try {
             return URLDecoder.decode(RSATools.decryptStringByJs(str), "UTF-8");
         } catch (Exception e) {
-            LOGGER.error(e);
+            LOGGER.error(e.getMessage(),e);
             error("解密过程发生错误，请联系后台管理员!");
         }
         return null;
@@ -307,6 +356,5 @@ public class PS {
 
     public static final String JSESSIONID = "hsessionid";
     public static final String TOKEN = "htoken";
-
 
 }

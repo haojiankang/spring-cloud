@@ -13,12 +13,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+import org.springframework.web.client.RestTemplate;
 
 import com.ghit.framework.consumer.utils.CS;
 import com.ghit.framework.consumer.utils.security.filter.SecurityManagerFilter;
 import com.ghit.framework.consumer.utils.security.filter.SessionManagerFilter;
+
+import feign.Feign;
+import feign.Logger;
+import feign.Request;
 
 /**
  * ClassName:ConsumerConf <br/>
@@ -58,4 +65,28 @@ public class ConsumerConf {
         registrationBean.setUrlPatterns(urlPatterns);
         return registrationBean;
     }
+
+    @LoadBalanced
+    @Bean
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @Bean
+    @Scope("prototype")
+    public Feign.Builder feignBuilder() {
+        return Feign.builder();
+    }
+
+    @Bean
+    public Logger.Level feignLogger() {
+        return Logger.Level.FULL;
+    }
+
+
+    @Bean
+    public Request.Options options() {
+        return new Request.Options();
+    }
+
 }

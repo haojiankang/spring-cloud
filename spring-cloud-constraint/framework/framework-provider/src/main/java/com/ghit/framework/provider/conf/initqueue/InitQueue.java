@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.utils;
+package com.ghit.framework.provider.conf.initqueue;
 /** 
  * Project Name:EHealthData 
  * File Name:InitQueue.java 
@@ -16,8 +16,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.ContextRefreshedEvent;
-
-import com.ghit.framework.provider.conf.initqueue.InitQueueProperties;
 
 /**
  * ClassName:InitQueue <br>

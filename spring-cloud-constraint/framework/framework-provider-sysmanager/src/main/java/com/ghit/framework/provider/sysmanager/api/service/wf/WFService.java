@@ -10,12 +10,12 @@ package com.ghit.framework.provider.sysmanager.api.service.wf;
 import java.util.List;
 import java.util.Map;
 
+import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.Activity;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPD;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPN;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPNAction;
 import com.ghit.framework.provider.sysmanager.api.model.vo.wf.WFProcess;
-import com.ghit.framework.provider.sysmanager.api.supports.security.model.IUser;
 
 /**
  * ClassName:WFService <br>

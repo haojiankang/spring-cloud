@@ -1,11 +1,60 @@
 package com.github.haojiankang.framework.commons.utils.lang;
 
-import java.util.*;
+import java.io.ByteArrayOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.DeflaterOutputStream;
+import java.util.zip.InflaterOutputStream;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.bouncycastle.util.encoders.Base64;
 
 /**
  * String 工具类
  */
 public class StringUtil {
+    private static  final Log LOG=LogFactory.getLog(StringUtil.class);
+    
+// 压缩字符串  
+   public static String compressString(String data) {  
+       try {  
+           ByteArrayOutputStream bos = new ByteArrayOutputStream();  
+           DeflaterOutputStream zos = new DeflaterOutputStream(bos);  
+           zos.write(data.getBytes());  
+           zos.close();  
+           return new String(getenBASE64inCodec(bos.toByteArray()));  
+       } catch (Exception e) {  
+           LOG.warn(e.getMessage(), e);
+           return null;  
+       }  
+   }  
+// 解码字符串  
+   public static String decompressString(String encdata) {  
+       try {  
+           ByteArrayOutputStream bos = new ByteArrayOutputStream();  
+           InflaterOutputStream zos = new InflaterOutputStream(bos);  
+           zos.write(getdeBASE64inCodec(encdata));   
+           zos.close();  
+           return new String(bos.toByteArray());  
+       } catch (Exception e) {  
+           LOG.warn(e.getMessage(), e);
+           return null;  
+       }  
+   }  
+// 使用apche codec对数组进行encode  
+   public static String getenBASE64inCodec(byte [] b) {  
+       if (b == null)  
+           return null;  
+       return new String(Base64.encode(b));  
+   }  
+// base64转码为string  
+   public static byte[] getdeBASE64inCodec(String s) {  
+       if (s == null)  
+           return null;  
+       return Base64.decode(s.getBytes());  
+   }  
+
 
     /**
      * StringBuilder的初始化大小,设置的大点,

@@ -17,8 +17,6 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -42,13 +40,8 @@ import org.apache.commons.logging.LogFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.github.haojiankang.framework.commons.utils.i18n.LanguageType;
 import com.github.haojiankang.framework.commons.utils.lang.DateTimeUtil;
 import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
-import com.github.haojiankang.framework.commons.utils.security.model.SecurityDepartment;
-import com.github.haojiankang.framework.commons.utils.security.model.SecurityJurisdiction;
-import com.github.haojiankang.framework.commons.utils.security.model.SecurityRole;
-import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
 
 /**
  * Java简单对象工具类.
@@ -167,15 +160,12 @@ public class BeanUtils {
         return null;
     }
 
-    @SuppressWarnings("deprecation")
     public static <T> T decodeHeader(String str, Class<T> cls) {
-        String decode = URLDecoder.decode(str);
-        return jsonToT(cls, decode);
+        return jsonToT(cls,  StringUtil.decompressString(str));
     }
 
-    @SuppressWarnings("deprecation")
     public static String encodeHeader(Object obj) {
-        return URLEncoder.encode(objToJson(obj));
+        return StringUtil.compressString(objToJson(obj));
     }
 
     /**
@@ -331,33 +321,6 @@ public class BeanUtils {
         } else {
             fieldValueToSB(value, name, target);
         }
-    }
-
-    public static void main(String[] args) {
-        SecurityUser user = new SecurityUser();
-        SecurityRole role = new SecurityRole();
-        SecurityJurisdiction juris1 = new SecurityJurisdiction();
-        SecurityJurisdiction juris2 = new SecurityJurisdiction();
-        SecurityDepartment depart = new SecurityDepartment();
-        user.setId("123456");
-        user.setLanguageType(LanguageType.Simplified_Chinese);
-        user.setUserType(0);
-        List<SecurityRole> secRoles = new ArrayList<SecurityRole>();
-        List<SecurityJurisdiction> juriss = new ArrayList<SecurityJurisdiction>();
-        user.setRoles(secRoles);
-        secRoles.add(role);
-        role.setJurisdictions(juriss);
-        juriss.add(juris1);
-        juriss.add(juris2);
-        user.setDepartment(depart);
-        juris1.setCode("001");
-        juris1.setRule("URL");
-        juris2.setCode("002");
-        juris2.setRule("URL");
-        depart.setId("123");
-        depart.setName("depart");
-        String oToFromData = oToFromData(user);
-        System.out.println(oToFromData);
     }
 
     /**

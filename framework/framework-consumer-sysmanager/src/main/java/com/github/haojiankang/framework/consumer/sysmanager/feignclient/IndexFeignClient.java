@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.github.haojiankang.framework.commons.utils.RequestHeaders;
 import com.github.haojiankang.framework.commons.utils.SSTO;
 import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
 import com.github.haojiankang.framework.consumer.sysmanager.model.User;
@@ -39,7 +40,8 @@ public interface IndexFeignClient {
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public SSTO<SecurityUser> login(User user);
-    
+
     @RequestMapping(value = "loadResource")
-    public SSTO<Map<String,Object>> loadResource(@RequestParam("resourceName") String resourceName,@RequestHeader(name="userinfo") String user);
+    public SSTO<Map<String, Object>> loadResource(@RequestParam("resourceName") String resourceName,
+            @RequestHeader(name = RequestHeaders.USER_INFO) String user);
 }

@@ -41,6 +41,5 @@
 	<modules>
 		<module>spring-cloud-starter-parent</module>
 		<module>eureka-server-dependencies</module>
-		<module>framework</module>
 	</modules>
 </project>

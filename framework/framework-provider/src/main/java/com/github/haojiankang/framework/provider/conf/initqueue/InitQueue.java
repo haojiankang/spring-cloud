@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.conf.initqueue;
+package com.github.haojiankang.framework.provider.conf.initqueue;
 /** 
  * Project Name:EHealthData 
  * File Name:InitQueue.java 

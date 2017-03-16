@@ -5,7 +5,7 @@
  * Date:2017年3月15日下午8:28:49  
 */
 
-package com.ghit.framework.commons.utils.spring.convert;
+package com.github.haojiankang.framework.commons.utils.spring.convert;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,7 +25,7 @@ import org.springframework.http.converter.json.MappingJacksonValue;
 import com.fasterxml.jackson.core.util.DefaultIndenter;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
 
 /**
  * ClassName:FeignRemoteCallMessageConvert <br/>

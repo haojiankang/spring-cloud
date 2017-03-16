@@ -5,12 +5,12 @@
  * Date:2016年8月2日上午9:37:39  
 */  
   
-package com.ghit.framework.provider.sysmanager.dao.uploadfile;
+package com.github.haojiankang.framework.provider.sysmanager.dao.uploadfile;
 
 import java.io.Serializable;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 /** 
  * ClassName:FileDao <br/> 

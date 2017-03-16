@@ -5,9 +5,9 @@
  * Date:2016年6月30日上午10:46:40  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr;
 
-import com.ghit.framework.provider.sysmanager.api.supports.vo.BaseVO;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.vo.BaseVO;
 
 /**
  * ClassName:Configuration <br/>

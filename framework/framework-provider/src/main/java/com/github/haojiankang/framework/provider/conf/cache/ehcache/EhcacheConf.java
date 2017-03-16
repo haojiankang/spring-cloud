@@ -5,7 +5,7 @@
  * Date:2017年3月14日下午1:48:24  
 */
 
-package com.ghit.framework.provider.conf.cache.ehcache;
+package com.github.haojiankang.framework.provider.conf.cache.ehcache;
 
 import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.cache.ehcache.EhCacheManagerFactoryBean;

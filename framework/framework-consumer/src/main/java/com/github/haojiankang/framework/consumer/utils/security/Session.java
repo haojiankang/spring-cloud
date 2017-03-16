@@ -1,8 +1,8 @@
-package com.ghit.framework.consumer.utils.security;
+package com.github.haojiankang.framework.consumer.utils.security;
 
 import java.util.Date;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 
 /**
  * 会话信息接口

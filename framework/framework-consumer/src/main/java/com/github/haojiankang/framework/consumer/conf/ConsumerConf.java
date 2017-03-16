@@ -5,7 +5,7 @@
  * Date:2017年3月14日下午5:13:57  
 */
 
-package com.ghit.framework.consumer.conf;
+package com.github.haojiankang.framework.consumer.conf;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,10 +19,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.client.RestTemplate;
 
-import com.ghit.framework.commons.utils.spring.convert.FeignRemoteCallMessageConvert;
-import com.ghit.framework.consumer.utils.CS;
-import com.ghit.framework.consumer.utils.security.filter.SecurityManagerFilter;
-import com.ghit.framework.consumer.utils.security.filter.SessionManagerFilter;
+import com.github.haojiankang.framework.commons.utils.spring.convert.FeignRemoteCallMessageConvert;
+import com.github.haojiankang.framework.consumer.utils.CS;
+import com.github.haojiankang.framework.consumer.utils.security.filter.SecurityManagerFilter;
+import com.github.haojiankang.framework.consumer.utils.security.filter.SessionManagerFilter;
 
 import feign.Feign;
 import feign.Logger;

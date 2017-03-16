@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.supports.po;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.po;
 
 import java.util.Date;
 
@@ -11,7 +11,7 @@ import javax.persistence.MappedSuperclass;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
+import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
 /**
  * Description:所有实体对象的基类。

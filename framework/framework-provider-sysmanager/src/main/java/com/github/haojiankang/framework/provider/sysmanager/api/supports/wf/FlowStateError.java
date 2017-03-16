@@ -5,7 +5,7 @@
  * Date:2016年10月8日下午2:45:30  
 */  
   
-package com.ghit.framework.provider.sysmanager.api.supports.wf;  
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.wf;  
 /** 
  * ClassName:FlowStateError <br> 
  * Function: TODO ADD FUNCTION. <br> 

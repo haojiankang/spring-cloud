@@ -5,7 +5,7 @@
  * Date:2016年7月1日上午10:41:58  
 */
 
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -18,19 +18,19 @@ import javax.annotation.Resource;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.bean.ObjectUtils;
-import com.ghit.framework.commons.utils.spring.SpringUtils;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ConfigurationService;
-import com.ghit.framework.provider.sysmanager.api.supports.DataOper;
-import com.ghit.framework.provider.sysmanager.api.supports.security.context.ContextContainer;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.ConfigurationDao;
-import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.ConfigurationUtils;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.bean.ObjectUtils;
+import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ConfigurationService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.ContextContainer;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.ConfigurationDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.ConfigurationUtils;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 /**
  * ClassName:ConfigurationServiceImpl <br/>

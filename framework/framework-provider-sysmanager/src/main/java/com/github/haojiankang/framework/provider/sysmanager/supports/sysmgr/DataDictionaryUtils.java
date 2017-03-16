@@ -5,20 +5,20 @@
  * Date:2016年7月25日下午4:26:13  
 */
 
-package com.ghit.framework.provider.sysmanager.supports.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr;
 
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.spring.SpringUtils;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
-import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
-import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
-import com.ghit.framework.provider.utils.PS;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 /**
  * ClassName:DataDictionaryUtils <br>

@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager;
+package com.github.haojiankang.framework.provider.sysmanager;
 /** 
  * Project Name:cloud-simple-service 
  * File Name:Application.java 
@@ -26,7 +26,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableAutoConfiguration
 @EnableDiscoveryClient
-@SpringBootApplication(scanBasePackages={"com.ghit.framework"})
+@SpringBootApplication(scanBasePackages={"com.github.haojiankang.framework"})
 public class ProviderSysmanagerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ProviderSysmanagerApplication.class, args);

@@ -5,7 +5,7 @@
  * Date:2016年6月28日上午11:20:37  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.validate;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.validate;
 
 /**
  * ClassName:ValidateEnum <br/>

@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.security.model;
+package com.github.haojiankang.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 import java.util.List;

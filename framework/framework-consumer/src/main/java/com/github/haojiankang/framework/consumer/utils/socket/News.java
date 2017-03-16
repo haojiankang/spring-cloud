@@ -5,7 +5,7 @@
  * Date:2016年11月21日上午9:34:02  
 */
 
-package com.ghit.framework.consumer.utils.socket;
+package com.github.haojiankang.framework.consumer.utils.socket;
 
 import java.util.HashMap;
 import java.util.HashSet;

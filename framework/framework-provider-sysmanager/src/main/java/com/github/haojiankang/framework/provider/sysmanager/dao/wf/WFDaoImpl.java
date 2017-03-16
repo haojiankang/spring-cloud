@@ -5,7 +5,7 @@
  * Date:2016年9月1日上午10:47:53  
 */
 
-package com.ghit.framework.provider.sysmanager.dao.wf;
+package com.github.haojiankang.framework.provider.sysmanager.dao.wf;
 
 import java.util.List;
 
@@ -16,11 +16,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiActivity;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPD;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPN;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPNAction;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiProcess;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiActivity;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPD;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPN;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPNAction;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiProcess;
 
 /**
  * ClassName:WFDaoImpl <br>

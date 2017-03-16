@@ -1,4 +1,4 @@
-package com.ghit.framework.consumer.utils.socket;
+package com.github.haojiankang.framework.consumer.utils.socket;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;

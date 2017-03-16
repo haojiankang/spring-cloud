@@ -5,7 +5,7 @@
  * Date:2016年7月15日上午10:01:50  
 */
 
-package com.ghit.framework.commons.utils.mail;
+package com.github.haojiankang.framework.commons.utils.mail;
 
 /**
  * ClassName:ProtocolType <br>

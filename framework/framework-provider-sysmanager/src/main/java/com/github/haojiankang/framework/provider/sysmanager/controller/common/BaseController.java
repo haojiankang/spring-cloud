@@ -5,7 +5,7 @@
  * Date:2016年7月4日下午2:48:58  
 */
 
-package com.ghit.framework.provider.sysmanager.controller.common;
+package com.github.haojiankang.framework.provider.sysmanager.controller.common;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.i18n.I118nUtils;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.controller.sysmgr.UserController;
-import com.ghit.framework.provider.utils.PS;
-import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.i18n.I118nUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr.UserController;
+import com.github.haojiankang.framework.provider.utils.PS;
+import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
 /**
  * ClassName:BaseController <br/>

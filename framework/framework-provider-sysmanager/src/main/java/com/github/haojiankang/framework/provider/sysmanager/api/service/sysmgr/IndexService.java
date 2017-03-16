@@ -1,9 +1,9 @@
-package com.ghit.framework.provider.sysmanager.api.service.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr;
 
 import java.util.Map;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 
 public interface IndexService {
     /**

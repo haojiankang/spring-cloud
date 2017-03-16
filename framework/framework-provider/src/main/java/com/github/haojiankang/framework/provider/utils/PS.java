@@ -5,7 +5,7 @@
  * Date:2017年2月16日下午4:30:45  
 */
 
-package com.ghit.framework.provider.utils;
+package com.github.haojiankang.framework.provider.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,9 +21,9 @@ import org.apache.commons.logging.LogFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ghit.framework.commons.utils.security.RSATools;
-import com.ghit.framework.commons.utils.security.context.ContextContainer;
-import com.ghit.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.RSATools;
+import com.github.haojiankang.framework.commons.utils.security.context.ContextContainer;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 
 /**
  * ClassName:SharpCommon <br/>

@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.model.po.uploadfile;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile;
 
 import java.io.InputStream;
 import java.util.Date;
@@ -13,8 +13,8 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ghit.framework.provider.sysmanager.api.supports.vo.AbstractVO;
-import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.vo.AbstractVO;
+import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
 /**
  * 上传文件记录

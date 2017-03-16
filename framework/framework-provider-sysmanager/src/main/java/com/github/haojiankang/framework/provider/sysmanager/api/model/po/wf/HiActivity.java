@@ -5,7 +5,7 @@
  * Date:2016年8月29日上午11:21:33  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.po.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf;
 
 import java.util.Date;
 

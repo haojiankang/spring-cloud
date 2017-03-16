@@ -5,7 +5,7 @@
  * Date:2017年3月14日下午5:25:23  
 */
 
-package com.ghit.framework.consumer.conf;
+package com.github.haojiankang.framework.consumer.conf;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

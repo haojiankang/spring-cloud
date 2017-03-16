@@ -5,15 +5,15 @@
  * Date:2016年8月2日上午10:31:37  
 */
 
-package com.ghit.framework.provider.sysmanager.api.service.uploadfile;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.uploadfile;
 
 import java.io.File;
 import java.util.List;
 import java.util.Map;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 
 /**
  * ClassName:UploadFileService <br/>

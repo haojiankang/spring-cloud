@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,21 +7,21 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.ResourceType;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.security.model.ResourceInformation;
-import com.ghit.framework.commons.utils.security.model.SecurityResourceInformation;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
-import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
-import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.ResourceDao;
-import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
-import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
-import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.ResourceType;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.ResourceInformation;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityResourceInformation;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.ResourceDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;
+import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 @Service
 public class ResourceServiceImpl extends BaseServiceImpl<Resource,VOResource> implements ResourceService {

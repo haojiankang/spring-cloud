@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.bean;
+package com.github.haojiankang.framework.commons.utils.bean;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
@@ -42,13 +42,13 @@ import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ghit.framework.commons.utils.i18n.LanguageType;
-import com.ghit.framework.commons.utils.lang.DateTimeUtil;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.model.SecurityDepartment;
-import com.ghit.framework.commons.utils.security.model.SecurityJurisdiction;
-import com.ghit.framework.commons.utils.security.model.SecurityRole;
-import com.ghit.framework.commons.utils.security.model.SecurityUser;
+import com.github.haojiankang.framework.commons.utils.i18n.LanguageType;
+import com.github.haojiankang.framework.commons.utils.lang.DateTimeUtil;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityDepartment;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityJurisdiction;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityRole;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
 
 /**
  * Java简单对象工具类.

@@ -5,7 +5,7 @@
  * Date:2016年8月28日下午7:49:31  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf;
 
 import java.util.List;
 

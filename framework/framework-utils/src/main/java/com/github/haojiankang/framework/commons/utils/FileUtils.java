@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils;
+package com.github.haojiankang.framework.commons.utils;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -22,9 +22,9 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.RSATools;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.RSATools;
 
 /**
  * 文件操作工具类

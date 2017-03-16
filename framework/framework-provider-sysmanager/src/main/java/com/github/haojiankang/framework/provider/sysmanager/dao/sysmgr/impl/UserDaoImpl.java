@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.dao.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
-import com.ghit.framework.provider.utils.hibernate.BaseDaoImpl;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.UserDao;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDaoImpl;
 
 @Repository
 public class UserDaoImpl extends BaseDaoImpl<User, Serializable> implements UserDao {

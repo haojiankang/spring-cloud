@@ -1,5 +1,5 @@
 
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import java.io.Serializable;
 import java.util.List;
@@ -8,14 +8,14 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Role;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.RoleService;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.RoleDao;
-import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Role;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.RoleService;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.RoleDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 @Service
 public class RoleServiceImpl extends BaseServiceImpl<Role,VORole> implements RoleService {

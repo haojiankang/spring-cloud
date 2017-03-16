@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.lang;
+package com.github.haojiankang.framework.commons.utils.lang;
 
 import java.text.DateFormat;
 import java.text.ParseException;

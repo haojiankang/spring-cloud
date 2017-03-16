@@ -5,15 +5,15 @@
  * Date:2016年6月30日下午3:12:40  
 */
 
-package com.ghit.framework.provider.sysmanager.api.service.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr;
 
 import java.util.List;
 import java.util.Map;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 
 /**
  * ClassName:ConfigurationService <br/>

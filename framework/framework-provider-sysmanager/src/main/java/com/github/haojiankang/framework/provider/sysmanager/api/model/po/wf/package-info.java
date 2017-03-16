@@ -15,4 +15,4 @@
  * @version 
  * @since JDK 1.8
  */
-package com.ghit.framework.provider.sysmanager.api.model.po.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf;

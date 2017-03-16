@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.utils.security;
+package com.github.haojiankang.framework.provider.utils.security;
 
 import java.io.IOException;
 
@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.security.model.SecurityUser;
-import com.ghit.framework.provider.utils.PS;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 /**
  * 会话管理核心过滤器 此过滤器应该放在所有需要会话的过滤器之前

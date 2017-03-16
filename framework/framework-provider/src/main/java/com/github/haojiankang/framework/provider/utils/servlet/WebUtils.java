@@ -6,7 +6,7 @@
  * 
 */
 
-package com.ghit.framework.provider.utils.servlet;
+package com.github.haojiankang.framework.provider.utils.servlet;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -25,9 +25,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.ghit.framework.commons.utils.excel.ExcelUtils;
-import com.ghit.framework.commons.utils.excel.IRow;
-import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.excel.ExcelUtils;
+import com.github.haojiankang.framework.commons.utils.excel.IRow;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 
 /**
  * ClassName:WebUtils <br/>

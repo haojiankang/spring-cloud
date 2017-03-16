@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.model.po.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr;
 
 import java.util.Date;
 import java.util.List;
@@ -19,8 +19,8 @@ import org.hibernate.annotations.FetchMode;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ghit.framework.provider.sysmanager.api.supports.DbOnly;
-import com.ghit.framework.provider.sysmanager.api.supports.po.BaseEntity;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.DbOnly;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.po.BaseEntity;
 
 @Entity
 @Table(name = "HJK_SYS_USER")

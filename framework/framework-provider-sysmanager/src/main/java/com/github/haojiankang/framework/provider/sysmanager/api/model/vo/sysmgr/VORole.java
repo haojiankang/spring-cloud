@@ -1,9 +1,9 @@
-package com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ghit.framework.provider.sysmanager.api.supports.vo.BaseVO;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.vo.BaseVO;
 
 public class VORole  extends BaseVO{
     {

@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -15,20 +15,20 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Organization;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOOrganization;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
-import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
-import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.OrganizationDao;
-import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
-import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
-import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Organization;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOOrganization;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.OrganizationDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;
+import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 @Service
 public class OrganizationServiceImpl extends BaseServiceImpl<Organization, VOOrganization>

@@ -5,7 +5,7 @@
  * Date:2016年8月30日下午2:12:49  
 */
 
-package com.ghit.framework.provider.sysmanager.service.wf.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.wf.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,24 +21,24 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.security.model.SecurityUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiActivity;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPD;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPN;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPNAction;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiProcess;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.Activity;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiActivityBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPDBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPNActionBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPNBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiProcessBean;
-import com.ghit.framework.provider.sysmanager.api.service.wf.WFService;
-import com.ghit.framework.provider.sysmanager.api.supports.wf.ActionType;
-import com.ghit.framework.provider.sysmanager.dao.wf.WFDao;
-import com.ghit.framework.provider.sysmanager.supports.wf.HiWorkFlowContext;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiActivity;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPD;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPN;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPNAction;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiProcess;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.Activity;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiActivityBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiBPDBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiBPNActionBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiBPNBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiProcessBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.wf.WFService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.wf.ActionType;
+import com.github.haojiankang.framework.provider.sysmanager.dao.wf.WFDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.wf.HiWorkFlowContext;
 
 /**
  * ClassName:HiWFServiceImpl <br>

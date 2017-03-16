@@ -5,9 +5,9 @@
  * Date:2016年7月25日下午1:10:25  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr;
 
-import com.ghit.framework.provider.sysmanager.api.supports.vo.BaseVO;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.vo.BaseVO;
 
 /**
  * ClassName:DataDictionary <br>

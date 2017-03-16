@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.security.model;
+package com.github.haojiankang.framework.commons.utils.security.model;
 
 
 import java.io.Serializable;
@@ -10,8 +10,8 @@ import java.util.function.Consumer;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.ghit.framework.commons.utils.i18n.LanguageType;
-import com.ghit.framework.commons.utils.security.AuthenticationType;
+import com.github.haojiankang.framework.commons.utils.i18n.LanguageType;
+import com.github.haojiankang.framework.commons.utils.security.AuthenticationType;
 
 /**
  * 安全用户信息基础类

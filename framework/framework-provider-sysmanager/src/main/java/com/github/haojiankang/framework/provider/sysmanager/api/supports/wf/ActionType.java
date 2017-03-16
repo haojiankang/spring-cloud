@@ -5,7 +5,7 @@
  * Date:2016年8月28日下午10:01:18  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.wf;
 
 
 /**

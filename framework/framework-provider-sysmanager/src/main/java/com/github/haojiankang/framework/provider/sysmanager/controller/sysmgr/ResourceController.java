@@ -1,17 +1,17 @@
-package com.ghit.framework.provider.sysmanager.controller.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr;
 
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
-import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
 
 @Controller
 @RequestMapping("/resource")

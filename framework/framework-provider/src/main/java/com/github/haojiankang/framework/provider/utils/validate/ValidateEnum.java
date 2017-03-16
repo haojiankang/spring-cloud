@@ -5,7 +5,7 @@
  * Date:2016年6月28日上午11:20:37  
 */
 
-package com.ghit.framework.provider.utils.validate;
+package com.github.haojiankang.framework.provider.utils.validate;
 
 /**
  * ClassName:ValidateEnum <br/>

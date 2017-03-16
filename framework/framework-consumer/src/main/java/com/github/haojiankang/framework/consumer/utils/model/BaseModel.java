@@ -5,7 +5,7 @@
  * Date:2017年3月15日下午1:51:29  
 */  
   
-package com.ghit.framework.consumer.utils.model;
+package com.github.haojiankang.framework.consumer.utils.model;
 
 import java.io.Serializable;
 import java.util.Date;

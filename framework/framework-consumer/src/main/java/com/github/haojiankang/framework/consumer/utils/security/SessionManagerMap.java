@@ -1,4 +1,4 @@
-package com.ghit.framework.consumer.utils.security;
+package com.github.haojiankang.framework.consumer.utils.security;
 
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -12,9 +12,9 @@ import java.util.UUID;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.consumer.ConsumerConstant;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.consumer.ConsumerConstant;
 
 /**
  * Map方式实现的会话管理器

@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.security;
+package com.github.haojiankang.framework.commons.utils.security;
 /** 
  * Project Name:ytj-manage-common 
  * File Name:SecurityConfig.java 

@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.model.po.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-import com.ghit.framework.provider.sysmanager.api.supports.po.BaseEntity;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.po.BaseEntity;
 
 @Entity
 @Table(name = "HJK_SYS_Role")

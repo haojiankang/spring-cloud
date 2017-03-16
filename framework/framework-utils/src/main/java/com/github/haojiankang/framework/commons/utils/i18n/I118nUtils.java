@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.i18n;
+package com.github.haojiankang.framework.commons.utils.i18n;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import java.util.Properties;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ghit.framework.commons.utils.FileUtils;
+import com.github.haojiankang.framework.commons.utils.FileUtils;
 
 /**
  * 语言工具类

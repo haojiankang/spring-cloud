@@ -5,7 +5,7 @@
  * Date:2016年8月29日上午9:52:27  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.po.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

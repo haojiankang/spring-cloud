@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.http;
+package com.github.haojiankang.framework.commons.utils.http;
 
 import java.io.File;
 import java.io.IOException;

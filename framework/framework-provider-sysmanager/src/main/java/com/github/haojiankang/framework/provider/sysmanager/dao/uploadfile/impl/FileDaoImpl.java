@@ -5,7 +5,7 @@
  * Date:2016年8月5日上午10:20:06  
 */  
   
-package com.ghit.framework.provider.sysmanager.dao.uploadfile.impl;
+package com.github.haojiankang.framework.provider.sysmanager.dao.uploadfile.impl;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -14,10 +14,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.ghit.framework.commons.utils.bean.ObjectUtils;
-import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
-import com.ghit.framework.provider.sysmanager.dao.uploadfile.FileDao;
-import com.ghit.framework.provider.utils.hibernate.BaseDaoImpl;
+import com.github.haojiankang.framework.commons.utils.bean.ObjectUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
+import com.github.haojiankang.framework.provider.sysmanager.dao.uploadfile.FileDao;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDaoImpl;
 
 /** 
  * ClassName:FileDaoImpl <br/> 

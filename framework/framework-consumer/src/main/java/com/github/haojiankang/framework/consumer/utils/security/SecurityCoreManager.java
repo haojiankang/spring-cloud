@@ -1,8 +1,8 @@
-package com.ghit.framework.consumer.utils.security;
+package com.github.haojiankang.framework.consumer.utils.security;
 
-import com.ghit.framework.commons.utils.security.context.Context;
-import com.ghit.framework.commons.utils.security.context.HashTableContext;
-import com.ghit.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.context.Context;
+import com.github.haojiankang.framework.commons.utils.security.context.HashTableContext;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 
 /**
  * 安全管理器

@@ -5,7 +5,7 @@
  * Date:2016年7月14日下午3:01:30  
 */
 
-package com.ghit.framework.provider.sysmanager.supports.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr;
 
 import java.util.HashMap;
 import java.util.Hashtable;
@@ -15,16 +15,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.spring.SpringUtils;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
-import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
-import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
-import com.ghit.framework.provider.sysmanager.supports.conf.ProviderProperties;
-import com.ghit.framework.provider.utils.PS;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;
+import com.github.haojiankang.framework.provider.sysmanager.supports.conf.ProviderProperties;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 /**
  * ClassName:SecurityPolicy <br>

@@ -1,4 +1,4 @@
-package com.ghit.framework.consumer.utils.security.filter;
+package com.github.haojiankang.framework.consumer.utils.security.filter;
 
 import java.io.IOException;
 import java.util.Date;
@@ -17,14 +17,14 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ghit.framework.commons.utils.i18n.I118nUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.context.ContextContainer;
-import com.ghit.framework.consumer.conf.SecurityProperties;
-import com.ghit.framework.consumer.utils.CS;
-import com.ghit.framework.consumer.utils.security.SecurityCoreManager;
-import com.ghit.framework.consumer.utils.security.Session;
-import com.ghit.framework.consumer.utils.servlet.WebUtils;
+import com.github.haojiankang.framework.commons.utils.i18n.I118nUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.context.ContextContainer;
+import com.github.haojiankang.framework.consumer.conf.SecurityProperties;
+import com.github.haojiankang.framework.consumer.utils.CS;
+import com.github.haojiankang.framework.consumer.utils.security.SecurityCoreManager;
+import com.github.haojiankang.framework.consumer.utils.security.Session;
+import com.github.haojiankang.framework.consumer.utils.servlet.WebUtils;
 
 /**
  * 会话管理核心过滤器 此过滤器应该放在所有需要会话的过滤器之前

@@ -5,7 +5,7 @@
  * Date:2016年12月13日上午11:28:53  
 */  
   
-package com.ghit.framework.commons.utils.excel;
+package com.github.haojiankang.framework.commons.utils.excel;
 
 import java.util.List;
 

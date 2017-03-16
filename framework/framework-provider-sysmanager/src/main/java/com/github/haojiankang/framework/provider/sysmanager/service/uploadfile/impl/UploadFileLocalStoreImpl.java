@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.service.uploadfile.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.uploadfile.impl;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -29,22 +29,22 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ghit.framework.commons.utils.FileUtils;
-import com.ghit.framework.commons.utils.IdentityHelper;
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.ObjectUtils;
-import com.ghit.framework.commons.utils.lang.MathUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
-import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
-import com.ghit.framework.provider.sysmanager.api.service.uploadfile.UploadFileService;
-import com.ghit.framework.provider.sysmanager.api.supports.DataOper;
-import com.ghit.framework.provider.sysmanager.dao.uploadfile.FileDao;
-import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
-import com.ghit.framework.provider.utils.PS;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.commons.utils.FileUtils;
+import com.github.haojiankang.framework.commons.utils.IdentityHelper;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.bean.ObjectUtils;
+import com.github.haojiankang.framework.commons.utils.lang.MathUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.uploadfile.UploadFileService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
+import com.github.haojiankang.framework.provider.sysmanager.dao.uploadfile.FileDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.provider.utils.PS;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 @Service
 public class UploadFileLocalStoreImpl extends BaseServiceImpl<UploadFile,UploadFile> implements UploadFileService {

@@ -5,7 +5,7 @@
  * Date:2016年11月21日上午9:56:16  
 */
 
-package com.ghit.framework.consumer.utils.socket;
+package com.github.haojiankang.framework.consumer.utils.socket;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

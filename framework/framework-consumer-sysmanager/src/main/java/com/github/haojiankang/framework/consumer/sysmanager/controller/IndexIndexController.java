@@ -5,7 +5,7 @@
  * Date:2017年3月16日上午9:42:04  
 */
 
-package com.ghit.framework.consumer.sysmanager.controller;
+package com.github.haojiankang.framework.consumer.sysmanager.controller;
 
 import java.util.Map;
 
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ghit.framework.commons.utils.SSTO;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.consumer.sysmanager.feignclient.IndexFeignClient;
-import com.ghit.framework.consumer.utils.CS;
+import com.github.haojiankang.framework.commons.utils.SSTO;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.consumer.sysmanager.feignclient.IndexFeignClient;
+import com.github.haojiankang.framework.consumer.utils.CS;
 
 /**
  * ClassName:IndexIndexController <br/>

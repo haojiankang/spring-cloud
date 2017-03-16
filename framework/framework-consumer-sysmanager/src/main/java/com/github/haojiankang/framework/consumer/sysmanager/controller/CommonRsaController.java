@@ -5,7 +5,7 @@
  * Date:2017年3月15日上午10:53:28  
 */
 
-package com.ghit.framework.consumer.sysmanager.controller;
+package com.github.haojiankang.framework.consumer.sysmanager.controller;
 
 import java.util.Map;
 
@@ -13,8 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ghit.framework.commons.utils.SSTO;
-import com.ghit.framework.consumer.sysmanager.feignclient.IndexFeignClient;
+import com.github.haojiankang.framework.commons.utils.SSTO;
+import com.github.haojiankang.framework.consumer.sysmanager.feignclient.IndexFeignClient;
 
 /**
  * ClassName:CommonRsaController <br/>

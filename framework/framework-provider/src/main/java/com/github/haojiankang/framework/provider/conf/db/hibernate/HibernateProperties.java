@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.conf.db.hibernate;
+package com.github.haojiankang.framework.provider.conf.db.hibernate;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -5,7 +5,7 @@
  * Date:2017年3月15日下午2:21:39  
 */
 
-package com.ghit.framework.commons.utils;
+package com.github.haojiankang.framework.commons.utils;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

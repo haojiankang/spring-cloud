@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.http;
+package com.github.haojiankang.framework.commons.utils.http;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,7 +7,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.ghit.framework.commons.utils.Sharp;
+import com.github.haojiankang.framework.commons.utils.Sharp;
 
 public class MessageUtil {
 

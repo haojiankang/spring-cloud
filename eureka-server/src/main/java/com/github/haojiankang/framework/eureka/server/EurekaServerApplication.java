@@ -1,4 +1,4 @@
-package com.ghit.framework.eureka.server;
+package com.github.haojiankang.framework.eureka.server;
 /**
  * eureka server
  * @author 52395090@qq.com

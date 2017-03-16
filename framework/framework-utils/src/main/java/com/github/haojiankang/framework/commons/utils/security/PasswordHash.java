@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.security;
+package com.github.haojiankang.framework.commons.utils.security;
 
 import java.math.BigInteger;
 import java.security.NoSuchAlgorithmException;

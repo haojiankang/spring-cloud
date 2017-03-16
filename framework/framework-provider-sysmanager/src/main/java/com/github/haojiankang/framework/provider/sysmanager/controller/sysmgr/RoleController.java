@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.controller.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr;
 
 import java.util.List;
 import java.util.Map;
@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Role;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.RoleService;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Role;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.RoleService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
 
 @Controller
 @RequestMapping("/role")

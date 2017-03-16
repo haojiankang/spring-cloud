@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.conf.initqueue;
+package com.github.haojiankang.framework.provider.conf.initqueue;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

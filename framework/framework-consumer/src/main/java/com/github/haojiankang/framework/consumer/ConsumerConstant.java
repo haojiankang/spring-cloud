@@ -1,4 +1,4 @@
-package com.ghit.framework.consumer;
+package com.github.haojiankang.framework.consumer;
 
 
 /**

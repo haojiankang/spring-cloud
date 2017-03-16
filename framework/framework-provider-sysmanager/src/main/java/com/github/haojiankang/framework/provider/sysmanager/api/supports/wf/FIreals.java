@@ -5,14 +5,14 @@
  * Date:2016年11月17日下午3:28:39  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.wf;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.Activity;
-import com.ghit.framework.provider.sysmanager.api.service.wf.ActivitiesFilter;
-import com.ghit.framework.provider.sysmanager.api.service.wf.ActivityFilter;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.Activity;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.wf.ActivitiesFilter;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.wf.ActivityFilter;
 
 /**
  * ClassName:FIreals <br>

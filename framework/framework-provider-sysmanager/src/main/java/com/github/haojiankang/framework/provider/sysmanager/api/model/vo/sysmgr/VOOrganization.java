@@ -1,6 +1,6 @@
-package com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr;
 
-import com.ghit.framework.provider.sysmanager.api.supports.vo.BaseVO;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.vo.BaseVO;
 
 /**
  * 机构、组织信息实体

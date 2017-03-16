@@ -5,11 +5,11 @@
  * Date:2016年8月16日下午1:07:45  
 */  
   
-package com.ghit.framework.provider.sysmanager.api.service.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 
 /** 
  * ClassName:LoginSystem <br> 

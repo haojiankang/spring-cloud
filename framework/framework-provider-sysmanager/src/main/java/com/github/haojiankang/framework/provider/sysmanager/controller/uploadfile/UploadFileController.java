@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.controller.uploadfile;
+package com.github.haojiankang.framework.provider.sysmanager.controller.uploadfile;
 
 import javax.annotation.Resource;
 
@@ -7,10 +7,10 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
-import com.ghit.framework.provider.sysmanager.api.service.uploadfile.UploadFileService;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.uploadfile.UploadFileService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
 
 @Controller
 @RequestMapping("/upload")

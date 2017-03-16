@@ -5,7 +5,7 @@
  * Date:2017年3月16日上午10:25:59  
 */
 
-package com.ghit.framework.commons.utils;
+package com.github.haojiankang.framework.commons.utils;
 
 /**
  * ClassName:SRTO <br/>

@@ -1,10 +1,10 @@
-package com.ghit.framework.commons.utils.security.model;
+package com.github.haojiankang.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-import com.ghit.framework.commons.utils.i18n.LanguageType;
+import com.github.haojiankang.framework.commons.utils.i18n.LanguageType;
 
 /**
  * 用户信息接口

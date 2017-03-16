@@ -5,12 +5,12 @@
  * Date:2017年3月15日下午1:49:11  
 */  
   
-package com.ghit.framework.consumer.sysmanager.model;
+package com.github.haojiankang.framework.consumer.sysmanager.model;
 
 import java.util.Date;
 import java.util.List;
 
-import com.ghit.framework.consumer.utils.model.BaseModel;
+import com.github.haojiankang.framework.consumer.utils.model.BaseModel;
 
 /** 
  * ClassName:User <br/> 

@@ -5,7 +5,7 @@
  * Date:2017年3月14日下午10:14:24  
 */  
   
-package com.ghit.framework.consumer;
+package com.github.haojiankang.framework.consumer;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

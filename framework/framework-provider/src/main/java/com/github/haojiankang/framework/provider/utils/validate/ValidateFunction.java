@@ -5,7 +5,7 @@
  * Date:2016年6月23日上午11:10:33  
 */
 
-package com.ghit.framework.provider.utils.validate;
+package com.github.haojiankang.framework.provider.utils.validate;
 
 import java.util.List;
 

@@ -1,15 +1,15 @@
-package com.ghit.framework.provider.sysmanager.controller.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Jurisdiction;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOJurisdiction;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.JurisdictionService;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Jurisdiction;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOJurisdiction;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.JurisdictionService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
 
 @Controller
 @RequestMapping("/jurisdiction")

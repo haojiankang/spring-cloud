@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.utils;
+package com.github.haojiankang.framework.provider.utils;
 
 /**
  * 常量信息类

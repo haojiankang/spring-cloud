@@ -5,7 +5,7 @@
  * Date:2016年6月24日上午11:37:01  
 */  
   
-package com.ghit.framework.provider.utils.validate;  
+package com.github.haojiankang.framework.provider.utils.validate;  
 /** 
  * ClassName:ProcessMode  <br>
  * Function: 校验不通过，处理模式枚举 <br> 

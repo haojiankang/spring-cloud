@@ -5,7 +5,7 @@
  * Date:2016年6月30日下午4:50:03  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.security.context;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context;
 
 /**
  * ClassName:ContextContainer <br/>

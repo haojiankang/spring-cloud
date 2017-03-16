@@ -5,7 +5,7 @@
  * Date:2016年7月12日上午10:59:50  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

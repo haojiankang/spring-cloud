@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.poi;
+package com.github.haojiankang.framework.commons.utils.poi;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -49,8 +49,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
-import com.ghit.framework.commons.utils.excel.WorkbookType;
-import com.ghit.framework.commons.utils.excel.XssfDataType;
+import com.github.haojiankang.framework.commons.utils.excel.WorkbookType;
+import com.github.haojiankang.framework.commons.utils.excel.XssfDataType;
 
 
 /**

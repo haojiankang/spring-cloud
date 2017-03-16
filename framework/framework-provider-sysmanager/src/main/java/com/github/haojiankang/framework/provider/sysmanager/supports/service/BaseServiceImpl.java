@@ -5,7 +5,7 @@
  * Date:2016年7月4日下午2:13:31  
 */
 
-package com.ghit.framework.provider.sysmanager.supports.service;
+package com.github.haojiankang.framework.provider.sysmanager.supports.service;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -22,15 +22,15 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.provider.sysmanager.api.supports.DbOnly;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.utils.PS;
-import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
-import com.ghit.framework.provider.utils.validate.Validate;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.DbOnly;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.utils.PS;
+import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.provider.utils.validate.Validate;
 
 /**
  * ClassName:BaseServiceImpl <br/>

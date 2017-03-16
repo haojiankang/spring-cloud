@@ -5,7 +5,7 @@
  * Date:2017年2月27日下午2:32:02  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.vo;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.vo;
 
 import java.io.Serializable;
 

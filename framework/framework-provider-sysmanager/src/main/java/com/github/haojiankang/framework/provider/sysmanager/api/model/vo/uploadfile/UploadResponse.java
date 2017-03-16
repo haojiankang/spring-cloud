@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.model.vo.uploadfile;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.uploadfile;
 
 
 import java.util.ArrayList;

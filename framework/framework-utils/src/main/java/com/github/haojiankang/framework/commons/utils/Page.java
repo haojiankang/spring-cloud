@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils;
+package com.github.haojiankang.framework.commons.utils;
 
 import java.io.Serializable;
 import java.util.HashMap;

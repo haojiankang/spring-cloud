@@ -5,9 +5,9 @@
  * Date:2016年8月28日下午10:24:57  
 */  
   
-package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 
 /** 
  * ClassName:Process <br/> 

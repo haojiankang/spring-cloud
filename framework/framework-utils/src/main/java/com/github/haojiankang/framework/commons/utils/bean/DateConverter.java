@@ -1,11 +1,11 @@
-package com.ghit.framework.commons.utils.bean;
+package com.github.haojiankang.framework.commons.utils.bean;
 
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.core.convert.converter.Converter;
 
-import com.ghit.framework.commons.utils.lang.DateTimeUtil;
+import com.github.haojiankang.framework.commons.utils.lang.DateTimeUtil;
 
 /**
  * 表单输入日期文本转换成日期实例

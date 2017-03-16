@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.utils.hibernate;
+package com.github.haojiankang.framework.provider.utils.hibernate;
 
 import java.io.Serializable;
 import java.lang.reflect.Field;
@@ -51,12 +51,12 @@ import org.hibernate.transform.ResultTransformer;
 import org.hibernate.transform.Transformers;
 import org.springframework.util.Assert;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.bean.ObjectUtils;
-import com.ghit.framework.commons.utils.bean.Reflections;
-import com.ghit.framework.commons.utils.lang.DateTimeUtil;
-import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.bean.ObjectUtils;
+import com.github.haojiankang.framework.commons.utils.bean.Reflections;
+import com.github.haojiankang.framework.commons.utils.lang.DateTimeUtil;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 
 public class BaseDaoImpl<T, PK extends Serializable> implements BaseDao<T, PK> {
 

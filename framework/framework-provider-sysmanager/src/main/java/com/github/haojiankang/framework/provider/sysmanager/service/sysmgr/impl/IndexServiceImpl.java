@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,23 +11,23 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.mail.MailInfo;
-import com.ghit.framework.commons.utils.mail.MailUtils;
-import com.ghit.framework.commons.utils.security.RSATools;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.security.model.ResourceInformation;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.IndexService;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
-import com.ghit.framework.provider.sysmanager.api.service.wf.WorkFlow;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
-import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SecurityPolicy;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
-import com.ghit.framework.provider.utils.PS;
-import com.ghit.framework.provider.utils.validate.Validate;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.mail.MailInfo;
+import com.github.haojiankang.framework.commons.utils.mail.MailUtils;
+import com.github.haojiankang.framework.commons.utils.security.RSATools;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.ResourceInformation;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.IndexService;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.wf.WorkFlow;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.UserDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SecurityPolicy;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.provider.utils.PS;
+import com.github.haojiankang.framework.provider.utils.validate.Validate;
 
 @Service
 @Transactional(propagation = Propagation.NOT_SUPPORTED)

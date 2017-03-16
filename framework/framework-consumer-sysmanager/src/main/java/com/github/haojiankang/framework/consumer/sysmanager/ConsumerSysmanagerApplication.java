@@ -5,7 +5,7 @@
  * Date:2017年3月14日下午9:40:20  
 */  
   
-package com.ghit.framework.consumer.sysmanager;
+package com.github.haojiankang.framework.consumer.sysmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -28,7 +28,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableFeignClients
-@SpringBootApplication(scanBasePackages={"com.ghit.framework"})
+@SpringBootApplication(scanBasePackages={"com.github.haojiankang.framework"})
 public class ConsumerSysmanagerApplication {
     public static void main(String[] args) {
         SpringApplication.run(ConsumerSysmanagerApplication.class, args);

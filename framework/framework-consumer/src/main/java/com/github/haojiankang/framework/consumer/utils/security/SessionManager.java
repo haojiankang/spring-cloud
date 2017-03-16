@@ -1,9 +1,9 @@
-package com.ghit.framework.consumer.utils.security;
+package com.github.haojiankang.framework.consumer.utils.security;
 
 import java.util.Map;
 import java.util.Set;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 
 /**
  * 会话管理接口

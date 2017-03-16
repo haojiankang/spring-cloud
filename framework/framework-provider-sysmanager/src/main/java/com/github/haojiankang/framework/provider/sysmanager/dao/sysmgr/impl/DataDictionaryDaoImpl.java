@@ -1,12 +1,12 @@
-package com.ghit.framework.provider.sysmanager.dao.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.impl;
 
 import java.io.Serializable;
 
 import org.springframework.stereotype.Repository;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.DataDictionaryDao;
-import com.ghit.framework.provider.utils.hibernate.BaseDaoImpl;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.DataDictionaryDao;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDaoImpl;
 /**
  * 
  * ClassName: DataDictionaryDaoImpl 

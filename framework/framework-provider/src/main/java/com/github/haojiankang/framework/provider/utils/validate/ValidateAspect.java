@@ -5,7 +5,7 @@
  * Date:2016年6月22日下午3:05:45  
 */
 
-package com.ghit.framework.provider.utils.validate;
+package com.github.haojiankang.framework.provider.utils.validate;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -29,10 +29,10 @@ import org.xidea.el.impl.ExpressionFactoryImpl;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ghit.framework.commons.utils.FileUtils;
-import com.ghit.framework.commons.utils.i18n.I118nUtils;
-import com.ghit.framework.commons.utils.security.context.ContextContainer;
-import com.ghit.framework.provider.utils.ProviderConstant;
+import com.github.haojiankang.framework.commons.utils.FileUtils;
+import com.github.haojiankang.framework.commons.utils.i18n.I118nUtils;
+import com.github.haojiankang.framework.commons.utils.security.context.ContextContainer;
+import com.github.haojiankang.framework.provider.utils.ProviderConstant;
 
 /**
  * ClassName:ValidateAspect <br/>
@@ -101,7 +101,7 @@ public class ValidateAspect {
         });
     }
 
-    @Pointcut("@annotation(com.ghit.framework.provider.utils.validate.Validate)")
+    @Pointcut("@annotation(com.github.haojiankang.framework.provider.utils.validate.Validate)")
     public void validateAspect() {
     }
 

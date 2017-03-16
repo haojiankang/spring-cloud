@@ -5,7 +5,7 @@
  * Date:2017年3月15日上午11:06:29  
 */
 
-package com.ghit.framework.consumer.sysmanager.feignclient;
+package com.github.haojiankang.framework.consumer.sysmanager.feignclient;
 
 import java.util.Map;
 
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ghit.framework.commons.utils.SSTO;
-import com.ghit.framework.commons.utils.security.model.SecurityUser;
-import com.ghit.framework.consumer.sysmanager.model.User;
+import com.github.haojiankang.framework.commons.utils.SSTO;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
+import com.github.haojiankang.framework.consumer.sysmanager.model.User;
 
 /**
  * ClassName:IndexFeignClient <br/>

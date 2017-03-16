@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.utils.hibernate;
+package com.github.haojiankang.framework.provider.utils.hibernate;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
@@ -10,7 +10,7 @@ import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Order;
 import org.hibernate.type.Type;
 
-import com.ghit.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.Page;
 
 /**
  * Description:基础dao操作接口类。

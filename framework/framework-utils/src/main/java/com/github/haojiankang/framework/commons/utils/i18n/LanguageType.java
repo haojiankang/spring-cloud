@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.i18n;
+package com.github.haojiankang.framework.commons.utils.i18n;
 /**
  * 
  * ClassName: LanguageType 

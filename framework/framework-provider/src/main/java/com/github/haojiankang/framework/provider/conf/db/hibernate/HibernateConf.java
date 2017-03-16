@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.conf.db.hibernate;
+package com.github.haojiankang.framework.provider.conf.db.hibernate;
 
 import java.sql.SQLException;
 import java.util.Properties;
@@ -13,7 +13,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.ghit.framework.provider.conf.db.DataSourceProperties;
+import com.github.haojiankang.framework.provider.conf.db.DataSourceProperties;
 
 @Configuration
 @EnableConfigurationProperties(value = { DataSourceProperties.class, HibernateProperties.class })

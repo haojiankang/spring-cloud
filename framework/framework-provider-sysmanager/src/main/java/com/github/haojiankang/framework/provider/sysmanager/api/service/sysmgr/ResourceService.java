@@ -1,11 +1,11 @@
-package com.ghit.framework.provider.sysmanager.api.service.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.security.model.ResourceInformation;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
-import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.ResourceInformation;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Resource;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 
 /**
  * 资源信息业务管理类

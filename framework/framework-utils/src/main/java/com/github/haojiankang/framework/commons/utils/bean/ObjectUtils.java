@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.bean;
+package com.github.haojiankang.framework.commons.utils.bean;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Method;
@@ -12,8 +12,8 @@ import org.springframework.util.ClassUtils;
 import org.springframework.util.NumberUtils;
 import org.springframework.util.ReflectionUtils;
 
-import com.ghit.framework.commons.utils.lang.DateTimeUtil;
-import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.lang.DateTimeUtil;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 
 /**
  * Java对象工具类.

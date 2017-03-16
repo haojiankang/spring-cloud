@@ -5,12 +5,12 @@
  * Date:2016年6月30日下午3:12:20  
 */  
   
-package com.ghit.framework.provider.sysmanager.dao.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr;
 
 import java.io.Serializable;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 /** 
  * ClassName:ConfigurationDao <br/> 

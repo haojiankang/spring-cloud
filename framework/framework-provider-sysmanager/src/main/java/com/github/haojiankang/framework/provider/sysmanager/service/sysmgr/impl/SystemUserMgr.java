@@ -5,21 +5,21 @@
  * Date:2016年8月16日下午1:10:31  
 */
 
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
-import com.ghit.framework.provider.utils.PS;
+import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.UserDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 /**
  * ClassName:SystemTypeLogin <br>

@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.service.sysmgr.impl;
+package com.github.haojiankang.framework.provider.sysmanager.service.sysmgr.impl;
 
 import java.io.Serializable;
 
@@ -10,15 +10,15 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VODataDictionary;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
-import com.ghit.framework.provider.sysmanager.dao.sysmgr.DataDictionaryDao;
-import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
-import com.ghit.framework.provider.utils.hibernate.BaseDao;
-import com.ghit.framework.provider.utils.validate.Validate;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VODataDictionary;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
+import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.DataDictionaryDao;
+import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
+import com.github.haojiankang.framework.provider.utils.validate.Validate;
 
 /**
  * 

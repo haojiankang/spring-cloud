@@ -5,7 +5,7 @@
  * Date:2016年6月22日下午3:22:17  
 */  
   
-package com.ghit.framework.provider.sysmanager.api.supports.validate;  
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.validate;  
 /** 
  * ClassName:ValidateException <br/> 
  * Function: 验证异常类表示验证不通过 <br/> 

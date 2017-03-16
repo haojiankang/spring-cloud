@@ -5,11 +5,11 @@
  * Date:2016年6月30日下午1:30:06  
 */
 
-package com.ghit.framework.provider.sysmanager.supports.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr;
 
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
-import com.ghit.framework.provider.sysmanager.api.supports.DataOper;
-import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
 
 /**
  * ClassName:ConfigurationCallback <br/>

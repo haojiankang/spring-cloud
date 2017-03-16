@@ -5,9 +5,9 @@
  * Date:2017年3月15日下午1:50:39  
 */
 
-package com.ghit.framework.consumer.sysmanager.model;
+package com.github.haojiankang.framework.consumer.sysmanager.model;
 
-import com.ghit.framework.consumer.utils.model.BaseModel;
+import com.github.haojiankang.framework.consumer.utils.model.BaseModel;
 
 /**
  * ClassName:Jurisdiction <br/>

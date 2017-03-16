@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.utils.hibernate;
+package com.github.haojiankang.framework.provider.utils.hibernate;
 
 import java.io.Serializable;
 import java.util.Date;

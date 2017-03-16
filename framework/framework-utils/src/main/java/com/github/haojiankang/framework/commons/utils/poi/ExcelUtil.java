@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.poi;
+package com.github.haojiankang.framework.commons.utils.poi;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,7 +33,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 
 /**
  * 操作excel的工具类（07,03版都可用）

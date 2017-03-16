@@ -5,7 +5,7 @@
  * Date:2016年7月5日下午3:31:27  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports;
 
 /**
  * ClassName:DataOper <br/>

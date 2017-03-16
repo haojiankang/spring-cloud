@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.conf.db;
+package com.github.haojiankang.framework.provider.conf.db;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

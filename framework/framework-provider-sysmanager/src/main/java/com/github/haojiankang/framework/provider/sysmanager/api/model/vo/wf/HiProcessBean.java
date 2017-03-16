@@ -5,13 +5,13 @@
  * Date:2016年8月29日上午9:52:58  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf;
 
 import java.io.Serializable;
 import java.util.Date;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiProcess;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiProcess;
 
 /**
  * ClassName:HiFlowState <br>

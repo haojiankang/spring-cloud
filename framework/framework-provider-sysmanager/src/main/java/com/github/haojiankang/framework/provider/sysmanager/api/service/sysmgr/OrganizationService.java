@@ -1,10 +1,10 @@
-package com.ghit.framework.provider.sysmanager.api.service.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr;
 
 
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Organization;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOOrganization;
-import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Organization;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOOrganization;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 
 /**
  * 机构业务处理接口

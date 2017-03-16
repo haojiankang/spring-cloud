@@ -5,7 +5,7 @@
  * Date:2016年6月30日下午4:50:03  
 */
 
-package com.ghit.framework.commons.utils.security.context;
+package com.github.haojiankang.framework.commons.utils.security.context;
 
 /**
  * ClassName:ContextContainer <br/>

@@ -1,8 +1,8 @@
-package com.ghit.framework.commons.utils.security.model;
+package com.github.haojiankang.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 
-import com.ghit.framework.commons.utils.security.AuthenticationType;
+import com.github.haojiankang.framework.commons.utils.security.AuthenticationType;
 
 /**
  * 权限信息接口

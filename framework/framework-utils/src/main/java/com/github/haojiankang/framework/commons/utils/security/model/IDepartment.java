@@ -5,7 +5,7 @@
  * Date:2016年7月18日上午10:22:16  
 */  
   
-package com.ghit.framework.commons.utils.security.model;
+package com.github.haojiankang.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 

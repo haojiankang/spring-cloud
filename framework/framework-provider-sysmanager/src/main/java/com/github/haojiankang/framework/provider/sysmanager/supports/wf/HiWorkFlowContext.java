@@ -5,7 +5,7 @@
  * Date:2016年8月29日上午11:02:08  
 */
 
-package com.ghit.framework.provider.sysmanager.supports.wf;
+package com.github.haojiankang.framework.provider.sysmanager.supports.wf;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -21,13 +21,13 @@ import java.util.stream.Collectors;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.ghit.framework.commons.utils.spring.SpringUtils;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiActivityBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPDBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPNActionBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiBPNBean;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.HiProcessBean;
-import com.ghit.framework.provider.sysmanager.api.service.wf.WFService;
+import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiActivityBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiBPDBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiBPNActionBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiBPNBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.HiProcessBean;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.wf.WFService;
 
 /**
  * ClassName:WorkFlowContext <br>

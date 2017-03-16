@@ -5,17 +5,17 @@
  * Date:2016年8月28日下午10:09:58  
 */
 
-package com.ghit.framework.provider.sysmanager.api.service.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.service.wf;
 
 import java.util.List;
 import java.util.Map;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.Activity;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPD;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPN;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.BPNAction;
-import com.ghit.framework.provider.sysmanager.api.model.vo.wf.WFProcess;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.Activity;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.BPD;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.BPN;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.BPNAction;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf.WFProcess;
 
 /**
  * ClassName:WorkFlow <br/>

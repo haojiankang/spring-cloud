@@ -5,15 +5,15 @@
  * Date:2016年8月29日上午11:21:33  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf;
 
 import java.io.Serializable;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiActivity;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiActivity;
 
 /**
  * ClassName:HiActivity <br>

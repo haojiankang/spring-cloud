@@ -5,7 +5,7 @@
  * Date:2016年7月5日下午4:26:41  
 */
 
-package com.ghit.framework.commons.utils.security.context;
+package com.github.haojiankang.framework.commons.utils.security.context;
 
 import java.util.Hashtable;
 import java.util.Set;

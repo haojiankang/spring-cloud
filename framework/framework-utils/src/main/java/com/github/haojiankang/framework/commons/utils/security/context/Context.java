@@ -5,7 +5,7 @@
  * Date:2016年6月30日下午4:47:33  
 */
 
-package com.ghit.framework.commons.utils.security.context;
+package com.github.haojiankang.framework.commons.utils.security.context;
 
 import java.util.Set;
 

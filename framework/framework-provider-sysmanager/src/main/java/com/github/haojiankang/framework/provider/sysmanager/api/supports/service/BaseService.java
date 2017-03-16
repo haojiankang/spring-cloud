@@ -5,10 +5,10 @@
  * Date:2016年7月4日下午2:11:08  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.service;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.service;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
 /**
  * ClassName:BaseService <br/>

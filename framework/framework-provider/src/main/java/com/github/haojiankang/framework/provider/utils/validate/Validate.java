@@ -5,7 +5,7 @@
  * Date:2016年6月22日下午3:02:52  
 */  
   
-package com.ghit.framework.provider.utils.validate;
+package com.github.haojiankang.framework.provider.utils.validate;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

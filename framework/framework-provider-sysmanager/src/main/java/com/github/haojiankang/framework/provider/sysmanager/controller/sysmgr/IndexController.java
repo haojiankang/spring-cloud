@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.controller.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr;
 
 import java.util.Map;
 
@@ -10,11 +10,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ghit.framework.commons.utils.SSTO;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.IndexService;
-import com.ghit.framework.provider.utils.PS;
+import com.github.haojiankang.framework.commons.utils.SSTO;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.IndexService;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 @Controller
 @RequestMapping("/index")

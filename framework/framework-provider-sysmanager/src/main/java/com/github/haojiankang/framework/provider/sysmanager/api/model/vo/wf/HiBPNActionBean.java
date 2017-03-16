@@ -5,14 +5,14 @@
  * Date:2016年8月29日上午9:52:43  
 */
 
-package com.ghit.framework.provider.sysmanager.api.model.vo.wf;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.vo.wf;
 
 import java.io.Serializable;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ghit.framework.provider.sysmanager.api.model.po.wf.HiBPNAction;
-import com.ghit.framework.provider.sysmanager.api.supports.wf.ActionType;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.wf.HiBPNAction;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.wf.ActionType;
 
 /**
  * ClassName:HiBPNAction <br>

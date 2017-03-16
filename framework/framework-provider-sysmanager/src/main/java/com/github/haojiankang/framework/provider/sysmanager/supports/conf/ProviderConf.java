@@ -5,7 +5,7 @@
  * Date:2017年3月15日下午2:59:30  
 */
 
-package com.ghit.framework.provider.sysmanager.supports.conf;
+package com.github.haojiankang.framework.provider.sysmanager.supports.conf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

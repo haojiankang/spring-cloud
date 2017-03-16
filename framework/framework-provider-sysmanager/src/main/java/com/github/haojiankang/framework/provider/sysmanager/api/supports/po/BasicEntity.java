@@ -5,7 +5,7 @@
  * Date:2016年8月16日下午5:31:44  
 */  
   
-package com.ghit.framework.provider.sysmanager.api.supports.po;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.po;
 
 import java.io.Serializable;
 import java.util.Date;

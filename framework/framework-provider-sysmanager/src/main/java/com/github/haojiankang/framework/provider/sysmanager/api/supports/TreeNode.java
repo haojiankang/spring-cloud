@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.api.supports;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 
 /**
  * 树的节点信息实体

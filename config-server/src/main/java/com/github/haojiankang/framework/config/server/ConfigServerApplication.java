@@ -2,7 +2,7 @@
  * spring cloud config server
  * @author lzhoumail@126.com 
  */
-package com.ghit.framework.config.server;
+package com.github.haojiankang.framework.config.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

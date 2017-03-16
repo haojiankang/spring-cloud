@@ -5,7 +5,7 @@
  * Date:2017年2月16日下午4:30:45  
 */
 
-package com.ghit.framework.consumer.utils;
+package com.github.haojiankang.framework.consumer.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -31,15 +31,15 @@ import org.apache.commons.logging.LogFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ghit.framework.commons.utils.lang.StringUtil;
-import com.ghit.framework.commons.utils.security.context.ContextContainer;
-import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.consumer.ConsumerConstant;
-import com.ghit.framework.consumer.conf.SecurityProperties;
-import com.ghit.framework.consumer.utils.security.SecurityCoreManager;
-import com.ghit.framework.consumer.utils.security.SecuritySession;
-import com.ghit.framework.consumer.utils.security.Session;
-import com.ghit.framework.consumer.utils.servlet.WebUtils;
+import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.context.ContextContainer;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.consumer.ConsumerConstant;
+import com.github.haojiankang.framework.consumer.conf.SecurityProperties;
+import com.github.haojiankang.framework.consumer.utils.security.SecurityCoreManager;
+import com.github.haojiankang.framework.consumer.utils.security.SecuritySession;
+import com.github.haojiankang.framework.consumer.utils.security.Session;
+import com.github.haojiankang.framework.consumer.utils.servlet.WebUtils;
 
 /**
  * ClassName:SharpCommon <br/>

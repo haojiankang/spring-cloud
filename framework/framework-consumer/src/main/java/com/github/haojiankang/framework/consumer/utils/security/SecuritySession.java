@@ -1,4 +1,4 @@
-package com.ghit.framework.consumer.utils.security;
+package com.github.haojiankang.framework.consumer.utils.security;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.ghit.framework.commons.utils.security.model.IUser;
+import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 
 public class SecuritySession implements Session {
     private String id;

@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.poi;
+package com.github.haojiankang.framework.commons.utils.poi;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -20,7 +20,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.ghit.framework.commons.utils.excel.WorkbookType;
+import com.github.haojiankang.framework.commons.utils.excel.WorkbookType;
 
 /**
  * ClassName: PoiExcelWriter 

@@ -5,7 +5,7 @@
  * Date:2017年2月16日下午4:30:45  
 */
 
-package com.ghit.framework.commons.utils;
+package com.github.haojiankang.framework.commons.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

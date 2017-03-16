@@ -5,7 +5,7 @@
  * Date:2016年6月30日下午4:47:33  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.security.context;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context;
 
 import java.util.Set;
 

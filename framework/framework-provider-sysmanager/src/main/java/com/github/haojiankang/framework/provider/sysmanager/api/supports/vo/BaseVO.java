@@ -5,13 +5,13 @@
  * Date:2017年2月27日下午2:34:17  
 */
 
-package com.ghit.framework.provider.sysmanager.api.supports.vo;
+package com.github.haojiankang.framework.provider.sysmanager.api.supports.vo;
 
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
+import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
 /**
  * ClassName:BaseVo <br/>

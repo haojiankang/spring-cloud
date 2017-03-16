@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.supports;
+package com.github.haojiankang.framework.provider.sysmanager.supports;
 
 /**
  * 常量信息类

@@ -5,7 +5,7 @@
  * Date:2017年3月16日上午11:46:43  
 */  
   
-package com.ghit.framework.provider.conf;
+package com.github.haojiankang.framework.provider.conf;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.ghit.framework.provider.utils.security.UserHeaderFilter;
+import com.github.haojiankang.framework.provider.utils.security.UserHeaderFilter;
 
 /** 
  * ClassName:ConsumerConf <br/> 

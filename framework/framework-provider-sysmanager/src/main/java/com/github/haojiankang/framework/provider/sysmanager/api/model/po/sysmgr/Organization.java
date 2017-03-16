@@ -1,10 +1,10 @@
-package com.ghit.framework.provider.sysmanager.api.model.po.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import com.ghit.framework.provider.sysmanager.api.supports.po.BaseEntity;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.po.BaseEntity;
 
 /**
  * 机构、组织信息实体

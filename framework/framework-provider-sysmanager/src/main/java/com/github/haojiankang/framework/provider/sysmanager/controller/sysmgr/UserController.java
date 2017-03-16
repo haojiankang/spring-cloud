@@ -1,4 +1,4 @@
-package com.ghit.framework.provider.sysmanager.controller.sysmgr;
+package com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,17 +10,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.ghit.framework.commons.utils.Page;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
-import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.RoleService;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserService;
-import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
-import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.controller.common.BaseController;
-import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.RoleService;
+import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.UserService;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
+import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
+import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
 
 @Controller
 @RequestMapping("/user")

@@ -1,4 +1,4 @@
-package com.ghit.framework.commons.utils.bean;
+package com.github.haojiankang.framework.commons.utils.bean;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

@@ -5,18 +5,18 @@
  * Date:2017年3月15日上午10:46:27  
 */
 
-package com.ghit.framework.consumer.sysmanager.controller;
+package com.github.haojiankang.framework.consumer.sysmanager.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ghit.framework.commons.utils.SSTO;
-import com.ghit.framework.commons.utils.security.model.SecurityUser;
-import com.ghit.framework.consumer.sysmanager.feignclient.IndexFeignClient;
-import com.ghit.framework.consumer.sysmanager.model.User;
-import com.ghit.framework.consumer.utils.CS;
+import com.github.haojiankang.framework.commons.utils.SSTO;
+import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
+import com.github.haojiankang.framework.consumer.sysmanager.feignclient.IndexFeignClient;
+import com.github.haojiankang.framework.consumer.sysmanager.model.User;
+import com.github.haojiankang.framework.consumer.utils.CS;
 
 /**
  * ClassName:LoginHtmlController <br/>

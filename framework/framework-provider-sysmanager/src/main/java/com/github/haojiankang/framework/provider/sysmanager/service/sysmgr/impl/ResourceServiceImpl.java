@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 import com.github.haojiankang.framework.commons.utils.security.ResourceType;
+import com.github.haojiankang.framework.commons.utils.security.context.Context;
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 import com.github.haojiankang.framework.commons.utils.security.model.ResourceInformation;
 import com.github.haojiankang.framework.commons.utils.security.model.SecurityResourceInformation;
@@ -16,7 +17,6 @@ import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOResource;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
 import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.ResourceDao;
 import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
 import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;

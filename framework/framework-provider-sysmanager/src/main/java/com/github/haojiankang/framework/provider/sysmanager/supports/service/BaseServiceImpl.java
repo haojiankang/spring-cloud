@@ -45,7 +45,7 @@ import com.github.haojiankang.framework.provider.utils.validate.Validate;
 @Transactional(propagation = Propagation.SUPPORTS)
 public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends AbstractPojo<?>>
         implements BaseService<PO, VO> {
-    protected final Log logger = LogFactory.getLog(getClass());
+    protected final Log log = LogFactory.getLog(getClass());
     protected Class<VO> voClass;
     protected Class<PO> poClass;
 
@@ -92,7 +92,7 @@ public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends Abs
                 getBaseDao().delete(getPO(t));
             return delAfter(t, beforeState);
         } catch (Exception e) {
-            logger.error(e);
+            log.error(e);
         }
         return false;
     }
@@ -128,7 +128,7 @@ public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends Abs
             }
             return saveAfter(po, beforeState, isAdd);
         } catch (Exception e) {
-            logger.error(e);
+            log.error(e);
             PS.error(e.getMessage());
         }
         return false;
@@ -146,7 +146,7 @@ public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends Abs
             }
             return saveAfter(po, beforeState, true);
         } catch (Exception e) {
-            logger.error(e);
+            log.error(e);
             PS.error(e.getMessage());
         }
         return false;
@@ -171,7 +171,7 @@ public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends Abs
             }
             return saveAfter(po, beforeState, false);
         } catch (Exception e) {
-            logger.error(e);
+            log.error(e);
             PS.error(e.getMessage());
         }
         return false;
@@ -228,7 +228,7 @@ public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends Abs
                     PS.error(only.name() + "为：" + value + "\t的记录已存在!");
                 }
             } catch (Exception e) {
-                logger.error(e);
+                log.error(e);
             }
         });
         if (groups.size() > 0) {

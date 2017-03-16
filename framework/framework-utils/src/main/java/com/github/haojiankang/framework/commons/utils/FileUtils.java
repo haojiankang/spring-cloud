@@ -19,10 +19,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
-import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
 import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 import com.github.haojiankang.framework.commons.utils.security.RSATools;
 
@@ -33,7 +32,8 @@ import com.github.haojiankang.framework.commons.utils.security.RSATools;
  *
  */
 public class FileUtils {
-    private static Logger log = LoggerFactory.getLogger(BeanUtils.class);
+
+    protected static final Log log = LogFactory.getLog(FileUtils.class);
 
     private static final int DEFAULT_BUFFER_SIZE = 1024 * 1024 * 10;// 10M
 

@@ -18,8 +18,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -36,7 +36,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
  * @see
  */
 public class Sharp {
-    private static Logger LOGGER = LoggerFactory.getLogger(Sharp.class);
+    protected static final Log LOGGER = LogFactory.getLog(Sharp.class);
     private static Sharp sharp;
 
     public static Sharp sharp() {

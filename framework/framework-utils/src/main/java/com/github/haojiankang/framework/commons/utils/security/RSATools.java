@@ -21,9 +21,9 @@ import javax.crypto.Cipher;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * RSA算法加密/解密工具类。
@@ -39,7 +39,7 @@ import org.slf4j.LoggerFactory;
  */
 public class RSATools {
 
-    private static Logger logger = LoggerFactory.getLogger(RSATools.class);
+    protected static final Log logger = LogFactory.getLog(RSATools.class);
 
     /** 算法名称 */
     private static final String ALGORITHOM = "RSA";

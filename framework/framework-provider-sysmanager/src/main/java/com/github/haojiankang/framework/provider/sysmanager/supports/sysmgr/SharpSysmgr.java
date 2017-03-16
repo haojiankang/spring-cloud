@@ -12,6 +12,7 @@ import java.util.List;
 
 import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
 import com.github.haojiankang.framework.commons.utils.security.AuthenticationType;
+import com.github.haojiankang.framework.commons.utils.security.context.Context;
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 import com.github.haojiankang.framework.commons.utils.security.model.SecurityDepartment;
 import com.github.haojiankang.framework.commons.utils.security.model.SecurityJurisdiction;
@@ -24,7 +25,6 @@ import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
 import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
 import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;
 import com.github.haojiankang.framework.provider.utils.PS;

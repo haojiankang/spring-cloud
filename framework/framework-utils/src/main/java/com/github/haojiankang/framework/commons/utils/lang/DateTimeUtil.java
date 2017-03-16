@@ -14,8 +14,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.time.DateUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * Description:日期时间工具类.
@@ -31,7 +31,8 @@ import org.slf4j.LoggerFactory;
  *          </pre>
  */
 public class DateTimeUtil {
-    private static Logger LOGGER = LoggerFactory.getLogger(DateTimeUtil.class);
+
+    protected static final Log LOGGER = LogFactory.getLog(DateTimeUtil.class);
 
     private static final String TIME_FORMAT_SHORT = "yyyyMMddHHmmss";
 

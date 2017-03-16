@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -39,12 +41,10 @@ import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ApacheHttpClient {
 
-    private static Logger log = LoggerFactory.getLogger(ApacheHttpClient.class);
+    protected static final Log log = LogFactory.getLog(ApacheHttpClient.class);
 
 	private RequestConfig config = null;
 	private PoolingHttpClientConnectionManager pool = null;

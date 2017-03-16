@@ -21,8 +21,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.haojiankang.framework.commons.utils.excel.ExcelUtils;
@@ -40,7 +40,7 @@ import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
  * @see
  */
 public class WebUtils {
-    private static Logger LOGGER = LoggerFactory.getLogger(WebUtils.class);
+    protected static final Log LOGGER = LogFactory.getLog(WebUtils.class);
 
     /**
      * 

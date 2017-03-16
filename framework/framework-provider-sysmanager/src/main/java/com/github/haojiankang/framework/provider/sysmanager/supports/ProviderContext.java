@@ -10,10 +10,10 @@ package com.github.haojiankang.framework.provider.sysmanager.supports;
 import java.util.Hashtable;
 
 import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
+import com.github.haojiankang.framework.commons.utils.security.context.Context;
+import com.github.haojiankang.framework.commons.utils.security.context.HashTableContext;
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 import com.github.haojiankang.framework.commons.utils.security.model.ResourceInformation;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.HashTableContext;
 
 /**
  * ClassName:ProviderContext <br/>

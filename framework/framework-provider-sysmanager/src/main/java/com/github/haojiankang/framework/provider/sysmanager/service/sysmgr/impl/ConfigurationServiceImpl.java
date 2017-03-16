@@ -21,12 +21,12 @@ import org.springframework.stereotype.Service;
 import com.github.haojiankang.framework.commons.utils.Page;
 import com.github.haojiankang.framework.commons.utils.bean.BeanUtils;
 import com.github.haojiankang.framework.commons.utils.bean.ObjectUtils;
+import com.github.haojiankang.framework.commons.utils.security.context.ContextContainer;
 import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ConfigurationService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.ContextContainer;
 import com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr.ConfigurationDao;
 import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
 import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.ConfigurationUtils;
@@ -89,7 +89,7 @@ public class ConfigurationServiceImpl extends BaseServiceImpl<Configuration, VOC
                 // ContextContainer.getContainer().getContext(), oper);
                 flag = executeCallBack(configuration.getCallback(), configuration, oper);
             } catch (Exception e) {
-                logger.error(e);
+                log.error(e.getMessage(),e);
                 ContextContainer.getContainer().getContext().appendBind("message", e.getMessage());
                 flag = false;
             }

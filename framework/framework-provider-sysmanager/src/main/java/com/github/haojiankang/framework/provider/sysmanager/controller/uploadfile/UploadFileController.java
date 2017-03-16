@@ -2,8 +2,6 @@ package com.github.haojiankang.framework.provider.sysmanager.controller.uploadfi
 
 import javax.annotation.Resource;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,7 +13,6 @@ import com.github.haojiankang.framework.provider.sysmanager.controller.common.Ba
 @Controller
 @RequestMapping("/upload")
 public class UploadFileController extends BaseController<UploadFile,UploadFile> {
-    Log log = LogFactory.getLog(UploadFileController.class);
 
     @Resource
     private UploadFileService uploadFileService;

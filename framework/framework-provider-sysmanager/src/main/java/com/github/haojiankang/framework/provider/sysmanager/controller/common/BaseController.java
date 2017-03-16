@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.haojiankang.framework.commons.utils.Page;
 import com.github.haojiankang.framework.commons.utils.i18n.I118nUtils;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.github.haojiankang.framework.provider.sysmanager.controller.sysmgr.UserController;
 import com.github.haojiankang.framework.provider.utils.PS;
 import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
@@ -36,7 +35,7 @@ import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
  * @see
  */
 public abstract class BaseController<PO extends AbstractPojo<?>,VO extends AbstractPojo<?>> {
-    protected Log log = LogFactory.getLog(UserController.class);
+    protected Log log = LogFactory.getLog(getClass());
 
     public abstract BaseService<PO,VO> getBaseService();
 

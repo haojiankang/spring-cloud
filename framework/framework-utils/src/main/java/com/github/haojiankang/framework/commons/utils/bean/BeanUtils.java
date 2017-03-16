@@ -36,8 +36,8 @@ import java.util.stream.Collectors;
 import org.apache.commons.beanutils.PropertyUtilsBean;
 import org.apache.commons.lang3.ClassUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -59,7 +59,8 @@ import com.github.haojiankang.framework.commons.utils.security.model.SecurityUse
  */
 @SuppressWarnings("unchecked")
 public class BeanUtils {
-    private static Logger log = LoggerFactory.getLogger(BeanUtils.class);
+
+    protected static final Log log = LogFactory.getLog(BeanUtils.class);
     private static final String[] SIMPLE_TYPE = new String[] { "int", "byte", "short", "long", "float", "double",
             "char", "boolean", "java.lang.Integer", "java.lang.Character", "java.lang.Long", "java.lang.Short",
             "java.lang.Byte", "java.lang.String", "java.lang.Float", "java.lang.Double", "java.lang.Boolean",

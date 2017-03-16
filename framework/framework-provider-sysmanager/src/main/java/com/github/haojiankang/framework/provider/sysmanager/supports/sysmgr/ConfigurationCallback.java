@@ -7,9 +7,9 @@
 
 package com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr;
 
+import com.github.haojiankang.framework.commons.utils.security.context.Context;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.security.context.Context;
 
 /**
  * ClassName:ConfigurationCallback <br/>

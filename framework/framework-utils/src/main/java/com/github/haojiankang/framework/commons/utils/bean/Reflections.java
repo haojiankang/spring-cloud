@@ -9,8 +9,8 @@ import java.lang.reflect.Type;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
  * 反射工具类.
@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Reflections {
 
-    private static Logger log = LoggerFactory.getLogger(Reflections.class);
+    protected static final Log log = LogFactory.getLog(Reflections.class);
 
     private static final String SETTER_PREFIX = "set";
 

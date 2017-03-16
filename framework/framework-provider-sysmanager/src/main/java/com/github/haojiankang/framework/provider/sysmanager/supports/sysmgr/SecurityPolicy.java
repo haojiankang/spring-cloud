@@ -11,8 +11,8 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
@@ -37,7 +37,7 @@ import com.github.haojiankang.framework.provider.utils.PS;
  * @see
  */
 public class SecurityPolicy {
-    private static Logger log = LoggerFactory.getLogger(SecurityPolicy.class);
+    protected static final Log log = LogFactory.getLog(SecurityPolicy.class);
     // 用户连续登录失败最大次数
     private static int user_fail_login_count_max = 0;
     // 连续登录失败锁定时间

@@ -3,6 +3,8 @@ package com.ghit.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.ghit.framework.commons.utils.security.AuthenticationType;
 
 /**
@@ -11,6 +13,8 @@ import com.ghit.framework.commons.utils.security.AuthenticationType;
  * @author ren7wei
  *
  */
+
+@JsonInclude(value = Include.NON_EMPTY, content = Include.NON_NULL)
 public class SecurityJurisdiction implements IJurisdiction, Serializable {
 
     /**

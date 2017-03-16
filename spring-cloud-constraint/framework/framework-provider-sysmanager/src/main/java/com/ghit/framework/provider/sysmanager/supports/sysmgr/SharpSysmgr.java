@@ -7,17 +7,27 @@
 
 package com.ghit.framework.provider.sysmanager.supports.sysmgr;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import com.ghit.framework.commons.utils.bean.BeanUtils;
+import com.ghit.framework.commons.utils.security.AuthenticationType;
+import com.ghit.framework.commons.utils.security.model.IUser;
+import com.ghit.framework.commons.utils.security.model.SecurityDepartment;
+import com.ghit.framework.commons.utils.security.model.SecurityJurisdiction;
+import com.ghit.framework.commons.utils.security.model.SecurityRole;
+import com.ghit.framework.commons.utils.security.model.SecurityUser;
 import com.ghit.framework.commons.utils.spring.SpringUtils;
+import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Jurisdiction;
+import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Role;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
 import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
+import com.ghit.framework.provider.utils.PS;
 
 /**
  * ClassName:SharpEcg <br>
@@ -30,7 +40,43 @@ import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
  * @see
  */
 public class SharpSysmgr {
+    public static IUser convertUserToIUser(User user) {
+        SecurityUser secUser = new SecurityUser();
+        secUser.setUserName(user.getFullname());
+        secUser.setId(user.getId());
+        secUser.setUserType(user.getUserType());
+        if (user.getRoles() != null) {
+            List<SecurityRole> secRoles = new ArrayList<SecurityRole>();
+            for (Role role : user.getRoles()) {
+                if (role.getJurisdictions() != null) {
+                    SecurityRole secRole = new SecurityRole();
+                    List<SecurityJurisdiction> secJurisList = new ArrayList<SecurityJurisdiction>();
+                    for (Jurisdiction juris : role.getJurisdictions()) {
+                        SecurityJurisdiction secJuris = new SecurityJurisdiction();
+                        secJuris.setCode(juris.getJurisdictionCode());
+                        secJuris.setRule(juris.getAuthenticationRule());
+                        if (juris.getAuthenticationType() != null)
+                            secJuris.setType(AuthenticationType.valueOf(juris.getAuthenticationType()));
+                        secJurisList.add(secJuris);
+                    }
+                    secRole.setJurisdictions(secJurisList);
+                    secRoles.add(secRole);
+                }
+            }
+            secUser.setRoles(secRoles);
+        }
+        SecurityDepartment deparment = new SecurityDepartment();
+        secUser.setDepartment(deparment);
+        deparment.setId("-1");
+        if (user.getOrganization() != null) {
+            deparment.setCode(user.getOrganization().getCode());
+            deparment.setId(user.getOrganization().getId());
+            deparment.setName(user.getOrganization().getName());
+        }
+        secUser.setData(BeanUtils.map("loginName", user.getUserName()));
+        return secUser;
 
+    }
     /**
      * 
      * getConfigValue:获取系统配置信息指定配置项的值

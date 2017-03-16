@@ -1,7 +1,8 @@
-package com.ghit.framework.commons.utils.security;
-
+package com.ghit.framework.commons.utils.security.model;
 
 import java.util.List;
+
+import com.ghit.framework.commons.utils.security.ResourceType;
 
 public interface ResourceInformation extends Cloneable {
     String getId();

@@ -1,6 +1,5 @@
 package com.ghit.framework.commons.utils.security;
 
-
 public enum ResourceType {
     /**
      * 根

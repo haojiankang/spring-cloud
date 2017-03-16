@@ -11,7 +11,7 @@ import java.util.Hashtable;
 
 import com.ghit.framework.commons.utils.lang.StringUtil;
 import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.provider.sysmanager.api.supports.security.ResourceInformation;
+import com.ghit.framework.commons.utils.security.model.ResourceInformation;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.HashTableContext;
 

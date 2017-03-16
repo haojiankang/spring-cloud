@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.ghit.framework.commons.utils.i18n.LanguageType;
 import com.ghit.framework.commons.utils.security.AuthenticationType;
 
@@ -25,6 +27,8 @@ import com.ghit.framework.commons.utils.security.AuthenticationType;
  * @version
  * @since JDK 1.8
  */
+
+@JsonInclude(value = Include.NON_EMPTY, content = Include.NON_NULL)
 public class SecurityUser implements IUser, Serializable {
     private String id;
     /**

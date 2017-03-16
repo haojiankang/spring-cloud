@@ -27,7 +27,7 @@ import com.ghit.framework.commons.utils.bean.BeanUtils;
 import com.ghit.framework.commons.utils.lang.StringUtil;
 import com.ghit.framework.provider.sysmanager.api.supports.DbOnly;
 import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
-import com.ghit.framework.provider.sysmanager.supports.PS;
+import com.ghit.framework.provider.utils.PS;
 import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
 import com.ghit.framework.provider.utils.hibernate.BaseDao;
 import com.ghit.framework.provider.utils.validate.Validate;

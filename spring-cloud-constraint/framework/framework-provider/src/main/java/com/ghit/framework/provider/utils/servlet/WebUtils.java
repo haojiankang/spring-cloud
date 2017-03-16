@@ -108,7 +108,6 @@ public class WebUtils {
         return (request.getHeader("X-Requested-With") != null
                 && "XMLHttpRequest".equalsIgnoreCase(request.getHeader("X-Requested-With")));
     }
-
     /**
      * 
      * reponseJons:将obj转换为json并返回给客户端

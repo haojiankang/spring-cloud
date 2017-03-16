@@ -16,11 +16,11 @@ import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.RoleService;
-import com.ghit.framework.provider.sysmanager.api.service.sysmgr.SharpSysmgrService;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserService;
 import com.ghit.framework.provider.sysmanager.api.supports.TreeNode;
 import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
 import com.ghit.framework.provider.sysmanager.controller.common.BaseController;
+import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
 
 @Controller
 @RequestMapping("/user")
@@ -32,8 +32,6 @@ public class UserController extends BaseController<User,VOUser> {
     private OrganizationService organizationService;
     @Resource
     private RoleService roleService;
-    @Resource
-    private SharpSysmgrService sharpservice;
 
     @RequestMapping("list")
     @ResponseBody
@@ -48,8 +46,8 @@ public class UserController extends BaseController<User,VOUser> {
             map.put("Organization", rootNode);
             map.put("page", page);
             map.put("roles", roles);
-            map.put("sex", sharpservice.dataDicLookup("性别"));
-            map.put("flag", sharpservice.dataDicLookup("用户状态"));
+            map.put("sex", SharpSysmgr.dataDicLookup("性别"));
+            map.put("flag", SharpSysmgr.dataDicLookup("用户状态"));
             result = map;
         }
 //        IUser currentUser = CS.currentUser();

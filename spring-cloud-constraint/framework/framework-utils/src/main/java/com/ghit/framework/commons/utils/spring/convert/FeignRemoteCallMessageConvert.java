@@ -57,7 +57,7 @@ public class FeignRemoteCallMessageConvert extends AbstractGenericHttpMessageCon
 
     @Override
     protected boolean supports(Class<?> clazz) {
-        return true;
+        return !BeanUtils.isSimpleType(clazz);
     }
 
     @Override

@@ -1,6 +1,6 @@
 var depends = [
     {name: "utils"},
-    {name: "rsa"},
+    {name: "common.rsa"},
     {name: "bootstrap-validate"},
     {name: "AdminLTE"},
     {name: "index", type: "css"},
@@ -15,8 +15,8 @@ var depends = [
     {name:"hjkbase",type:"css"},
     {name:"hjkplug",type:"css"}
 ];
-modular.define({name: "index"}, depends, function () {
-    var rsa=this.rsa;
+modular.define({name: "index.index"}, depends, function () {
+    var rsa=this['common.rsa'];
     var utils=this.utils;
     var horizontalTabsHeight=0;
     
@@ -74,7 +74,8 @@ modular.define({name: "index"}, depends, function () {
                 url: "index/loadResource",
                 data: "resourceName=访问系统/",
                 dataType: 'json',
-                success: function (data) {
+                success: function (ssto) {
+                	var data=ssto.data;
                     // 预处理节点数据的properties属性，将properties的属性复制到this上。
                     ProcessingData(data.resource);
                     // 初始化菜单

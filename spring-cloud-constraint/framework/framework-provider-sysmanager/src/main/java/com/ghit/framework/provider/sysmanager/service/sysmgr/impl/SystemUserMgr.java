@@ -18,8 +18,8 @@ import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
 import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.ghit.framework.provider.utils.PS;
 
 /**
  * ClassName:SystemTypeLogin <br>
@@ -45,7 +45,7 @@ public class SystemUserMgr implements UserMgr {
         user.setCreateTime(findUser.getCreateTime());
         SharpSysmgr.userPwdMd5(user);
         if (findUser != null && StringUtil.eq(findUser.getPassword(), user.getPassword())) {
-            currentUser = PS.convertUserToIUser(findUser);
+            currentUser = SharpSysmgr.convertUserToIUser(findUser);
         }
         return currentUser;
     }

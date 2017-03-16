@@ -1,5 +1,4 @@
-package com.ghit.framework.commons.utils.security;
-
+package com.ghit.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,6 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.ghit.framework.commons.utils.lang.StringUtil;
+import com.ghit.framework.commons.utils.security.ResourceType;
 
 /**
  * 安全资源信息基础类

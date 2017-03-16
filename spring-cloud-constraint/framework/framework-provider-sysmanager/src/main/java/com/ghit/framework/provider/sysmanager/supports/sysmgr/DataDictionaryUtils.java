@@ -16,9 +16,9 @@ import com.ghit.framework.commons.utils.spring.SpringUtils;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
 import com.ghit.framework.provider.sysmanager.api.supports.security.context.Context;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
+import com.ghit.framework.provider.utils.PS;
 
 /**
  * ClassName:DataDictionaryUtils <br>

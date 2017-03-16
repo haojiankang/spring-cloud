@@ -10,8 +10,10 @@ package com.ghit.framework.consumer.sysmanager.feignclient;
 import java.util.Map;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ghit.framework.commons.utils.SSTO;
 import com.ghit.framework.commons.utils.security.model.SecurityUser;
@@ -37,5 +39,7 @@ public interface IndexFeignClient {
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public SSTO<SecurityUser> login(User user);
-
+    
+    @RequestMapping(value = "loadResource")
+    public SSTO<Map<String,Object>> loadResource(@RequestParam("resourceName") String resourceName,@RequestHeader(name="userinfo") String user);
 }

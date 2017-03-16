@@ -18,7 +18,7 @@ import com.ghit.framework.consumer.sysmanager.feignclient.IndexFeignClient;
 
 /**
  * ClassName:CommonRsaController <br/>
- * Function: TODO ADD FUNCTION. <br/>
+ * Function: 对应js模块：common.rsa. <br/>
  * Date: 2017年3月15日 上午10:53:28 <br/>
  * 
  * @author ren7wei

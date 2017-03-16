@@ -41,9 +41,9 @@ import com.ghit.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile
 import com.ghit.framework.provider.sysmanager.api.service.uploadfile.UploadFileService;
 import com.ghit.framework.provider.sysmanager.api.supports.DataOper;
 import com.ghit.framework.provider.sysmanager.dao.uploadfile.FileDao;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
 import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.ghit.framework.provider.utils.PS;
 import com.ghit.framework.provider.utils.hibernate.BaseDao;
 
 @Service

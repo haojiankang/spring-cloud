@@ -4,6 +4,11 @@ import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -12,6 +17,8 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -32,6 +39,9 @@ import org.apache.commons.lang3.reflect.FieldUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.ghit.framework.commons.utils.i18n.LanguageType;
 import com.ghit.framework.commons.utils.lang.DateTimeUtil;
 import com.ghit.framework.commons.utils.lang.StringUtil;
@@ -83,6 +93,88 @@ public class BeanUtils {
             list.add(poVo(t, voClass, listExper));
         });
         return list;
+    }
+
+    /**
+     * 
+     * serialize:序列化对象为byte数组
+     *
+     * @author ren7wei
+     * @param obj
+     * @return
+     * @since JDK 1.7
+     */
+    public static byte[] serialize(Object obj) {
+        try (ByteArrayOutputStream bos = new ByteArrayOutputStream();) {
+            try (ObjectOutputStream os = new ObjectOutputStream(bos);) {
+                os.writeObject(obj);
+                os.flush();
+            } catch (Exception e) {
+                log.error(e.getMessage(), e);
+            }
+            byte[] b = bos.toByteArray();
+            return b;
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    /**
+     * 
+     * deserialize:反序列化byte为对象.
+     *
+     * @author ren7wei
+     * @param bs
+     * @return
+     * @since JDK 1.7
+     */
+    public static <T> T deserialize(byte[] bs) {
+        try (ByteArrayInputStream ins = new ByteArrayInputStream(bs);) {
+            try (ObjectInputStream in = new ObjectInputStream(ins);) {
+                return (T) in.readObject();
+            } catch (Exception e) {
+                log.error(e.getMessage(), e);
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    public static <T extends Object> T jsonToT(Class<T> c, String jsonStr) {
+        ObjectMapper ojbmapper = new ObjectMapper();
+        ojbmapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        ojbmapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+        try {
+            return ojbmapper.readValue(jsonStr, c);
+        } catch (IOException e) {
+            log.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    public static String objToJson(Object obj) {
+        ObjectMapper ojbmapper = new ObjectMapper();
+        ojbmapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        ojbmapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+        try {
+            return ojbmapper.writeValueAsString(obj);
+        } catch (IOException e) {
+            log.error(e.getMessage(), e);
+        }
+        return null;
+    }
+
+    @SuppressWarnings("deprecation")
+    public static <T> T decodeHeader(String str, Class<T> cls) {
+        String decode = URLDecoder.decode(str);
+        return jsonToT(cls, decode);
+    }
+
+    @SuppressWarnings("deprecation")
+    public static String encodeHeader(Object obj) {
+        return URLEncoder.encode(objToJson(obj));
     }
 
     /**
@@ -183,8 +275,8 @@ public class BeanUtils {
 
     private static void fieldValueToSB(Object src, String pre, StringBuilder target) {
         try {
-            if(pre.length()>0){
-                pre=pre+".";
+            if (pre.length() > 0) {
+                pre = pre + ".";
             }
             Field[] fields = getAllFields(src.getClass());
             accessible(fields);
@@ -194,7 +286,7 @@ public class BeanUtils {
                 String name = field.getName();
                 if (value == null)
                     continue;
-                fieldValueExec(pre+name, target, value, type );
+                fieldValueExec(pre + name, target, value, type);
                 target.append("&");
             }
         } catch (IllegalArgumentException | IllegalAccessException e) {
@@ -220,23 +312,23 @@ public class BeanUtils {
             Collection<?> colle = (Collection<?>) value;
             if (!colle.isEmpty()) {
                 Iterator<?> iterator = colle.iterator();
-                int i=0;
-                while(iterator.hasNext()){
+                int i = 0;
+                while (iterator.hasNext()) {
                     Object next = iterator.next();
-                    fieldValueExec(name + "[" + i + "]", target, next,next.getClass());
+                    fieldValueExec(name + "[" + i + "]", target, next, next.getClass());
                     i++;
-                    
+
                 }
             }
         } else if (Map.class.isAssignableFrom(type)) {
             Map<?, ?> map = (Map<?, ?>) value;
             if (!map.isEmpty()) {
                 map.forEach((k, v) -> {
-                    fieldValueExec( name + "[" + k + "]", target, v,v.getClass());
+                    fieldValueExec(name + "[" + k + "]", target, v, v.getClass());
                 });
             }
         } else {
-            fieldValueToSB(value,  name, target);
+            fieldValueToSB(value, name, target);
         }
     }
 

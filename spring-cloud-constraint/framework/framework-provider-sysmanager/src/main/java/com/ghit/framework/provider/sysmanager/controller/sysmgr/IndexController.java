@@ -14,7 +14,7 @@ import com.ghit.framework.commons.utils.SSTO;
 import com.ghit.framework.commons.utils.security.model.IUser;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.IndexService;
-import com.ghit.framework.provider.sysmanager.supports.PS;
+import com.ghit.framework.provider.utils.PS;
 
 @Controller
 @RequestMapping("/index")
@@ -33,8 +33,9 @@ public class IndexController {
 
     @RequestMapping(value = "loadResource")
     @ResponseBody
-    public Object loadResource(String resourceName, IUser user) {
-        return indexService.loadResource(resourceName, user);
+    public SSTO<Map<String, Object> > loadResource(String resourceName) {
+        Map<String, Object> resource = indexService.loadResource(resourceName ,PS.currentUser());
+        return SSTO.structure(true, null, resource);
     }
 
     @RequestMapping(value = "resetPassword")

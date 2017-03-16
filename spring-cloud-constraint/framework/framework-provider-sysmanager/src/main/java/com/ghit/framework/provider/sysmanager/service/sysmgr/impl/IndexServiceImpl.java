@@ -16,17 +16,17 @@ import com.ghit.framework.commons.utils.mail.MailInfo;
 import com.ghit.framework.commons.utils.mail.MailUtils;
 import com.ghit.framework.commons.utils.security.RSATools;
 import com.ghit.framework.commons.utils.security.model.IUser;
+import com.ghit.framework.commons.utils.security.model.ResourceInformation;
 import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.IndexService;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
 import com.ghit.framework.provider.sysmanager.api.service.wf.WorkFlow;
-import com.ghit.framework.provider.sysmanager.api.supports.security.ResourceInformation;
 import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.sysmgr.SecurityPolicy;
 import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.ghit.framework.provider.utils.PS;
 import com.ghit.framework.provider.utils.validate.Validate;
 
 @Service

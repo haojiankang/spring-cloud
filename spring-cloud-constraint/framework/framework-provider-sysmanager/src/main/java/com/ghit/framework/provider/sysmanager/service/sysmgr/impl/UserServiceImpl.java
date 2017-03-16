@@ -20,10 +20,10 @@ import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserService;
 import com.ghit.framework.provider.sysmanager.dao.sysmgr.UserDao;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.service.BaseServiceImpl;
 import com.ghit.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.ghit.framework.provider.utils.PS;
 import com.ghit.framework.provider.utils.hibernate.BaseDao;
 
 @Service

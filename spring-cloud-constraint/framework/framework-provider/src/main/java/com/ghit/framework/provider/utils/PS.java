@@ -5,20 +5,14 @@
  * Date:2017年2月16日下午4:30:45  
 */
 
-package com.ghit.framework.provider.sysmanager.supports;
+package com.ghit.framework.provider.utils;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.URLDecoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -27,18 +21,9 @@ import org.apache.commons.logging.LogFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.ghit.framework.commons.utils.bean.BeanUtils;
-import com.ghit.framework.commons.utils.security.AuthenticationType;
 import com.ghit.framework.commons.utils.security.RSATools;
+import com.ghit.framework.commons.utils.security.context.ContextContainer;
 import com.ghit.framework.commons.utils.security.model.IUser;
-import com.ghit.framework.commons.utils.security.model.SecurityDepartment;
-import com.ghit.framework.commons.utils.security.model.SecurityJurisdiction;
-import com.ghit.framework.commons.utils.security.model.SecurityRole;
-import com.ghit.framework.commons.utils.security.model.SecurityUser;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Jurisdiction;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.Role;
-import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
-import com.ghit.framework.provider.sysmanager.api.supports.security.context.ContextContainer;
 
 /**
  * ClassName:SharpCommon <br/>
@@ -53,6 +38,10 @@ import com.ghit.framework.provider.sysmanager.api.supports.security.context.Cont
 public class PS {
     protected static final Log  LOGGER= LogFactory.getLog(PS.class);
     private static PS sharp;
+    static ThreadLocal<IUser> currentUser;
+    static {
+        currentUser = new ThreadLocal<IUser>();
+    }
 
     public static PS sharp() {
         if (sharp == null)
@@ -60,43 +49,7 @@ public class PS {
         return sharp;
     }
 
-    public static IUser convertUserToIUser(User user) {
-        SecurityUser secUser = new SecurityUser();
-        secUser.setUserName(user.getFullname());
-        secUser.setId(user.getId());
-        secUser.setUserType(user.getUserType());
-        if (user.getRoles() != null) {
-            List<SecurityRole> secRoles = new ArrayList<SecurityRole>();
-            for (Role role : user.getRoles()) {
-                if (role.getJurisdictions() != null) {
-                    SecurityRole secRole = new SecurityRole();
-                    List<SecurityJurisdiction> secJurisList = new ArrayList<SecurityJurisdiction>();
-                    for (Jurisdiction juris : role.getJurisdictions()) {
-                        SecurityJurisdiction secJuris = new SecurityJurisdiction();
-                        secJuris.setCode(juris.getJurisdictionCode());
-                        secJuris.setRule(juris.getAuthenticationRule());
-                        if (juris.getAuthenticationType() != null)
-                            secJuris.setType(AuthenticationType.valueOf(juris.getAuthenticationType()));
-                        secJurisList.add(secJuris);
-                    }
-                    secRole.setJurisdictions(secJurisList);
-                    secRoles.add(secRole);
-                }
-            }
-            secUser.setRoles(secRoles);
-        }
-        SecurityDepartment deparment = new SecurityDepartment();
-        secUser.setDepartment(deparment);
-        deparment.setId("-1");
-        if (user.getOrganization() != null) {
-            deparment.setCode(user.getOrganization().getCode());
-            deparment.setId(user.getOrganization().getId());
-            deparment.setName(user.getOrganization().getName());
-        }
-        secUser.setData(BeanUtils.map("loginName", user.getUserName()));
-        return secUser;
-
-    }
+    
 
     /**
      * 
@@ -202,53 +155,6 @@ public class PS {
         return null;
     }
 
-    /**
-     * 
-     * serialize:序列化对象为byte数组
-     *
-     * @author ren7wei
-     * @param obj
-     * @return
-     * @since JDK 1.7
-     */
-    public static byte[] serialize(Object obj) {
-        try (ByteArrayOutputStream bos = new ByteArrayOutputStream();) {
-            try (ObjectOutputStream os = new ObjectOutputStream(bos);) {
-                os.writeObject(obj);
-                os.flush();
-            } catch (Exception e) {
-                LOGGER.error(e.getMessage(), e);
-            }
-            byte[] b = bos.toByteArray();
-            return b;
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-        }
-        return null;
-    }
-
-    /**
-     * 
-     * deserialize:反序列化byte为对象.
-     *
-     * @author ren7wei
-     * @param bs
-     * @return
-     * @since JDK 1.7
-     */
-    @SuppressWarnings("unchecked")
-    public static <T> T deserialize(byte[] bs) {
-        try (ByteArrayInputStream ins = new ByteArrayInputStream(bs);) {
-            try (ObjectInputStream in = new ObjectInputStream(ins);) {
-                return (T) in.readObject();
-            } catch (Exception e) {
-                LOGGER.error(e.getMessage(), e);
-            }
-        } catch (Exception e) {
-            LOGGER.error(e.getMessage(), e);
-        }
-        return null;
-    }
 
     /**
      * 
@@ -353,8 +259,12 @@ public class PS {
         } while (read > -1);
         return messageDigest.digest();
     }
-
     public static final String JSESSIONID = "hsessionid";
     public static final String TOKEN = "htoken";
-
+    public static IUser currentUser(){
+        return currentUser.get();
+    }
+    public static void currentUser(IUser user){
+        currentUser.set(user);
+    }
 }

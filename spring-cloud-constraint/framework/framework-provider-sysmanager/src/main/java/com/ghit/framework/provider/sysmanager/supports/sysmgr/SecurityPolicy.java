@@ -21,10 +21,10 @@ import com.ghit.framework.provider.sysmanager.api.model.po.sysmgr.User;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.ghit.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.ghit.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
-import com.ghit.framework.provider.sysmanager.supports.PS;
 import com.ghit.framework.provider.sysmanager.supports.ProviderConstant;
 import com.ghit.framework.provider.sysmanager.supports.ProviderContext;
 import com.ghit.framework.provider.sysmanager.supports.conf.ProviderProperties;
+import com.ghit.framework.provider.utils.PS;
 
 /**
  * ClassName:SecurityPolicy <br>

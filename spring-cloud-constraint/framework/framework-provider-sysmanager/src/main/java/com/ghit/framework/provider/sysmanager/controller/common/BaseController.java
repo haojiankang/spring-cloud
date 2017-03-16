@@ -22,7 +22,7 @@ import com.ghit.framework.commons.utils.Page;
 import com.ghit.framework.commons.utils.i18n.I118nUtils;
 import com.ghit.framework.provider.sysmanager.api.supports.service.BaseService;
 import com.ghit.framework.provider.sysmanager.controller.sysmgr.UserController;
-import com.ghit.framework.provider.sysmanager.supports.PS;
+import com.ghit.framework.provider.utils.PS;
 import com.ghit.framework.provider.utils.hibernate.AbstractPojo;
 
 /**

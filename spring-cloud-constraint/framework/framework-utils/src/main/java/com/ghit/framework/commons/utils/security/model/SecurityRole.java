@@ -5,12 +5,17 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 /**
  * 安全角色信息基础类
  * 
  * @author ren7wei
  *
  */
+
+@JsonInclude(value = Include.NON_EMPTY, content = Include.NON_NULL)
 public class SecurityRole implements IRole, Serializable {
 
     /**

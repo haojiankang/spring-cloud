@@ -8,6 +8,9 @@ package com.ghit.framework.commons.utils.security.model;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
 /** 
  * ClassName:SecurityDepartment <br> 
  * Function: 部门接口基本实现类. <br> 
@@ -17,6 +20,8 @@ import java.io.Serializable;
  * @since    JDK 1.8
  * @see       
  */
+
+@JsonInclude(value = Include.NON_EMPTY, content = Include.NON_NULL)
 public class SecurityDepartment implements IDepartment,Serializable {
     private static final long serialVersionUID = 1L;
     private String id;

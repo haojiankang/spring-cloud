@@ -92,7 +92,8 @@ public abstract class BaseServiceImpl<PO extends AbstractPojo<?>, VO extends Abs
                 getBaseDao().delete(getPO(t));
             return delAfter(t, beforeState);
         } catch (Exception e) {
-            log.error(e);
+            log.warn(e.getMessage(),e);
+            PS.message("执行删除过程中发生异常："+e.getMessage());
         }
         return false;
     }

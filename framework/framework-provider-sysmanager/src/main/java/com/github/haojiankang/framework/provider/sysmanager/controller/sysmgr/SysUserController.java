@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.SSTO;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysUser;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
@@ -21,10 +22,11 @@ import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNod
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
 import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 @Controller
 @RequestMapping("/user")
-public class SysUserController extends BaseController<SysUser,VOUser> {
+public class SysUserController extends BaseController<SysUser, VOUser> {
 
     @Resource
     private UserService userService;
@@ -35,7 +37,7 @@ public class SysUserController extends BaseController<SysUser,VOUser> {
 
     @RequestMapping("list")
     @ResponseBody
-    public Object list(Page page) {
+    public SSTO<?> list(Page page) {
         Object result = page;
         if (page.getConditions().get("firstLoad") != null
                 && page.getConditions().get("firstLoad").toString().equals("true")) {
@@ -50,22 +52,18 @@ public class SysUserController extends BaseController<SysUser,VOUser> {
             map.put("flag", SharpSysmgr.dataDicLookup("用户状态"));
             result = map;
         }
-//        IUser currentUser = CS.currentUser();
-//        if (currentUser != null) {
-//            if (currentUser.getDepartment() != null && !currentUser.getDepartment().getId().equals("-1"))
-//                // 对用户进行数据权限限制，当前用户只能查看本机构及本机构的下级机构的数据
-//                page.getConditions().put("organization.codeLIKE", currentUser.getDepartment().getCode());
-//        }
+        // IUser currentUser = CS.currentUser();
+        // if (currentUser != null) {
+        // if (currentUser.getDepartment() != null &&
+        // !currentUser.getDepartment().getId().equals("-1"))
+        // // 对用户进行数据权限限制，当前用户只能查看本机构及本机构的下级机构的数据
+        // page.getConditions().put("organization.codeLIKE",
+        // currentUser.getDepartment().getCode());
+        // }
         userService.list(page);
-        return result;
+        return SSTO.structure(true, PS.message(), result);
     }
 
-    @RequestMapping(value = "info")
-    @ResponseBody
-    public Object info(VOUser user) {
-        VOUser usrOut = userService.findById(user);
-        return usrOut;
-    }
 
     @RequestMapping(value = "reset")
     @ResponseBody
@@ -80,7 +78,7 @@ public class SysUserController extends BaseController<SysUser,VOUser> {
     }
 
     @Override
-    public BaseService<SysUser,VOUser> getBaseService() {
+    public BaseService<SysUser, VOUser> getBaseService() {
         return userService;
     }
 

@@ -16,11 +16,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.SSTO;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ConfigurationService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 /**
  * ClassName:ConfigurationController <br/>
@@ -35,7 +37,7 @@ import com.github.haojiankang.framework.provider.sysmanager.controller.common.Ba
 
 @Controller
 @RequestMapping("/configuration")
-public class SysConfigurationController extends BaseController<SysConfiguration,VOConfiguration> {
+public class SysConfigurationController extends BaseController<SysConfiguration, VOConfiguration> {
     @Resource
     private ConfigurationService service;
 
@@ -45,23 +47,24 @@ public class SysConfigurationController extends BaseController<SysConfiguration,
     }
 
     @Override
-    protected Object listReturn(Map<String, Object> maps, Page page) {
+    protected SSTO<?> listReturn(Map<String, Object> maps, Page page) {
         Map<String, List<VOConfiguration>> listGroup = service.listGroup(page);
-        return listGroup;
+        return SSTO.structure(true, PS.message(), listGroup);
     }
 
     @Override
     protected void saveAfter(VOConfiguration configuration, boolean state, boolean isAdd) {
-//        service.callBack(configuration, isAdd ? DataOper.ADD : DataOper.EDIT);
+        // service.callBack(configuration, isAdd ? DataOper.ADD :
+        // DataOper.EDIT);
     }
 
     @Override
     protected void delAfter(VOConfiguration configuration, boolean state) {
-//        service.callBack(configuration, DataOper.REMOVE);
+        // service.callBack(configuration, DataOper.REMOVE);
     }
 
     @Override
-    public BaseService<SysConfiguration,VOConfiguration> getBaseService() {
+    public BaseService<SysConfiguration, VOConfiguration> getBaseService() {
         return service;
     }
 

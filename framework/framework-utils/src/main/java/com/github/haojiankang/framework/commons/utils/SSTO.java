@@ -34,6 +34,12 @@ public class SSTO<O> {
         ssto.setMessage(message);
         return ssto;
     }
+    public static <I> SSTO<I> structureSucess( String message, I data) {
+        return structure(true,message,data);
+    }
+    public static <I> SSTO<I> structureFail( String message, I data) {
+        return structure(false,message,data);
+    }
 
     public boolean getState() {
         return state;

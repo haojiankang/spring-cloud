@@ -16,7 +16,7 @@ public class SysUserDaoImpl extends BaseDaoImpl<SysUser, Serializable> implement
 
     @Override
     public SysUser findUsers(SysUser user) {
-        String hql = " from Users where password=?0 and userName=?1";
+        String hql = " from "+SysUser.class.getSimpleName()+" where password=?0 and userName=?1";
 
         List<SysUser> queryByHSql = this.queryByHSql(hql,
                 new ArrayList<Object>(Arrays.asList(user.getPassword(), user.getUserName())));
@@ -28,7 +28,7 @@ public class SysUserDaoImpl extends BaseDaoImpl<SysUser, Serializable> implement
 
     @Override
     public SysUser findUsersByName(SysUser user) {
-        String hql = " from User where  userName=?0";
+        String hql = " from "+SysUser.class.getSimpleName()+" where  userName=?0";
         List<SysUser> queryByHSql = this.queryByHSql(hql, new ArrayList<Object>(Arrays.asList(user.getUserName())));
         if (queryByHSql.size() > 0) {
             return queryByHSql.get(0);

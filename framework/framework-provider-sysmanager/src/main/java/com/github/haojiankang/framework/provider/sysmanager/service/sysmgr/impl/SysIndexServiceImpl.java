@@ -57,6 +57,7 @@ public class SysIndexServiceImpl implements IndexService {
             SysUser po = BeanUtils.poVo(user, SysUser.class, "");
             return SecurityPolicy.login(po);
         } catch (Exception e) {
+            log.warn(e.getMessage(), e);
         }
         return null;
     }

@@ -6,21 +6,22 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.haojiankang.framework.commons.utils.Page;
+import com.github.haojiankang.framework.commons.utils.SSTO;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysRole;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VORole;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.ResourceService;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.RoleService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 import com.github.haojiankang.framework.provider.sysmanager.controller.common.BaseController;
+import com.github.haojiankang.framework.provider.utils.PS;
 
 @Controller
 @RequestMapping("/role")
-public class SysRoleController extends BaseController<SysRole,VORole> {
+public class SysRoleController extends BaseController<SysRole, VORole> {
     @Resource
     private RoleService roleService;
     @Resource
@@ -35,27 +36,22 @@ public class SysRoleController extends BaseController<SysRole,VORole> {
         }
         return true;
     }
+
     @Override
-    protected Object listReturn(Map<String, Object> maps, Page page) {
+    protected SSTO<?> listReturn(Map<String, Object> maps, Page page) {
         maps.put("page", page);
-        return maps;
+        return SSTO.structure(true, PS.message(), maps);
     }
 
-    @RequestMapping(value = "save")
-    @ResponseBody
-    public Object save(@RequestBody VORole role) {
-        return super.save(role);
-    }
-
-    @RequestMapping(value="all")
+    @RequestMapping(value = "all")
     @ResponseBody
     public List<VORole> all() {
-    	//只有系统管理用户才能查看所有角色
-    	return  roleService.loadRoles();
+        // 只有系统管理用户才能查看所有角色
+        return roleService.loadRoles();
     }
 
     @Override
-    public BaseService<SysRole,VORole> getBaseService() {
+    public BaseService<SysRole, VORole> getBaseService() {
         return roleService;
     }
 }

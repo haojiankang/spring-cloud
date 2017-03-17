@@ -36,11 +36,11 @@ import com.github.haojiankang.framework.commons.utils.bean.ObjectUtils;
 import com.github.haojiankang.framework.commons.utils.lang.MathUtils;
 import com.github.haojiankang.framework.commons.utils.lang.StringUtil;
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.po.uploadfile.UploadFile;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.uploadfile.UploadFileService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
-import com.github.haojiankang.framework.provider.sysmanager.dao.uploadfile.FileDao;
+import com.github.haojiankang.framework.provider.sysmanager.dao.uploadfile.SysFileDao;
 import com.github.haojiankang.framework.provider.sysmanager.supports.service.BaseServiceImpl;
 import com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr.SharpSysmgr;
 import com.github.haojiankang.framework.provider.utils.PS;
@@ -430,7 +430,7 @@ public class UploadFileLocalStoreImpl extends BaseServiceImpl<UploadFile,UploadF
     private final String CACHE_UPLOAD_FILE = "upload_file";//上传文件缓存区名称
 
     @Resource
-    private FileDao dao;
+    private SysFileDao dao;
     @Override
     public BaseDao<UploadFile, Serializable> getBaseDao() {
         return dao;
@@ -449,7 +449,7 @@ public class UploadFileLocalStoreImpl extends BaseServiceImpl<UploadFile,UploadF
         return MAX_PER_PATH.intValue();
     }
 
-    public Boolean setMaxNum(Configuration config, DataOper oper) {
+    public Boolean setMaxNum(SysConfiguration config, DataOper oper) {
         if (oper.equals(DataOper.QUERY) || oper.equals(DataOper.REMOVE))
             return true;
         int maxNum = MathUtils.toInt(config.getConfigurationValue(), -1);
@@ -470,7 +470,7 @@ public class UploadFileLocalStoreImpl extends BaseServiceImpl<UploadFile,UploadF
         return FILE_BASE_URL;
     }
 
-    public Boolean setBaseUrl(Configuration config, DataOper oper) {
+    public Boolean setBaseUrl(SysConfiguration config, DataOper oper) {
         if (oper.equals(DataOper.QUERY))
             return true;
         if (oper.equals(DataOper.REMOVE)) {
@@ -491,7 +491,7 @@ public class UploadFileLocalStoreImpl extends BaseServiceImpl<UploadFile,UploadF
         return FILE_BASE_PATH;
     }
 
-    public Boolean setBasePath(Configuration config, DataOper oper) {
+    public Boolean setBasePath(SysConfiguration config, DataOper oper) {
         if (oper.equals(DataOper.QUERY))
             return true;
         if (oper.equals(DataOper.REMOVE)) {

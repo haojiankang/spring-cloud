@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.github.haojiankang.framework.commons.utils.Page;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.service.BaseService;
 
@@ -25,7 +25,7 @@ import com.github.haojiankang.framework.provider.sysmanager.api.supports.service
  * @since JDK 1.8
  * @see
  */
-public interface ConfigurationService extends BaseService<Configuration,VOConfiguration> {
+public interface ConfigurationService extends BaseService<SysConfiguration,VOConfiguration> {
     /**
      * 
      * listGroup:按照分组获取数据.

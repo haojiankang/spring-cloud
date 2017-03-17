@@ -8,7 +8,7 @@
 package com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr;
 
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysUser;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 
 /** 
@@ -21,7 +21,7 @@ import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.
  * @see       
  */
 public interface UserMgr {
-    IUser login(User user);
+    IUser login(SysUser user);
     boolean modifyPassword(String userid,String oldPwd,String newPwd);
     boolean resetPassword(VOUser user);
 }

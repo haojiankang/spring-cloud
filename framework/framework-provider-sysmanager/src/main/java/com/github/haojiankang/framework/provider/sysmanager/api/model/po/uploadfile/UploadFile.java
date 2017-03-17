@@ -13,7 +13,6 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.GenericGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.github.haojiankang.framework.provider.sysmanager.api.supports.vo.AbstractVO;
 import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
 
 /**
@@ -21,7 +20,7 @@ import com.github.haojiankang.framework.provider.utils.hibernate.AbstractPojo;
  */
 @Entity
 @Table(name = "HJK_SYS_UPLOADFILE")
-public class UploadFile   implements Cloneable,AbstractVO<String>,AbstractPojo<String> {
+public class UploadFile   implements Cloneable,AbstractPojo<String> {
     private static final long serialVersionUID = -7195643870983197505L;
     @Transient
     @JsonIgnore

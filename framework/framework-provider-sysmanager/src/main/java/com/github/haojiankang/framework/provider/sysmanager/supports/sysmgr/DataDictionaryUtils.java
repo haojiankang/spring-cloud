@@ -14,7 +14,7 @@ import java.util.Map;
 import com.github.haojiankang.framework.commons.utils.Page;
 import com.github.haojiankang.framework.commons.utils.security.context.Context;
 import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysDataDictionary;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.DataDictionaryService;
 import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderConstant;
 import com.github.haojiankang.framework.provider.sysmanager.supports.ProviderContext;
@@ -88,7 +88,7 @@ public class DataDictionaryUtils {
         Page page = new Page();
         page.setRows(Integer.MAX_VALUE);
         service.list(page);
-        ((List<DataDictionary>) page.getResult()).forEach(d -> {
+        ((List<SysDataDictionary>) page.getResult()).forEach(d -> {
             map.put(d.getName(), PS.strToJsonObj(d.getContent()));
         });
     }

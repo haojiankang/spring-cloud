@@ -19,9 +19,9 @@ import com.github.haojiankang.framework.commons.utils.security.model.SecurityJur
 import com.github.haojiankang.framework.commons.utils.security.model.SecurityRole;
 import com.github.haojiankang.framework.commons.utils.security.model.SecurityUser;
 import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Jurisdiction;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Role;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysJurisdiction;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysRole;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysUser;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.OrganizationService;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.TreeNode;
@@ -40,18 +40,18 @@ import com.github.haojiankang.framework.provider.utils.PS;
  * @see
  */
 public class SharpSysmgr {
-    public static IUser convertUserToIUser(User user) {
+    public static IUser convertUserToIUser(SysUser user) {
         SecurityUser secUser = new SecurityUser();
         secUser.setUserName(user.getFullname());
         secUser.setId(user.getId());
         secUser.setUserType(user.getUserType());
         if (user.getRoles() != null) {
             List<SecurityRole> secRoles = new ArrayList<SecurityRole>();
-            for (Role role : user.getRoles()) {
+            for (SysRole role : user.getRoles()) {
                 if (role.getJurisdictions() != null) {
                     SecurityRole secRole = new SecurityRole();
                     List<SecurityJurisdiction> secJurisList = new ArrayList<SecurityJurisdiction>();
-                    for (Jurisdiction juris : role.getJurisdictions()) {
+                    for (SysJurisdiction juris : role.getJurisdictions()) {
                         SecurityJurisdiction secJuris = new SecurityJurisdiction();
                         secJuris.setCode(juris.getJurisdictionCode());
                         secJuris.setRule(juris.getAuthenticationRule());
@@ -161,7 +161,7 @@ public class SharpSysmgr {
      *            传入用户信息，密码应该是明文
      * @since JDK 1.8
      */
-    public static void userPwdMd5(User user) {
+    public static void userPwdMd5(SysUser user) {
         user.setPassword(md5(user.getPassword(), String.valueOf(user.getCreateTime().getTime())));
     }
 

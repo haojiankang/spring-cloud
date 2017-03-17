@@ -17,7 +17,7 @@ import org.apache.commons.logging.LogFactory;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.github.haojiankang.framework.commons.utils.security.model.IUser;
 import com.github.haojiankang.framework.commons.utils.spring.SpringUtils;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.User;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysUser;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.model.vo.sysmgr.VOUser;
 import com.github.haojiankang.framework.provider.sysmanager.api.service.sysmgr.UserMgr;
@@ -116,7 +116,7 @@ public class SecurityPolicy {
 
     }
 
-    public static IUser login(User user) {
+    public static IUser login(SysUser user) {
         UserMgr loginSystem = beans.get(user.getUserType().toString());
         String name = user.getUserType() + "@" + user.getUserName();
         String realPwd = user.getPassword();

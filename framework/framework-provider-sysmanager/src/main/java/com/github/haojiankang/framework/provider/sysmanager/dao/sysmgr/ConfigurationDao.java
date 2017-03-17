@@ -9,7 +9,7 @@ package com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr;
 
 import java.io.Serializable;
 
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysConfiguration;
 import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 /** 
@@ -21,7 +21,7 @@ import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
  * @since    JDK 1.8
  * @see       
  */
-public interface ConfigurationDao extends BaseDao<Configuration, Serializable> {
+public interface ConfigurationDao extends BaseDao<SysConfiguration, Serializable> {
 
 }
   

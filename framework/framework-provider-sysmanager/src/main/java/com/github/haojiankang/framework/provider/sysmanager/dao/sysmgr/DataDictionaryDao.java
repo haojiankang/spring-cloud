@@ -2,7 +2,7 @@ package com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr;
 
 import java.io.Serializable;
 
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.DataDictionary;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysDataDictionary;
 import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 /**
  * 
@@ -15,6 +15,6 @@ import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
  * @version 
  * @since JDK 1.8
  */
-public interface DataDictionaryDao extends BaseDao<DataDictionary, Serializable> {
+public interface DataDictionaryDao extends BaseDao<SysDataDictionary, Serializable> {
 
 }

@@ -8,7 +8,7 @@
 package com.github.haojiankang.framework.provider.sysmanager.supports.sysmgr;
 
 import com.github.haojiankang.framework.commons.utils.security.context.Context;
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Configuration;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysConfiguration;
 import com.github.haojiankang.framework.provider.sysmanager.api.supports.DataOper;
 
 /**
@@ -32,5 +32,5 @@ public interface ConfigurationCallback {
      * @return
      * @since JDK 1.8
      */
-    boolean call(Configuration configuration, Context context,DataOper oper);
+    boolean call(SysConfiguration configuration, Context context,DataOper oper);
 }

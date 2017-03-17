@@ -2,7 +2,7 @@ package com.github.haojiankang.framework.provider.sysmanager.dao.sysmgr;
 
 import java.io.Serializable;
 
-import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.Organization;
+import com.github.haojiankang.framework.provider.sysmanager.api.model.po.sysmgr.SysOrganization;
 import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
 
 /**
@@ -16,5 +16,5 @@ import com.github.haojiankang.framework.provider.utils.hibernate.BaseDao;
  * @version 
  * @since JDK 1.8
  */
-public interface OrganizationDao extends BaseDao<Organization, Serializable> {
+public interface OrganizationDao extends BaseDao<SysOrganization, Serializable> {
 }

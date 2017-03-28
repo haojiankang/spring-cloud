@@ -15,7 +15,7 @@
 	<properties>
 		<constraint.version>1.0.0</constraint.version>
 		<java.version>1.8</java.version>
-		<project.domain>com.github.haojiankang</project.domain>
+		<project.domain>com.haojiankang</project.domain>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
